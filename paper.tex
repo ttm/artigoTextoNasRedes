@@ -152,24 +152,26 @@ Instituto de F\'isica de S\~ao Carlos, Universidade de S\~ao Paulo (IFSC/USP)%\\
              %  but any date may be explicitly specified
 
 \begin{abstract}
-This paper exposes textual production in interaction networks, with special emphasis on its relation to topological measures. Four email lists were selected, in which simple measures were taken from the texts participants wrote. 
-Periphery, intermediary and hub sectors of these networks were observed to have very different verbal ellaborations.
+This paper explores textual production in interaction networks, 
+with special emphasis on its relation to topological measures. 
+Four email lists were selected, in which measures were taken from the texts participants wrote. 
+Peripheral, intermediary and hub sectors of these networks were observed to have discrepant linguistic ellaborations.
 For completeness of exposition, correlation of textual and topological measures were observed for the entire network
-and for each connective section. The formation of principal components gives us further insight of how measures
-are related with respect to dispertion.
+and for each connective sector. The formation of principal components gives us further insight of how measures
+are related.
 \end{abstract}
 
 \pacs{89.75.Fb,05.65.+b,89.65.-s}
 \keywords{complex networks, natural language processing, social network analysis, statistical physics} % NOT required for Proceedings
 \maketitle
 \section{Introduction}
-Textual production has received considerable attention from social network analysis community.
-Sentiment analysis and vocabularies related to different parties are among a number of examples.
+Textual production has received considerable attention from the social network analysis community.
+Sentiment analysis and vocabularies related to different parties are among a number of examples~\cite{ex}.
 The relation of topological and textual measures is the subject of this article, for the following reasons:
 \begin{itemize}
-    \item This relation has been set aside in literature, with scattered and vage suggestions of mutual implications of the text produced and topological characteristics of the agents in the network.
-    \item This results eases undestanding of human interaction, which is useful for both psichological and anthropological typologies (personality and cultural ``types''.
-    \item There are some interesting hypothesis about verbal differentiation of network sections and groups, some of which were herein confirmed.
+    \item This relation has been set aside in literature, with scattered and vage suggestions of mutual implications of the text produced and topological characteristics of the agents in the network~\cite{texNet}.
+    \item This results eases undestanding of human interaction, which is useful for both psichological and anthropological typologies (personality and cultural ``types'')~\cite{Deborah}.
+    \item There are interesting hypothesis about verbal differentiation of network sections and groups, derived from a previous article by the same author~\cite{rede1}, some of which were herein confirmed.
 \end{itemize}
 
 Next section exposes the email lists used for this research, its textual and network facets.
@@ -181,17 +183,17 @@ Section~\ref{sec:remarks} has concluding remarks and further works envisioned.
 Eighty thousand messages were analysed, twenty thousand from each email list.
 This data was accessed online through the GMANE database~\cite{GMANE}. Each message
 has an ID, the ID of the message it is a response to (if any), an author,
-a ``date and time'' field for the moment the message was sent and the textual content
-of the message. Other fields are also available, but plays no central role in the work here presented.
+a ``date and time'' field registering the moment the message was sent, and the textual content.
+Other fields are also available, but plays no central role in the work here presented.
 This basic information of messages and authors are summarized in Table~\ref{tab:bas}.
 
 \subsection{Network formation}\label{subsec:net}
 Message-response pairs yield interaction networks, such as shown in Figure~\ref{formationNetwork}.
 Each participant is represented as a vertex, and each response is considered evidence that
-information emited by the first message was received
-by the responder (that had to read, process its contents and render a relevant textual response).
+information emited by the first author was received
+by the responder (that had to read, process its contents and render a relevant textual response). Therefore, an edge from first author to the second author (responder) is considered.
 This is the ``information network'' of the system. Edges can be considered in the reverse
-order, from the responder to the original sender, as a signal of status attribution, as the responder
+order, from the responder to the original sender, representing status attribution, as the responder
 considered what the sender said worthy of responding. This is the ``status network''. As these networks
 are virtually equivalent, one considers but one of them, usually the information network.
 
@@ -205,90 +207,85 @@ are virtually equivalent, one considers but one of them, usually the information
 
 \subsection{Verbal observations}
 Each message has a textual content. 
-Analysis this content can be observed regarding author, network section or community, or messages independently.
+Analysis this content can observe author, network section or community, or messages independently.
 As these are informal communities, there are typos, leet and invented words.
 This diversity and informality poses some challanges, by which the methodology was shaped.
 Simply put, tokens (words, numbers, punctuations, etc) were considered. The words identified
 were related to gramatical classes.
-For the histograms, message by message were considered. For sections (hubs, intermediary and peripheral),
-all messages written by authors in each section considered together.
+For the histograms, independent messages were considered. For sections (hubs, intermediary and peripheral),
+all messages written by authors in each section were considered together.
 
 Tables~\ref{tab:cha} to~\ref{tab:sizesSents} are dedicated to these measures. No further considerations were needed for the hypothesis in hand. 
 
 \section{Methodology}\label{sec:methods}
-A dedicated article was written for characterizing such network from the topological viewpoint~\cite{evoSN}. 
-This article is dedicated to primary textual observances, both as overall incidences and correlated to topological aspects.
+An article was written for reporting stability in such networks from the topological viewpoint~\cite{evoSN}.
+This article is dedicated to reporting differentiation in the textual production of the network as conectivity changes. Here, the observance of primary textual statistics is needed, and both overall incidences, and correlation to topological aspects, were tackled.
 
-It is coherent to have participants as vertexes and as references for the messages sent, for the text produced and for activity related to sent time and date. This way, to observe the text produced in certain section, one might gather all text produced by all participants on that section. To observe correlation of textual and topological characteristics, one can take measures on each vertex.
+It is coherent to have participants as vertexes and as references for the messages sent, for the text produced and for activity (related to time and date). This way, to observe the text produced in a certain section, one might gather all text produced by all participants on that section. To observe correlation of textual and topological characteristics, one can take measures on each vertex.
 
-[Figura com uma rede pequena. Um dos vértices é escolhido para dar as características dele]
+%[Figura com uma rede pequena. Um dos vértices é escolhido para dar as características dele]
 
 \subsection{Network measurements and partitioning}
-Basic network measures of connectivity, in the same networks, were oberved in a dedicated article~\cite{evoSN}.
-This article uses the same topological measures to observe correlations and PCA formation.
-This article also uses the same network sectioning in peripheral, intermediary and hub sectors,
-through strengh measure. ``Exclusivist criteria'' for such partitionin is closest to literature
+Basic network measures of connectivity, in the same networks, were oberved in a previous article~\cite{evoSN}.
+The present article uses the same topological measures to observe correlations, PCA formation and network sectioning in peripheral, intermediary and hub sectors,
+through strengh measure. The ``exclusivist criteria'' for such partitionin is found to be the closest to literature
 predictions (5\% of hubs, 15\% of intermediary and 80\% of peripheral vertex). Even so, strengh-based
-criteria can be considered simpler and yields reasonable results (5-10\%, 5-25\%, 65-90\%).
-In any case, authors do not believe that changing the sectioning to a degree or a compound criteria
-would significantly change the presented results. Besides preliminary tests done whle mining the data,
-these are boudaries should probably be considered a transition, not a sharp distinction.
+criteria is simpler and yields reasonable results (5-10\%, 5-25\%, 65-90\%).
+Beyond that, changing the sectioning to a degree or a compound criteria did not significantly change the presented results.
+%Tests done while mining the data,
+%suggested that boudaries should not be considered sharp, but as smooth transitions.
 
 
 \subsection{Textual measures}
-An infinitude of textual measures can be drawn from texts. This work focuses on the simplest of them, as they proved sufficient for current intereses. These measures include incidences of word, sentence and message size, of individual words and letters, of plurals, gender, POS (Part-Of-Speech) tags. Simple wordnet related measures were also used. 
+An infinitude of textual measures can be drawn from texts. This work focuses on the simplest of them, as they proved sufficient for current interests. These measures include frequency of individual letters and punctuations (Tables~\ref{tab:cha}), of words and tokens (Table~\ref{tab:tokens}), sizes of tokens, sentences and messages (Table~\ref{tab:sizesTokens},~\ref{tab:sizesSents} and~\ref{tab:sizesMsgs}) and POS (Part-Of-Speech) tags (Table~\ref{tab:pos}). Other measures envisioned are in subsection~\ref{subsec:fw}.
 
 This choice is based on: 1) the lack of such information in literature, as far as authors know; 
-2) potential relations of these incidences with topological aspects, such as conectivity; 3) the interdependence of textual artifacts suggests that simple measures should reflect more complex behaviors and verbal resources.
+2) potential relations of these incidences with topological aspects, such as conectivity; 3) the interdependence of textual artifacts suggests that simple measures should reflect complex behaviors subtle aspects.
 A preliminary study, with all the work from Machado de Assis~\cite{letrasMachado}, made clear that these measures vary with respect to style.
 
 
-Based on characters, letters, tokens and word incidences and sizes, considered measures are:
+Considered measures are:
 \begin{itemize}
-    \item Number of characters: letters, numeric types and vogals. Table~\ref{tab:caracteres} is dedicated to selected measures of this type.
-    \item Number of tokens, percentage of puntcuations, of known words, of words that returns synsets, of tokens that are stopwords, of words that return synsets and and are stop words. Table~\ref{tab:tokens} is dedicated to some measures of this kind.
-    \item Distribution of word and token sizes, e.g. distribution of sizes of stopwords. Table~\ref{tab:sizesTokens} is dedicated to these measures.
-    \item Sentences size distribution. Number of empty lines (as paragraph/block organization measures). Table~\ref{tab:sizesSents} is dedicates to measures of this kind.
-    \item Number of characters and words per messages. Table~\ref{tab:sizesMsgs} is dedicated to these measures.
-    \item Histogram with respect to most occurent or most basic words and word types in the English language. Figures~\ref{fig:kw},~\ref{fig:kwnsw},~\ref{fig:kwssnsw},~\ref{fig:sw} and~\ref{fig:nssnsw}.
+    \item Frequency of characters: letters, vogals, punctuations and uppercase. Table~\ref{tab:cha} is dedicated to such measures.
+    \item Number of tokens, frequency of puntcuations, of known words, of words that has wordnet synsets, of tokens that are stopwords, of words that return synsets and are stop words, etc. Table~\ref{tab:tokens} is dedicated to measures of this kind.
+    \item Mean and standard deviation for word and token sizes. Table~\ref{tab:sizesTokens} is dedicated to these measures.
+    \item Mean and standard deviation of sentence sizes. Table~\ref{tab:sizesSents} is dedicates to this sort of measures.
+    \item Mean and standard deviation of message sizes. Table~\ref{tab:sizesMsgs} presents some of these measures.
+    \item Fraction of morphosyntactic classes, such as adverbs, adjectives and nouns, represented by POS (Part-Of-Speech) tags. Table~\ref{tab:pos} displays such measures.
 \end{itemize}
 
-Morpholinguistics and POS tags is also of interest. Table~\ref{tab:pos} is dedicated to these:
+\subsection{Topological measures}\label{subsec:top}
+Degree (in, out and total), strength (in, out and total), betweenness centrality and clustering coefficient were measured for each vertex in the interaction network. This served two purposes:
 \begin{itemize}
-    \item Fraction of plurals, gender, common prefixes and suffixes, etc.
-    \item Fraction of adverbs, adjectives, verbs, etc.
-    \item Fraction of incidences of POS tags and other sintagma classification.
+    \item Obtaining sound partitioning of the network in peripheral, intermediary and hub sectors. This was developed in a previous article by the same author~\cite{evoSN}.
+    \item Observance of correlation with textual measures and principal components formation.
 \end{itemize}
 
+These measures are not developed here extensively as they are very consolidated, simple, and was the core of the previous article on the subject of email interaction networks~\cite{evoSN}.
 
-Wordnet synsets incidences was studied as well, as a potentially useful way to characterize networks and sectors:
-\begin{itemize}
-    \item Incidence of hypernyms, hyponyms, holonyms and meronyms.
-    \item Similarity measures of words, phases and messages, by use of semantic criteria (Wordnet) and bag of words.
-\end{itemize}
-
-Emotion classification has not been done and considered out of the scope for this stage of development.
 
 %\subsection{Observation of structure}
 \subsection{Relating text and topology}
 Key observations for a deeper insight about network structure depend on
 theoretical background and intentions. For this article, these were considered:
 \begin{enumerate}
-    \item Incidences of these linguistic traces in hub, intermediary and peripheral network sectors.
-    \item Correlation of measures of each vertex, easing pattern detection involving topology of interaction and language used. Date and time incidence measures is also addressed, as potentially linked to participation habits and purposes (e.g. low dispersion of sent time).
-    \item PCA to gain further insights about how measures combine.
+    \item Incidences of linguistic traces in hub, intermediary and peripheral network sectors.
+    \item Correlation of measures of each vertex, easing pattern detection involving topology of interaction and language used.
+    \item PCA to gain further insights about how measures combine in principal components formation.
 \end{enumerate}
 
-Criteria for these priorization include integration with previous topological results, lack of concise results that
-could substantiate correlations of topological and textual traces, and common sense as mundane integrant of these networks.
+Criteria for this choice include integration with previous topological results, lack of concise results that
+could substantiate correlations of topological and textual traces, and common sense as a long-time integrant of these networks.
 
-First task, of textual production observance in hubs, intermedary and peripheral sectors, is observed by Tables~\ref{tab:caracteres}-\ref{tab:pos}. An adaptation of the Kolmogorov-Smirnof test was used to observe diferences in textual productions.
+First task, of textual production observance in hubs, intermedary and peripheral sectors, is observed by Tables~\ref{tab:cha}-\ref{tab:kolPctInter}. An adaptation of the Kolmogorov-Smirnof test was used to observe diferences in textual productions, as exposed in Appendix~\ref{sec:ks}.
 
-Second approach to relate text and topology is addressed by the correlation matrix with both textual and topological measurements of each participant. Third, principal components composition are used to deepen understanding of measurements interelation. 
+Second task is addressed by the correlation matrix with both textual and topological measurements of each participant, in Tables~\ref{tab:corTop}-\ref{tab:corTexTop}. Third, principal components composition are used to deepen understanding of measurements interrelation, in Tables~\ref{tab:pca1}-\ref{tab:pca5}. 
 
 \section{Results and discussion}\label{sec:results}
 
-Although the results drawn from experiments and statistics were diverse, some fundamental insights can be given by going through tables anf figures in the appendix. Most importantly: conectivity has strong influence in textual production of participants in the network. Hubs use more contractions, use more common words and less punctuation if compared to the rest of the network, specially the peripheral sector.
+Although the results drawn from experiments and statistics were diverse, some fundamental insights can be given by going through tables anf figures in the Appendix~\ref{sec:si}. Most importantly: conectivity has strong influence in textual production of participants in the network. For example: hubs use more contractions, more adjectives, more common words, and less punctuation if compared to the rest of the network, specially the peripheral sector. In general, rise or fall of a measure was costant, by some of them reached extreme values in the intermedary sector.
+
+Next subsections exibit particular results of interests. Nevertheless, many other results were encountered, some of them had no immediate explanation, to which is dedicated Appendix~\ref{sec:resE} and part of section~\ref{sec:remarks}.
 
 \subsection{General characteristics of activity distribution among participants}
 Hubs and peripheral swap number and participants and activity. While Peripheral sector has $\approx 75\%$ of participants, it produces $\approx 10\%$ of all messages. Conversely, hubs has $\approx 10\%$ of participants and produces $\approx 75\%$ of all messages. Fewer threads are created in proportion to total messages sent by the hubs, while threads created by peripheral are twice as common as messages in general.
@@ -336,8 +333,11 @@ Regarding characters and tokens, connectivity was related to smaller messages, e
 Further information is given in Table~\ref{tab:sizesMsgs}.
 
 \section{Final remarks}\label{sec:remarks}
-\subsection{Further work}
+\subsection{Further work}\label{subsec:fw}
 Current research, including this article, suggests that less connected participants bring external proposals, while hubs helps the network to process this new information being brought by peripheral and intermediary vertexes.
+
+Simple wordnet related measures were also used, of plurals, gender. 
+
 
 Similarity of texts in message-response threads has been thought about by authors, and some results are being organized. These are two hypothesis, obtained from recent experiments, which has to do with similarity measures:
 \begin{itemize}
@@ -345,6 +345,21 @@ Similarity of texts in message-response threads has been thought about by author
     \item autossimilarity of messages by same authors, of messages sent at the same period of the day, etc. This includes incidences of word sizes and outliers, incidences of tags and morphosintactic classes, incidences of particular synset characterisctics. This includes wordnet word distances.
 \end{itemize}
 For example, peripheric vertex messages should exhibit greater diversity. Self-similarity of messages might vary with respect to connectivity as well.
+
+mais coisa:
+\begin{itemize}
+    \item Histogram with respect to most occurent or most basic words and word types in the English language. Figures~\ref{fig:kw},~\ref{fig:kwnsw},~\ref{fig:kwssnsw},~\ref{fig:sw} and~\ref{fig:nssnsw}.
+    \item Fraction of plurals, gender, common prefixes and suffixes, etc.
+    \item Correlation of measures of each vertex, easing pattern detection involving topology of interaction and language used. ---> Date and time incidence measures should also addressed, as potentially linked to participation habits and purposes (e.g. low dispersion of sent time).
+\end{itemize}
+Wordnet synsets incidences was studied as well, as a potentially useful way to characterize networks and sectors:
+\begin{itemize}
+    \item Incidence of hypernyms, hyponyms, holonyms and meronyms.
+    \item Similarity measures of words, phases and messages, by use of semantic criteria (Wordnet) and bag of words.
+\end{itemize}
+
+Emotion classification has not been done and considered out of the scope for this stage of development.
+
 
 
 \section{Acknowledgments}
@@ -370,10 +385,10 @@ the Postgraduate Committee of the IFSC/USP.
 %\balancecolumns
 \newpage
 \appendix
-%Appendix A
-\section{Support information}
+\section{Adaptation of the Kolmogotov-Smirnof test}\label{sec:ks}
+\section{Support information}\label{sec:si}
 
-\begin{table*}\label{tab:bas}
+\begin{table*}
 %\scriptsize
   \centering
 \setlength{\tabcolsep}{.056667em}
@@ -398,7 +413,7 @@ $-M$               & 7     &-&-&-      & 4 &-&-&-          & 5 &-&-&-           
 $\Delta_Y$ & 7.44 & - & - & - &                                  6.25  & - & - & - & 2.08  & - & - & - &     9.37 & - & - & - \\ \hline 
   \end{tabular}
   \caption{Columns $date_1$ and $date_M$ have dates (month/day/year) of first and last messages from the 20,000 messages considered. $N$ is the number of participants (number of different email addresses). $M$ is number of messages. $\Gamma$ is the number of threads (count of messages without antecedent). $-M$ is messages missing in the 20,000 collection, $100\frac{54}{20000}=0.27/100$ in the worst case. ELE notably has the fewer participants and the larger number of threads. This relation holds for pairs of lists considered: as the number of participants increase, the number of threads decrease. A similar role is observed in MET list described in~\cite{evoSN}, suggesting that 1) Non-technical topics gathers fewer participants and yields shorter threds; 2) MET techno-political characteristic is confirmed by having intermediary $\frac{N}{\Gamma}$ relation, between ELE (politics) and LAD (highly technical - GNU/Linux and music). These results should be further investigated in future research (see section~\ref{subsec:fwork}). The number of threads started by hubs is significantly lower than activity for all list, this suggests creative exploitation is done by hubs. $\Delta_Y$ is number of years involved in the first 20,000 messages of each list. Dates of first and last message is: Mar/13/2002 and Aug/25/2009 for CPP; Jun/30/2003 and Oct/07/2009 for LAD; Jun/29/2003 and Jul/23/2005 for LAU; finally, Abr/18/2002 and Aug/31/2011 for ELE.}
-  \label{geralListas}
+  \label{geralListas}\label{tab:bas}
 \end{table*}
 
 \renewcommand{\arraystretch}{2}
@@ -428,7 +443,7 @@ $\left(\frac{n\,Uppercase}{n\,letters}\right)\times 100$  & 4.60 & 4.96 & 5.38 &
 %$\left(\frac{n\,Uppercase}{n\,letters}\right)\times 100$ & 4.60 & 4.96 & 5.38 & 3.55 \\\hline
   \end{tabular}
   \caption{Measures based on characters, of the text produced by network participants. These are fairly stable. Suggested relations are: 1) punctuations of CPP, that can be expected by its programming language focus and dots and semicolon abundance in such parlance; 2) greater number of letters on ELE is expected by its political disposition; 3) not statistically clear, but higher percentage of vogals might be a sign of erudition. Most of all, number of characters incident in ELE 20,000 messages are more then the other three lists added. MET has an intermediary value of 13,137,042 characters, above CPP, LAD, LAU and below ELE. This builds up to a dicothomic typology of networks: technical (more participants, fewer and longer threads, e.g. CPP) -- political (less participants, more and shorter threads, e.g. ELE). Higher incidence of digits and lower incidence of letters seem to be associated to technical subjects.}
-  \label{tab:caracteres}\label{tab:cha}
+  \label{tab:cha}
 \end{table*}
 
 \begin{table*}
@@ -762,7 +777,7 @@ $bc$ - $triangles$ & 0.9055 & 0.4769 & 0.6933 & 0.9031 & 0.9555 & 0.2694 & 0.409
 $IC$ - $IP$ & -1.0010 & -1.0012 & 0.0000 & 0.0000 & -1.0008 & -1.0011 & 0.0000 & 0.0000 & -1.0008 & -1.0011 & 0.0000 & 0.0000 & -1.0033 & -1.0045 & 0.0000 & 0.0000 \\ \hline
   \end{tabular}
   \caption{Correlation of topological measures.}
-  \label{tab:pos}
+  \label{tab:corTop}
 \end{table*}
 
 \newcolumntype{R}{>{}p{0.6cm}}
@@ -830,7 +845,7 @@ dtmT-dttmT & 0.989 & 0.976 & 0.997 & 1.015 & 0.982 & 0.980 & 0.984 & 0.994 & 0.8
 mlwss-dlwss & 0.804 & 0.809 & 0.792 & 0.648 & 0.852 & 0.852 & 0.889 & 0.823 & 0.841 & 0.837 & 0.925 & 0.854 & 0.904 & 0.909 & 0.802 & 0.906 \\ \hline
 mtamH-mprof & 0.994 & 0.995 & 1.004 & 1.016 & 0.997 & 0.997 & 1.001 & 1.006 & 0.997 & 0.997 & 1.004 & 1.005 & 1.000 & 1.001 & 1.026 & 1.023 \\ \hline
 dtamH-dprof & 0.996 & 0.997 & 1.001 & 1.016 & 0.999 & 0.999 & 1.003 & 1.000 & 0.999 & 0.999 & 1.006 & 1.003 & 1.002 & 1.003 & 1.021 & 1.022 \\ \hline
-  \caption{Correlation of textual measures.}
+  \caption{Correlation of textual measures.}\label{tab:corTex}
 \end{longtable}
 
 
@@ -877,7 +892,7 @@ ntd-$in\;cent$ & 0.523 & 0.036 & -0.019 & 0.451 & 0.631 & 0.096 & 0.105 & 0.318 
 ntd-sector & 0.686 & 0.000 & 0.000 & 0.000 & 0.778 & 0.000 & 0.000 & 0.000 & 0.784 & 0.000 & 0.000 & 0.000 & 0.837 & 0.000 & 0.000 & 0.000 \\ \hline
 ntd/nt-sector & -0.547 & 0.000 & 0.000 & 0.000 & -0.603 & 0.000 & 0.000 & 0.000 & -0.571 & 0.000 & 0.000 & 0.000 & -0.603 & 0.000 & 0.000 & 0.000 \\ \hline
 mtsw2\_-sector & 0.555 & 0.000 & 0.000 & 0.000 & 0.546 & 0.000 & 0.000 & 0.000 & 0.502 & 0.000 & 0.000 & 0.000 & 0.683 & 0.000 & 0.000 & 0.000 \\ \hline
-  \caption{Correlation of textual and topological measures.}
+  \caption{Correlation of textual and topological measures.}\label{tab:corTexTop}
 \end{longtable}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -912,7 +927,7 @@ VBG & 0.19 & -0.68 & 1.10 & -1.29 & 0.18 & 0.89 & 0.37 & 0.90 & 5.63 & -0.40 & 0
 IN & -1.74 & 0.32 & -0.56 & -1.24 & 1.55 & 0.44 & -0.23 & 1.27 & -5.74 & -0.44 & -1.66 & -0.60 & 1.09 & 0.32 & 0.00 & 0.00 \\\hline
 PRP\$ & 6.51 & 0.22 & 0.29 & 0.41 & -0.77 & -0.18 & -0.11 & 0.25 & -0.26 & 0.22 & 0.14 & -0.08 & 0.14 & 0.34 & 0.00 & 0.00 \\\hline
 PDT & 5.12 & 0.11 & 0.24 & 0.41 & -0.14 & -0.15 & 0.19 & -0.25 & 0.31 & 0.56 & -0.43 & 0.40 & -1.40 & -0.37 & 0.00 & 0.00 \\\hline
-  \caption{Composition of first component (threshold that |val|>0.05).}
+  \caption{Composition of first component (threshold that |val|>0.05).}\label{tab:pca1}
 \end{longtable}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% 1
@@ -945,7 +960,7 @@ $s_o$ & -0.71 & 2.39 & -1.52 & 0.25 & 0.20 & 8.51 & -0.11 & 0.23 & -1.57 & -6.21
 $bc$ & 0.70 & 1.55 & 0.11 & -0.18 & -11.23 & -0.12 & -0.17 & 0.05 & -11.59 & 0.59 & 0.42 & 0.76 & -9.01 & -0.59 & -0.20 & 0.78 \\\hline
 $tri$ & -0.07 & 8.58 & 0.00 & -0.45 & -5.88 & -0.46 & 0.00 & 0.00 & -2.17 & 0.02 & 0.00 & -0.00 & -3.52 & -0.25 & -0.98 & 0.03 \\\hline
 $in\;cent$ & 15.09 & -0.00 & 0.00 & 0.53 & -0.06 & 0.00 & 0.00 & 0.00 & 0.15 & -0.00 & 0.00 & 0.00 & -0.79 & -0.00 & 0.06 & 1.25 \\\hline
-  \caption{Composition of second component (threshold that |val|>0.05).}
+  \caption{Composition of second component (threshold that |val|>0.05).}\label{tab:pca2}
 \end{longtable}
 
 
@@ -974,7 +989,7 @@ dttmT & 0.90 & -0.20 & -2.54 & 2.69 & 3.68 & 3.77 & -0.22 & -0.18 & -3.64 & 2.06
 mtsmT & -0.33 & -5.56 & 4.20 & 1.39 & 5.68 & -4.48 & 2.97 & 2.34 & 3.76 & -7.62 & 0.84 & 1.13 & 9.98 & 2.51 & -1.52 & -1.03 \\\hline
 dtsmT & -1.96 & 0.77 & 2.26 & -0.26 & 1.79 & 0.92 & 0.06 & -0.03 & 5.00 & 1.80 & -2.45 & 2.24 & 1.99 & -5.87 & 0.34 & 1.25 \\\hline
 NN & 2.78 & 0.13 & 0.15 & 1.10 & -0.60 & 6.82 & -0.07 & -0.10 & -2.70 & 4.95 & 1.05 & -1.69 & 0.46 & 3.08 & 0.34 & 1.25 \\\hline
-  \caption{Composition of third component (threshold that |val|>0.05).}
+  \caption{Composition of third component (threshold that |val|>0.05).}\label{tab:pca3}
 \end{longtable}
 
 
@@ -1009,7 +1024,7 @@ $bc$ & -0.17 & -0.06 & 0.03 & -0.71 & -0.11 & -0.14 & -1.03 & -0.92 & 0.02 & 0.2
 $tri$ & 1.09 & 0.11 & 0.00 & -0.31 & 0.11 & 14.18 & -0.00 & -0.00 & 1.23 & -0.40 & -0.00 & 0.00 & 3.12 & -1.50 & -0.49 & -0.24 \\\hline
 $cv$ & -0.24 & 0.24 & 0.00 & -0.25 & -2.62 & -4.41 & 0.00 & 0.00 & 0.34 & -15.74 & 0.00 & 0.00 & 14.09 & 16.09 & -0.36 & -0.24 \\\hline
 $in\;cent$ & 0.02 & -0.00 & 0.00 & -0.25 & 14.87 & 0.00 & 0.00 & 0.00 & 16.34 & -0.00 & -0.00 & 0.00 & 3.57 & -0.00 & -0.36 & -0.51 \\\hline
-  \caption{Composition of fourth component (threshold that |val|>0.05).}
+  \caption{Composition of fourth component (threshold that |val|>0.05).}\label{tab:pca4}
 \end{longtable}
 
 
@@ -1033,10 +1048,11 @@ dtsTS & -0.97 & 3.59 & -1.47 & 0.09 & 5.70 & 0.45 & 2.78 & 0.45 & -3.19 & 6.97 &
 dtsTSkw & 0.03 & -1.95 & 0.87 & -1.14 & -5.87 & -2.23 & 0.06 & -2.74 & -6.87 & -4.49 & -0.07 & 1.36 & 2.53 & -0.85 & -0.44 & -0.20 \\\hline
 dtsTSpv & 1.87 & -0.41 & 0.82 & 3.16 & 2.28 & -5.32 & -1.16 & 1.35 & 4.05 & -4.68 & 3.13 & -0.67 & 3.68 & 3.04 & -0.58 & -0.84 \\\hline
 sector & 0.00 & 0.00 & 0.00 & 0.48 & 0.00 & 0.00 & 0.00 & -0.00 & 0.00 & 0.00 & 0.00 & 0.00 & -0.00 & -0.00 & 11.05 & 1.52 \\\hline
-  \caption{Composition of fifth component (threshold that |val|>0.05).}
+  \caption{Composition of fifth component (threshold that |val|>0.05).}\label{tab:pca5}
 \end{longtable}
 
 
+\section{Example of unexplained results}\label{sec:resE}
 
 \begin{figure*}[hb]
     \centering
