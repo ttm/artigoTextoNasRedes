@@ -155,10 +155,9 @@ Instituto de F\'isica de S\~ao Carlos, Universidade de S\~ao Paulo (IFSC/USP)%\\
 This paper explores textual production in interaction networks, 
 with special emphasis on its relation to topological measures. 
 Four email lists were selected, in which measures were taken from the texts participants wrote. 
-Peripheral, intermediary and hub sectors of these networks were observed to have discrepant linguistic ellaborations.
+Peripheral, intermediary and hub sectors of these networks were observed to have discrepant linguistic elaborations.
 For completeness of exposition, correlation of textual and topological measures were observed for the entire network
-and for each connective sector. The formation of principal components gives us further insight of how measures
-are related.
+and for each connective sector. The formation of principal components is used for further insights of how measures are related.
 \end{abstract}
 
 \pacs{89.75.Fb,05.65.+b,89.65.-s}
@@ -166,120 +165,119 @@ are related.
 \maketitle
 \section{Introduction}
 Textual production has received considerable attention from the social network analysis community.
-Sentiment analysis and vocabularies related to different parties are among a number of examples~\cite{ex}.
+Sentiment analysis and vocabularies related to different parties are among a number of examples~\cite{easley}.
 The relation of topological and textual measures is the subject of this article, for the following reasons:
 \begin{itemize}
-    \item This relation has been set aside in literature, with scattered and vage suggestions of mutual implications of the text produced and topological characteristics of the agents in the network~\cite{texNet}.
-    \item This results eases undestanding of human interaction, which is useful for both psichological and anthropological typologies (personality and cultural ``types'')~\cite{Deborah}.
-    \item There are interesting hypothesis about verbal differentiation of network sections and groups, derived from a previous article by the same author~\cite{rede1}, some of which were herein confirmed.
+    \item This relation has been set aside in literature, with scattered and vague suggestions of mutual implications of the text produced and topological characteristics of the agents in the network~\cite{easley}.
+    \item This results eases understanding of human interaction, which is useful for both psychological and anthropological typologies (personality and cultural ``types'')~\cite{Deborah}.
+    \item There are interesting hypothesis about verbal differentiation of network sections and groups, derived from a previous article by the same author~\cite{evoSN}, some of which were herein confirmed.
 \end{itemize}
 
-Next section exposes the email lists used for this research, its textual and network facets.
+Next section exposes materials used for this research, its textual and network facets.
 Section~\ref{sec:methods} explains the analysis roadmap, with the measures chosen and methods
 for understanding data. Section~\ref{sec:results} is dedicated to detailing results and discussion.
-Section~\ref{sec:remarks} has concluding remarks and further works envisioned.
+Section~\ref{sec:remarks} has concluding remarks and further works envisioned. Appendices hold information about mailing lists, tables, results still to interpret and directions on data and scripts.
 
 \section{Materials}\label{sec:materials}
-Eighty thousand messages were analysed, twenty thousand from each email list.
+Eighty thousand messages were analysed, twenty thousand from each email list (see Appendix~\ref{sec:si}).
 This data was accessed online through the GMANE database~\cite{GMANE}. Each message
 has an ID, the ID of the message it is a response to (if any), an author,
 a ``date and time'' field registering the moment the message was sent, and the textual content.
-Other fields are also available, but plays no central role in the work here presented.
-This basic information of messages and authors are summarized in Table~\ref{tab:bas}.
+Other fields are also available, but plays no direct role in the work here presented.
+Basic information of messages, threads and authors are summarized in Table~\ref{tab:bas}.
 
 \subsection{Network formation}\label{subsec:net}
-Message-response pairs yield interaction networks, such as shown in Figure~\ref{formationNetwork}.
-Each participant is represented as a vertex, and each response is considered evidence that
-information emited by the first author was received
-by the responder (that had to read, process its contents and render a relevant textual response). Therefore, an edge from first author to the second author (responder) is considered.
-This is the ``information network'' of the system. Edges can be considered in the reverse
-order, from the responder to the original sender, representing status attribution, as the responder
-considered what the sender said worthy of responding. This is the ``status network''. As these networks
-are virtually equivalent, one considers but one of them, usually the information network.
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.3\textwidth]{figs/criaRede_}
-    \caption{Formation of interaction network. The edges are directed as information flows, from
+    \caption{Formation of interaction network. Edges are directed as information flows, from
     an original message's author to the observed responder. Further information is given in Section~\ref{subsec:net}}
     \label{formationNetwork}
 \end{figure}
 
+Message-response pairs yield interaction networks, such as shown in Figure~\ref{formationNetwork}.
+Each participant is represented by a vertex, and each response is considered evidence that
+information emitted by the first author was received
+by the responder (that had to read, process its contents and render a relevant textual response). Therefore, an edge from first author to the second author (responder) is considered.
+This is the ``information network'' of the system. Edges can be considered in the reverse
+order, from the responder to the original sender, representing status attribution, as the responder
+considered what the sender said worthy of responding and is directing his attention to him. This is the ``status network''. As these networks
+are virtually equivalent, one considers but one of them, usually the information network.
+
 \subsection{Verbal observations}
 Each message has a textual content. 
-Analysis this content can observe author, network section or community, or messages independently.
-As these are informal communities, there are typos, leet and invented words.
-This diversity and informality poses some challanges, by which the methodology was shaped.
-Simply put, tokens (words, numbers, punctuations, etc) were considered. The words identified
-were related to gramatical classes.
-For the histograms, independent messages were considered. For sections (hubs, intermediary and peripheral),
-all messages written by authors in each section were considered together.
-
-Tables~\ref{tab:cha} to~\ref{tab:sizesSents} are dedicated to these measures. No further considerations were needed for the hypothesis in hand. 
+Analysis this content can consider author, network section or community, or messages independently.
+As these are informal communities, there are typos, \emph{leet} and invented words.
+This diversity and informality poses some challenges, by which the methodology was shaped.
 
 \section{Methodology}\label{sec:methods}
 An article was written for reporting stability in such networks from the topological viewpoint~\cite{evoSN}.
-This article is dedicated to reporting differentiation in the textual production of the network as conectivity changes. Here, the observance of primary textual statistics is needed, and both overall incidences, and correlation to topological aspects, were tackled.
+This article is dedicated to reporting differentiation in the textual production of the network as connectivity changes. Here, the observance of primary textual statistics is needed, and both overall incidences, and correlation to topological aspects, were tackled.
 
-It is coherent to have participants as vertexes and as references for the messages sent, for the text produced and for activity (related to time and date). This way, to observe the text produced in a certain section, one might gather all text produced by all participants on that section. To observe correlation of textual and topological characteristics, one can take measures on each vertex.
-
-%[Figura com uma rede pequena. Um dos vértices é escolhido para dar as características dele]
+It is coherent to have participants as vertexes and as references for the messages sent, for the text produced and for activity (related to time and date). Thus, to observe the text produced in a certain section, one might gather all text produced by all participants on that section. To observe correlation of textual and topological characteristics, one can take measures on each vertex.
 
 \subsection{Network measurements and partitioning}
-Basic network measures of connectivity, in the same networks, were oberved in a previous article~\cite{evoSN}.
+Basic network measures of connectivity, in the same networks, were observed in a previous article~\cite{evoSN}.
 The present article uses the same topological measures to observe correlations, PCA formation and network sectioning in peripheral, intermediary and hub sectors,
-through strengh measure. The ``exclusivist criteria'' for such partitionin is found to be the closest to literature
-predictions (5\% of hubs, 15\% of intermediary and 80\% of peripheral vertex). Even so, strengh-based
+through strength measure. As described in that article, the ``exclusivist criteria'' for such partitioning is found to be the closest to literature
+predictions (5\% of hubs, 15\% of intermediary and 80\% of peripheral vertex). Even so, strength-based
 criteria is simpler and yields reasonable results (5-10\%, 5-25\%, 65-90\%).
 Beyond that, changing the sectioning to a degree or a compound criteria did not significantly change the presented results.
+
+Consequently, herein is considered a strength partitioning each sector (periphery, intermediary, hubs) is regarded as a \emph{primitive sector} of the \emph{primitive partitioning}.
+
 %Tests done while mining the data,
 %suggested that boudaries should not be considered sharp, but as smooth transitions.
 
 
 \subsection{Textual measures}
-An infinitude of textual measures can be drawn from texts. This work focuses on the simplest of them, as they proved sufficient for current interests. These measures include frequency of individual letters and punctuations (Tables~\ref{tab:cha}), of words and tokens (Table~\ref{tab:tokens}), sizes of tokens, sentences and messages (Table~\ref{tab:sizesTokens},~\ref{tab:sizesSents} and~\ref{tab:sizesMsgs}) and POS (Part-Of-Speech) tags (Table~\ref{tab:pos}). Other measures envisioned are in subsection~\ref{subsec:fw}.
+An infinitude of textual measures can be drawn from texts. This work focuses on the simplest of them, as they proved sufficient for current step. These measures include frequency of individual letters and punctuations (Tables~\ref{tab:cha}), of words and tokens (Table~\ref{tab:tokens}), sizes of tokens, sentences and messages (Table~\ref{tab:sizesTokens},~\ref{tab:sizesSents} and~\ref{tab:sizesMsgs}) and POS (Part-Of-Speech) tags (Table~\ref{tab:pos}). Other measures envisioned are in subsection~\ref{subsec:fw}.
 
 This choice is based on: 1) the lack of such information in literature, as far as authors know; 
-2) potential relations of these incidences with topological aspects, such as conectivity; 3) the interdependence of textual artifacts suggests that simple measures should reflect complex behaviors subtle aspects.
+2) potential relations of these incidences with topological aspects, such as connectivity; 3) the interdependence of textual artifacts suggests that simple measures should reflect complex behaviors subtle aspects.
 A preliminary study, with all the work from Machado de Assis~\cite{letrasMachado}, made clear that these measures vary with respect to style.
 
 
 Considered measures are:
 \begin{itemize}
-    \item Frequency of characters: letters, vogals, punctuations and uppercase. Table~\ref{tab:cha} is dedicated to such measures.
-    \item Number of tokens, frequency of puntcuations, of known words, of words that has wordnet synsets, of tokens that are stopwords, of words that return synsets and are stop words, etc. Table~\ref{tab:tokens} is dedicated to measures of this kind.
+    \item Frequency of characters: letters, vowels, punctuations and uppercase. Table~\ref{tab:cha} is dedicated to such measures.
+    \item Number of tokens, frequency of punctuations, of known words, of words that has wordnet synsets, of tokens that are stopwords, of words that return synsets and are stop words, etc. Table~\ref{tab:tokens} is dedicated to measures of this kind.
     \item Mean and standard deviation for word and token sizes. Table~\ref{tab:sizesTokens} is dedicated to these measures.
     \item Mean and standard deviation of sentence sizes. Table~\ref{tab:sizesSents} is dedicates to this sort of measures.
     \item Mean and standard deviation of message sizes. Table~\ref{tab:sizesMsgs} presents some of these measures.
     \item Fraction of morphosyntactic classes, such as adverbs, adjectives and nouns, represented by POS (Part-Of-Speech) tags. Table~\ref{tab:pos} displays such measures.
 \end{itemize}
 
+For sections (hubs, intermediary and peripheral),
+all messages written by authors in each section were considered together. For the histograms, independent messages were considered from each sector. 
+
 \subsection{Topological measures}\label{subsec:top}
 Degree (in, out and total), strength (in, out and total), betweenness centrality and clustering coefficient were measured for each vertex in the interaction network. This served two purposes:
 \begin{itemize}
-    \item Obtaining sound partitioning of the network in peripheral, intermediary and hub sectors. This was developed in a previous article by the same author~\cite{evoSN}.
+    \item Obtaining a sound partitioning of the network in peripheral, intermediary and hub sectors. This was developed in a previous article by the same author~\cite{evoSN}.
     \item Observance of correlation with textual measures and principal components formation.
 \end{itemize}
 
-These measures are not developed here extensively as they are very consolidated, simple, and was the core of the previous article on the subject of email interaction networks~\cite{evoSN}.
+These measures are not developed here extensively as they are very consolidated, simple, and was the core of a previous article this subject by the same author~\cite{evoSN}.
 
 
 %\subsection{Observation of structure}
 \subsection{Relating text and topology}
 Key observations for a deeper insight about network structure depend on
-theoretical background and intentions. For this article, these were considered:
+theoretical background and intentions. For this article, were considered:
 \begin{enumerate}
     \item Incidences of linguistic traces in hub, intermediary and peripheral network sectors.
     \item Correlation of measures of each vertex, easing pattern detection involving topology of interaction and language used.
     \item PCA to gain further insights about how measures combine in principal components formation.
 \end{enumerate}
 
-Criteria for this choice include integration with previous topological results, lack of concise results that
-could substantiate correlations of topological and textual traces, and common sense as a long-time integrant of these networks.
+Criteria for this choice include integration with previous topological results, lack of concise results in literature (as far as author knows) that
+could substantiate correlations of topological and textual traces, and common sense as a long-time member of these networks.
 
-First task, of textual production observance in hubs, intermedary and peripheral sectors, is observed by Tables~\ref{tab:cha}-\ref{tab:kolPctInter}. An adaptation of the Kolmogorov-Smirnof test was used to observe diferences in textual productions, as exposed in Appendix~\ref{sec:ks}.
+First task, of textual production in hubs, intermediary and peripheral sectors, is observed by Tables~\ref{tab:cha}-\ref{tab:kolPctInter}. An adaptation of the Kolmogorov-Smirnof test was used to observe differences in textual productions, as exposed in Appendix~\ref{sec:ks}.
 
-Second task is addressed by the correlation matrix with both textual and topological measurements of each participant, in Tables~\ref{tab:corTop}-\ref{tab:corTexTop}. Third, principal components composition are used to deepen understanding of measurements interrelation, in Tables~\ref{tab:pca1}-\ref{tab:pca5}. 
+Second task is addressed by the correlation matrix with both textual and topological measurements of each participant, in Tables~\ref{tab:corTop}-\ref{tab:corTexTop}. Third, principal components composition are in Tables~\ref{tab:pca1}-\ref{tab:pca5}. 
 
 \section{Results and discussion}\label{sec:results}
 
