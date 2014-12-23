@@ -403,10 +403,14 @@ Wordnet synsets incidences was studied as well, as a potentially useful way to c
 
 
 \section{Acknowledgments}
-Renato Fabbri is grateful to CNPq (project 870336/1997-5) and 
-the Postgraduate Committee of the IFSC/USP.
-
-
+Renato Fabbri is grateful to CNPq 
+(processo 140860/2013-4, project 870336/1997-5),
+the Postgraduate Committee of the IFSC/USP,
+Prof. Dr. Leonardo Paulo Maia for the insights
+which lead to the adaptation of the Kolmogorov-Smirnov
+test presented in Appendix~\ref{sec:ks}, to the GMANE
+developers and maintainers and to participants of the
+mailing lists analysed.
 
 %
 % The following two commands are all you need in the
@@ -425,7 +429,32 @@ the Postgraduate Committee of the IFSC/USP.
 %\balancecolumns
 \newpage
 \appendix
-\section{Adaptation of the Kolmogotov-Smirnof test}\label{sec:ks}
+\section{Adaptation of the Kolmogotov-Smirnov test}\label{sec:ks}
+\subsection{Canonical Kolmogorov-Smirnov test}
+Be $F_{1,n}$ and $F_{2,n'}$ two empirical distribution functions, where $n$ and $n'$ are the number of observations on each sample. The two-sample Kolmogorov-Smirnov test rejects the null hypothesis if:
+\begin{equation}\label{eq:ks}
+D_{n,n'} > c(\alpha)\sqrt{\frac{n+n'}{nn'}}
+\end{equation}
+
+where $D_{n,n'}=sup_x[F_{1,n}-F_{2,n'}]$ and $c(\alpha)$ is given for each level of $\alpha$:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l||c|c|c|c|c|c|}\hline
+$\alpha$    & 0.1  & 0.05 & 0.025 & 0.01 & 0.005 & 0.001 \\\hline
+$c(\alpha)$ & 1.22 & 1.36 & 1.48  & 1.63 & 1.73  & 1.95  \\\hline
+\end{tabular}
+\end{table}
+
+\subsection{Adaptation}
+We need to compare empirical distributions functions, so $D_{n,n'}$ is given, as are $n$ and $n'$. Therefore, as all terms in equation~\ref{eq:ks} are positive, $c(\alpha)$ can be isolated:
+
+\begin{equation}\label{eq:ks2}
+c(\alpha) < \frac{D_{n,n'}}{\sqrt{\frac{n+n'}{nn'}}} = c'(\alpha)
+\end{equation}
+
+In Tables~\ref{tab:kolSub}-\ref{tab:kolPctInter} are values for $c'(\alpha)$. When $c'(\alpha)$ is high, low values of $\alpha$ are possible for the test to reject the null hypothesis. Therefore, when $c'(\alpha)$ is greater than $\approx 1.7$, it is reasonable to assume that $F_{1,n}$ and $F_{2,n'}$ differ.
+
 \section{Support information}\label{sec:si}
 \subsection{Brief description of GMANE and the email lists chosen}\label{subsec:gm}
 \subsection{Meaning of achronims in the following tables}
