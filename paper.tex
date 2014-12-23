@@ -23,6 +23,7 @@
 \usepackage{bm}% bold math
 %\usepackage[mathlines]{lineno}% Enable numbering of text and display math
 %\linenumbers\relax % Commence numbering lines
+\usepackage{hyperref}
 \usepackage{multirow}
 \usepackage{color} % for the notes
 \usepackage{etex}
@@ -285,7 +286,7 @@ Although the results drawn from experiments and statistics were diverse, some fu
 
 Next subsections exhibit particular results of interests.
 
-\subsection{General characteristics of activity distribution among participants}
+\subsection{General characteristics of activity distribution among participants}\label{sec:gen}
 Hubs and periphery swap fraction of participants and activity. While peripheral sector has $\approx 75\%$ of participants, it produces $\approx 10\%$ of all messages. Conversely, hubs has $\approx 10\%$ of participants and produces $\approx 75\%$ of all messages. Fewer threads are created in proportion to total messages sent by the hubs, while threads created by peripheral are twice as frequent as general peripheral messages.
 This suggests a symbiosis of peripheral diversity and hub activity. 
 
@@ -310,27 +311,27 @@ Words with synsets, among known English words, are less frequent in hubs further
 
 Further information is given in Table~\ref{tab:tokens}.
 
-\subsection{Sizes of tokens and words}
+\subsection{Sizes of tokens and words}\label{subsec:tw2}
 Sizes of known words are smaller for hubs, which suggests its use of more common words, although some of the previous results suggests that hubs have a very differentiated and specialized vocabulary. Larger words seems to be related to intermediary sector, which might be related to cultured vocabulary.
 
 Further information is given in Table~\ref{tab:sizesTokens}.
 
-\subsection{Sizes of sentences}
+\subsection{Sizes of sentences}\label{subsec:ss}
 Hubs present the lowest average sentence size, both in characters and in tokens. Also, the incidence of usual known words seems to decay with connectivity, as does the number of known words with synsets.
 
 Further information is given in Table~\ref{tab:sizesSents}.
 
-\subsection{Messages}
+\subsection{Messages}\label{subsec:mm}
 Regarding characters and tokens, connectivity was related to smaller messages. ELE list displayed an inverse situation: the more connected the sector, the longer the messages are. This was considered a peculiarity of the culture bonded with the political subject of ELE list, to be further verified. Regarding sentences, the size of messages seem to hold steady until hubs are reached.
 
 Further information is given in Table~\ref{tab:sizesMsgs}.
 
-\subsection{POS tags}
+\subsection{POS tags}\label{subsec:pos}
 Lower connectivity delivers more nouns and less adjectives, adverbs and verbs. This suggests that the networks collect issues important to the world by the peripheral sector. These issues are qualified, elaborated about, by the more connected participants.
 
 Further information is given in Table~\ref{tab:pos}.
 
-\subsection{Differentiation of measures}
+\subsection{Differentiation of measures}\label{subsec:di}
 The Kolmogorov-Smirnov test was adapted for our need to compare measures.
 Results suggests that the texts produced by each sector is very distinct.
 Counterintuitively, intermediary sector sometimes yields a greater difference from periphery and hubs than these extreme sectors themselves (Tables~\ref{tab:kolSub} and~\ref{tab:kolSw}).
@@ -341,17 +342,17 @@ At the core of the results presented on this article, are two strong and immedia
     \item Differences between sectors on the same network (Tables~\ref{tab:kolSub},~\ref{tab:kolAdj},~\ref{tab:kolSw} and~\ref{tab:kolPct}) are bigger than differences between same sector from distinct lists (Tables~\ref{tab:kolSubInter},~\ref{tab:kolAdjInter},~\ref{tab:kolSwInter} and~\ref{tab:kolPctInter}).
 \end{itemize}
 
-\subsection{Correlation of measures}
+\subsection{Correlation of measures}\label{subsec:cor}
 
 Correlation of degree (how many participants the participant related to) and strength (how many interactions) measures is substantially smaller for intermediary sector. This raises interesting inquiries, to which the reader is invited, along with further analysis of Tables~\ref{tab:corTop},~\ref{tab:corTex} and~\ref{tab:corTexTop}, as detailing their interpretation goes beyond the scope of this article. Noteworthy is the negative correlation of degree and message size (number of characters, tokens or sentences) that intermediaries presented.
 
-\subsection{Formation of principal components}
+\subsection{Formation of principal components}\label{subsec:pc}
 
 Principal components formation seem to be the less stable of all features considered. First component, with $\approx 25\%$ of dispersion, relies heavily on POS tags, and slightly on sizes of tokens, sentences and messages. Second component, with almost $12\%$ of dispersion, blends topology, POS tags and size measures. Third component, with about $8.5\%$ is based on nouns frequency and size measures. Fourth and fifth components present less than $5\%$ of total dispersion, but are included for completeness of exposition.
 
 Tables~\ref{tab:pca1}-\ref{tab:pca5} exhibit these and further insights.
 
-\subsection{Results still to be interpreted}
+\subsection{Results still to be interpreted}\label{subsec:sii}
 These networks yield diverse characteristics, some of which were not of core importance for this step of the research. Even so, at least one of these characteristics was found interesting enough to be considered a result and an example of interesting artifacts found.
 
 Histogram differences of incident and existent word sizes were found constant. That is, in each list, when a histogram of word sizes were made with all words written, and another histogram made with sizes of all \emph{different} words, the cumulative positive difference of the two histograms were found constant for all lists analysed. When all known English words were considered, the difference was always $\approx 1.0$. When stopwords were discarded, the difference found was different, but still constant, slightly above $0.5$. When only stopwords were considered, the difference was $\approx 0.6$. When only known English words that does not have wordnet synsets are used, this difference is $\approx 1.2$.
@@ -446,19 +447,19 @@ $c(\alpha)$ & 1.22 & 1.36 & 1.48  & 1.63 & 1.73  & 1.95  \\\hline
 \end{table}
 
 \subsection{Adaptation}
-We need to compare empirical distributions functions, so $D_{n,n'}$ is given, as are $n$ and $n'$. Therefore, as all terms in equation~\ref{eq:ks} are positive, $c(\alpha)$ can be isolated:
+We need to compare empirical distribution functions, so $D_{n,n'}$ is given, as are $n$ and $n'$. Therefore, as all terms in equation~\ref{eq:ks} are positive and $c(\alpha)$ can be isolated:
 
 \begin{equation}\label{eq:ks2}
 c(\alpha) < \frac{D_{n,n'}}{\sqrt{\frac{n+n'}{nn'}}} = c'(\alpha)
 \end{equation}
 
-In Tables~\ref{tab:kolSub}-\ref{tab:kolPctInter} are values for $c'(\alpha)$. When $c'(\alpha)$ is high, low values of $\alpha$ are possible for the test to reject the null hypothesis. Therefore, when $c'(\alpha)$ is greater than $\approx 1.7$, it is reasonable to assume that $F_{1,n}$ and $F_{2,n'}$ differ.
+Tables~\ref{tab:kolSub}-\ref{tab:kolPctInter} are populated with values for $c'(\alpha)$. When $c'(\alpha)$ is high, low values of $\alpha$ are possible for the test to reject the null hypothesis. Therefore, when $c'(\alpha)$ is greater than $\approx 1.7$, it is reasonable to assume that $F_{1,n}$ and $F_{2,n'}$ differ.
 
 \section{Support information}\label{sec:si}
-\subsection{Brief description of GMANE and the email lists chosen}\label{subsec:gm}
-Four email lists were selected, in a similar fashion developed in~\cite{evoSN}, but with MET substituted by ELE list so that all lists are in English. The lists are:
+\subsection{Brief description of the email lists chosen}\label{subsec:gm}
+GMANE is a public email list database with some tenths of thousand of lists~\cite{GMANE}. Four email lists were selected, in a similar fashion developed in~\cite{evoSN}, but with MET substituted by ELE list so that all lists are in English. The lists are:
 \begin{itemize}
-    \item CPP, the development list for the standard C++ library\footnote{gmane.comp.gcc.libstdc++.devel is list ID in GMANE archive.}. Dominated by specialized computer programmers.
+    \item CPP, the development list of the standard C++ library\footnote{gmane.comp.gcc.libstdc++.devel is list ID in GMANE archive.}. Dominated by specialized computer programmers.
     \item LAD: Linux Audio Developers list\footnote{gmane.linux.audio.devel is list ID in GMANE archive.}.
     \item LAU: Linux Audio Users list\footnote{gmane.linux.audio.users is list ID in GMANE archive.}.
     \item ELE: list for discussion of the election reform\footnote{gmane.politics.election-methods is list ID in GMANE archive}.
@@ -487,7 +488,7 @@ Other symbols are explained on the tables itself. Some concepts, such as \emph{c
 \subsection{Tables}
 
 \begin{table*}
-%\scriptsize
+\footnotesize
   \centering
 \setlength{\tabcolsep}{.056667em}
   \begin{tabular}{|l|| c|c|c|c||  c|c|c|c||   c|c|c|c||   c|c|c|c|}\hline
@@ -510,7 +511,7 @@ $\Gamma_{\%}$  & - & 20.51\% & 15.58\% & {\bf 63.91\%} & - & 26.08\% & 21.52\% &
 $-M$               & 7     &-&-&-      & 4 &-&-&-          & 5 &-&-&-           & 54 &-&-&-   \\ \hline
 $\Delta_Y$ & 7.44 & - & - & - &                                  6.25  & - & - & - & 2.08  & - & - & - &     9.37 & - & - & - \\ \hline 
   \end{tabular}
-  \caption{Columns $date_1$ and $date_M$ have dates (month/day/year) of first and last messages from the 20,000 messages considered. $N$ is the number of participants (number of different email addresses). $M$ is number of messages. $\Gamma$ is the number of threads (count of messages without antecedent). $-M$ is messages missing in the 20,000 collection, $100\frac{54}{20000}=0.27/100$ in the worst case. ELE notably has the fewer participants and the larger number of threads. This relation holds for pairs of lists considered: as the number of participants increase, the number of threads decrease. A similar role is observed in MET list described in~\cite{evoSN}, suggesting that 1) Non-technical topics gathers fewer participants and yields shorter threds; 2) MET techno-political characteristic is confirmed by having intermediary $\frac{N}{\Gamma}$ relation, between ELE (politics) and LAD (highly technical - GNU/Linux and music). These results should be further investigated in future research (see section~\ref{subsec:fwork}). The number of threads started by hubs is significantly lower than activity for all list, this suggests creative exploitation is done by hubs. $\Delta_Y$ is number of years involved in the first 20,000 messages of each list. Dates of first and last message is: Mar/13/2002 and Aug/25/2009 for CPP; Jun/30/2003 and Oct/07/2009 for LAD; Jun/29/2003 and Jul/23/2005 for LAU; finally, Abr/18/2002 and Aug/31/2011 for ELE.}
+  \caption{Columns $date_1$ and $date_M$ have dates (month/day/year) of first and last messages from the 20,000 messages considered. $N$ is the number of participants (number of different email addresses). $M$ is number of messages. $\Gamma$ is the number of threads (count of messages without antecedent). $-M$ is messages missing in the 20,000 collection, $100\frac{54}{20000}=0.27/100$ in the worst case. ELE notably has the fewer participants and the larger number of threads. This relation holds for pairs of lists considered: as the number of participants increase, the number of threads decrease. A similar role is observed in MET list described in~\cite{evoSN}, suggesting that 1) Non-technical topics gathers fewer participants and yields shorter threads; 2) MET techno-political characteristic is confirmed by having intermediary $\frac{N}{\Gamma}$ relation, between ELE (politics) and LAD (highly technical - GNU/Linux and music). These results should be further investigated in future research (see section~\ref{subsec:fw}). The number of threads started by hubs is significantly lower than activity for all list, this suggests creative exploitation is done by hubs, i.e. hubs acquire/absorb creativity. $\Delta_Y$ is number of years involved in the first 20,000 messages of each list. Dates of first and last message is: Mar/13/2002 and Aug/25/2009 for CPP; Jun/30/2003 and Oct/07/2009 for LAD; Jun/29/2003 and Jul/23/2005 for LAU; finally, Abr/18/2002 and Aug/31/2011 for ELE. See section~\ref{sec:results} and subsection~\ref{sec:gen} for further directions.}
   \label{geralListas}\label{tab:bas}
 \end{table*}
 
@@ -540,13 +541,13 @@ $100\frac{|Uppercase|}{|letter|}$  & 4.60 & 4.96 & 5.38 & 3.55 & 6.06 & 6.05 & 6
 %$\left(\frac{n\,vogals}{n\,letters}\right)\times 100$ & 35.36 & 36.42 & 36.08 & 37.51 \\
 %$\left(\frac{n\,Uppercase}{n\,letters}\right)\times 100$ & 4.60 & 4.96 & 5.38 & 3.55 \\\hline
   \end{tabular}
-  \caption{Measures based on characters, of the text produced by network participants. These are fairly stable. Suggested relations are: 1) punctuations of CPP, that can be expected by its programming language focus and dots and semicolon abundance in such parlance; 2) greater number of letters on ELE is expected by its political disposition; 3) not statistically clear, but higher percentage of vogals might be a sign of erudition. Most of all, number of characters incident in ELE 20,000 messages are more then the other three lists added. MET has an intermediary value of 13,137,042 characters, above CPP, LAD, LAU and below ELE. This builds up to a dicothomic typology of networks: technical (more participants, fewer and longer threads, e.g. CPP) -- political (less participants, more and shorter threads, e.g. ELE). Higher incidence of digits and lower incidence of letters seem to be associated to technical subjects.}
+  \caption{Measures based on characters of the text produced by network participants, fairly stable. Suggested relations are: 1) punctuations of CPP, that can be expected by its programming language focus and dots and semicolon abundance in such parlance; 2) greater number of letters on ELE is expected by its political disposition; 3) not statistically clear, but higher percentage of vowels might be a sign of erudition. Most of all, number of characters incident in ELE 20,000 messages are more then the other three lists added. MET has an intermediary value of 13,137,042 characters~\cite{evoSN}, above CPP, LAD, LAU and below ELE. This builds up to a dichotomic typology of networks: technical (more participants, fewer and longer threads, e.g. CPP) -- political (less participants, more and shorter threads, e.g. ELE). Higher incidence of digits and lower incidence of letters seem to be associated to technical subjects. See subsection~\ref{sec:cha} for further discussion and context.}
   \label{tab:cha}
 \end{table*}
 
 \begin{table*}
   \centering
-    \small
+    \footnotesize
 \setlength{\tabcolsep}{.056667em}
   \begin{tabular}{|l|| c|c|c|c||  c|c|c|c||   c|c|c|c||   c|c|c|c|}\hline
 -\-  & \multicolumn{4}{c|}{CPP} & \multicolumn{4}{c|}{LAD} & \multicolumn{4}{c|}{LAU} & \multicolumn{4}{c|}{ELE} \\ \hline
@@ -582,7 +583,7 @@ $100\frac{|kw\,not\,stopword\,has\,synset|}{|kw|}$ & 49.92 & 50.92 & 52.42 & 49.
 %$100\frac{|kw\,not\,stopwords\,no\,synset|}{|kw|}$ & 2.94 & 2.40 & 2.54 & 2.48 \\
 %$100\frac{|kw\,not\,stopword\,has\,synset|}{|kw|}$ & 49.92 & 48.44 & 48.20 & 48.27 \\\hline
   \end{tabular}
-  \caption{Basic measures on tokens, known English words, stopwords, words with and without synset. Lexical diversity is higher in LAU and LAD, probably linked to these lists hybrid technical interests (music and GNU/Linux). Larger known words nd tokens are incident in ELE and LAD. ELE also exhibits larger incidence of stopwords without synsets (prolixity?). Stronger use words with synsets that are not stopwords is held by CPP. Stopwords that have synset account for $\approx25\%$ of all known words, which might be an indicative of language complexity (not same as good writing though). }
+  \caption{Basic measures on tokens, known English words, stopwords, words with and without synset. Lexical diversity is higher in LAU and LAD, probably linked to these lists hybrid technical interests (music and GNU/Linux). Larger known words and tokens are incident in ELE and LAD. ELE also exhibits larger incidence of stopwords without synsets (prolixity?). Stronger use of words with synsets that are not stopwords is held by CPP. Stopwords that have synset account for $\approx25\%$ of all known words, which might be an indicative of language complexity (not same as good writing though). See subsection~\ref{sybsec:tw} for further discussion and context.}
   \label{tab:tokens}
 \end{table*}
 
@@ -613,14 +614,14 @@ $\sigma(snsssw)$ & 1.25 & 1.23 & 1.25 & 1.26 & 1.25 & 1.24 & 1.23 & 1.25 & 1.25 
 $\mu(\neq snsssw)$ & 6.32 & 5.44 & 5.65 & 6.14 & 6.65 & 5.77 & 5.81 & 6.50 & 6.48 & 5.31 & 5.53 & 6.43 & 7.37 & 5.83 & 6.14 & 7.30 \\
 $\sigma(\neq snsssw)$ & 3.07 & 2.83 & 2.97 & 3.04 & 3.07 & 2.90 & 2.92 & 3.08 & 2.93 & 2.60 & 2.70 & 2.98 & 3.37 & 3.02 & 3.26 & 3.39 \\ \hline
   \end{tabular}
-  \caption{Sizes of tokens and words. Practically all sizes are greater for ELE. Results here are not as strong as other measures.}
+  \caption{Sizes of tokens and words. Practically all sizes are greater for ELE. See subsection~\ref{subsec:tw2} for discussion and context.}
   \label{tab:sizesTokens}
 \end{table*}
 
 
 \begin{table*}
   \centering
-    \small
+    \footnotesize
 \setlength{\tabcolsep}{.16667em}
   \begin{tabular}{|l|| c|c|c|c||  c|c|c|c||   c|c|c|c||   c|c|c|c|}\hline
 -\-  & \multicolumn{4}{c|}{CPP} & \multicolumn{4}{c|}{LAD} & \multicolumn{4}{c|}{LAU} & \multicolumn{4}{c|}{ELE} \\ \hline
@@ -635,7 +636,7 @@ $\sigma\left(\frac{kw}{sent}\right)$ & 17.22 & 22.67 & 18.33 & 16.09 & 13.81 & 1
 $\mu\left(\frac{kwssnsw}{sent}\right)$ & 6.90 & 8.13 & 6.73 & 6.78 & 7.26 & 7.79 & 7.57 & 7.09 & 6.67 & 7.06 & 6.69 & 6.58 & 8.19 & 8.60 & 8.74 & 8.07 \\
 $\sigma\left(\frac{kwssnsw}{sent}\right)$ & 10.72 & 14.17 & 11.76 & 9.92 & 7.79 & 11.11 & 7.84 & 6.95 & 7.54 & 8.92 & 9.71 & 6.49 & 6.59 & 7.05 & 7.13 & 6.46 \\ \hline
   \end{tabular}
-  \caption{Sizes of sentences in characters and in tokens. Hubs produce the smallest sentences and, at the same time, present the lowest incidence of known words and of known words with synsets.}
+  \caption{Sizes of sentences in characters and in tokens. Hubs produce the smallest sentences and, at the same time, present the lowest incidence of known words and of known words with synsets. See subsection~\ref{subsec:ss} for discussion and context.}
   \label{tab:sizesSents}
 \end{table*}
 
@@ -656,7 +657,7 @@ $\sigma\left(\frac{|tokens|}{msg}\right)$ & 444.20 & 287.17 & 940.83 & 304.37 & 
 $\mu\left(\frac{|sents|}{msg}\right)$ & 5.71 & 6.39 & 7.09 & 5.40 & 6.12 & 6.55 & 6.11 & 6.04 & 6.08 & 6.23 & 6.23 & 6.01 & 17.22 & 13.74 & 14.79 & 18.05 \\
 $\sigma\left(\frac{|sents|}{msg}\right)$ & 16.36 & 6.29 & 41.76 & 6.55 & 6.75 & 7.51 & 6.67 & 6.61 & 6.58 & 8.03 & 6.87 & 6.18 & 23.97 & 14.06 & 17.01 & 25.80 \\\hline
   \end{tabular}
-  \caption{Mean and standard deviation of message sizes. Greater size of messages from ELE list reflects domain of interest, as does its hubsi sector, which produces the largest texts.}
+  \caption{Mean and standard deviation of message sizes. Greater size of messages from ELE list reflects domain of interest, as does its hubsi sector, which produces the largest texts. See subsection~\ref{subsec:mm} for discussion and context.}
   \label{tab:sizesMsgs}
 \end{table*}
 
@@ -707,7 +708,7 @@ UH & 0.07 & 0.04 & 0.08 & 0.07 & 0.04 & 0.03 & 0.04 & 0.04 & 0.04 & 0.03 & 0.04 
 FW & 0.01 & 0.03 & 0.00 & 0.00 & 0.02 & 0.02 & 0.03 & 0.02 & 0.03 & 0.09 & 0.02 & 0.01 & 0.00 & 0.01 & 0.00 & 0.00\\\hline
 + & 0.72 & 0.71 & 0.74 & 0.72 & 0.84 & 0.74 & 0.78 & 0.86 & 0.82 & 0.82 & 0.79 & 0.83 & 1.16 & 1.14 & 1.13 & 1.17\\\hline\hline
   \end{tabular}
-  \caption{Incidence of Brown Tags. Used Brill tagger with $\approx 85\%$ of correctly identified tags on the Brown Corpus. Most explicit is the peripheral incidence of nouns and hubs incidence of adjectives, adverbs and verbs.}
+  \caption{Incidence of Brown Tags. Used Brill tagger with $\approx 85\%$ of correctly identified tags on the Brown Corpus. Most explicit is the peripheral incidence of nouns and hubs incidence of adjectives, adverbs and verbs. See subsection~\ref{subsec:pos} for discussion and context.}
   \label{tab:pos}
 \end{table*}
 
@@ -725,7 +726,7 @@ LAD & 7.67 & 2.07 & 8.35 \\\hline
 LAU & 6.23 & 1.63 & 5.98 \\\hline
 ELE & 3.42 & 0.77 & 2.81 \\\hline
   \end{tabular}
-  \caption{Kolmogorov $c(\alpha)$ values for substantives.}
+  \caption{Kolmogorov $c(\alpha)$ values for substantives. See subsection~\ref{subsec:di} for discussion and directions.}
   \label{tab:kolSub}
 \end{table}
 
@@ -739,7 +740,7 @@ P & 1.35 & 4.05 & 5.80 & 3.00 & 5.41 & 4.94 \\\hline
 I & 1.27 & 0.78 & 4.01 & 0.84 & 3.84 & 3.94 \\\hline
 H & 0.98 & 1.94 & 3.17 & 1.32 & 3.82 & 4.47 \\\hline
   \end{tabular}
-  \caption{Kolmogorov $c(\alpha)$ values for substantives. Comparrison of the same sector between lists, each author is an observation.}
+  \caption{Kolmogorov $c(\alpha)$ values for substantives. Comparrison of the same sector between lists, each author is an observation. See subsection~\ref{subsec:di} for discussion and directions.}
   \label{tab:kolSubInter}
 \end{table}
 
@@ -756,7 +757,7 @@ LAD & 4.22 & 2.88 & 1.02 \\\hline
 LAU & 4.30 & 2.45 & 1.34 \\\hline
 ELE & 4.77 & 1.69 & 2.86 \\\hline
   \end{tabular}
-  \caption{Kolmogorov $c(\alpha)$ values for adjectives.}
+  \caption{Kolmogorov $c(\alpha)$ values for adjectives. See subsection~\ref{subsec:di} for discussion and directions.}
   \label{tab:kolAdj}
 \end{table}
 
@@ -770,7 +771,7 @@ P & 0.44 & 0.34 & 2.57 & 0.20 & 2.32 & 2.37 \\\hline
 I & 0.74 & 0.99 & 3.72 & 0.32 & 3.37 & 3.10 \\\hline
 H & 0.26 & 0.32 & 3.72 & 0.29 & 4.36 & 4.24 \\\hline
   \end{tabular}
-  \caption{Kolmogorov $c(\alpha)$ values for adjectives. Comparrison of the same sector between lists, each author is an observation.}
+  \caption{Kolmogorov $c(\alpha)$ values for adjectives. Comparrison of the same sector between lists, each author is an observation. See subsection~\ref{subsec:di} for discussion and directions.}
   \label{tab:kolAdjInter}
 \end{table}
 
@@ -787,7 +788,7 @@ LAD & 9.82 & 6.13 & 8.58 \\\hline
 LAU & 9.66 & 5.44 & 7.45 \\\hline
 ELE & 5.78 & 2.84 & 4.69 \\\hline
   \end{tabular}
-  \caption{Kolmogorov $c(\alpha)$ values for stopwords.}
+  \caption{Kolmogorov $c(\alpha)$ values for stopwords. See subsection~\ref{subsec:di} for discussion and directions.}
   \label{tab:kolSw}
 \end{table}
 
@@ -802,7 +803,7 @@ P & 3.31 & 3.26 & 6.68 & 0.57 & 5.36 & 5.41 \\\hline
 I & 1.45 & 1.08 & 5.16 & 0.91 & 5.00 & 4.92 \\\hline
 H & 0.98 & 0.68 & 4.35 & 1.05 & 4.73 & 5.01 \\\hline
   \end{tabular}
-  \caption{Kolmogorov $c(\alpha)$ values for stopwords. Comparrison of the same sector between lists, each author is an observation.}
+  \caption{Kolmogorov $c(\alpha)$ values for stopwords. Comparrison of the same sector between lists, each author is an observation. See subsection~\ref{subsec:di} for discussion and directions.}
   \label{tab:kolSwInter}
 \end{table}
 
@@ -819,7 +820,7 @@ LAD & 2.32 & 0.97 & 2.09 \\\hline
 LAU & 2.10 & 0.78 & 1.68 \\\hline
 ELE & 1.51 & 1.32 & 1.15 \\\hline
   \end{tabular}
-  \caption{Kolmogorov $c(\alpha)$ values for punctuations/char.}
+  \caption{Kolmogorov $c(\alpha)$ values for punctuations/char. See subsection~\ref{subsec:di} for discussion and directions.}
   \label{tab:kolPct}
 \end{table}
 
@@ -833,7 +834,7 @@ P & 5.74 & 4.88 & 8.28 & 2.23 & 5.37 & 6.60 \\\hline
 I & 3.23 & 2.49 & 4.16 & 0.96 & 3.40 & 3.51 \\\hline
 H & 2.49 & 1.87 & 4.02 & 1.36 & 3.05 & 3.71 \\\hline
   \end{tabular}
-  \caption{Kolmogorov $c(\alpha)$ values for punctuations/char. Comparrison of the same sector between lists, each author is an observation.}
+  \caption{Kolmogorov $c(\alpha)$ values for punctuations/char. Comparrison of the same sector between lists, each author is an observation. See subsection~\ref{subsec:di} for discussion and directions.}
   \label{tab:kolPctInter}
 \end{table}
 
@@ -875,7 +876,7 @@ $s_o$ - $triangles$ & 0.9321 & 0.6209 & 0.7191 & 0.9410 & 0.9626 & 0.7058 & 0.65
 $bc$ - $triangles$ & 0.9055 & 0.4769 & 0.6933 & 0.9031 & 0.9555 & 0.2694 & 0.4095 & 0.9467 & 0.9409 & 0.2329 & 0.2844 & 0.9129 & 0.9255 & 0.7423 & 0.7459 & 0.8793 \\ \hline
 $IC$ - $IP$ & -1.0010 & -1.0012 & 0.0000 & 0.0000 & -1.0008 & -1.0011 & 0.0000 & 0.0000 & -1.0008 & -1.0011 & 0.0000 & 0.0000 & -1.0033 & -1.0045 & 0.0000 & 0.0000 \\ \hline
   \end{tabular}
-  \caption{Correlation of topological measures.}
+  \caption{Correlation of topological measures. See subsection~\ref{subsec:cor} for discussion and directions.}
   \label{tab:corTop}
 \end{table*}
 
@@ -945,7 +946,7 @@ dtmT-dttmT & 0.989 & 0.976 & 0.997 & 1.015 & 0.982 & 0.980 & 0.984 & 0.994 & 0.8
 mlwss-dlwss & 0.804 & 0.809 & 0.792 & 0.648 & 0.852 & 0.852 & 0.889 & 0.823 & 0.841 & 0.837 & 0.925 & 0.854 & 0.904 & 0.909 & 0.802 & 0.906 \\ \hline
 mtamH-mprof & 0.994 & 0.995 & 1.004 & 1.016 & 0.997 & 0.997 & 1.001 & 1.006 & 0.997 & 0.997 & 1.004 & 1.005 & 1.000 & 1.001 & 1.026 & 1.023 \\ \hline
 dtamH-dprof & 0.996 & 0.997 & 1.001 & 1.016 & 0.999 & 0.999 & 1.003 & 1.000 & 0.999 & 0.999 & 1.006 & 1.003 & 1.002 & 1.003 & 1.021 & 1.022 \\ \hline
-  \caption{Correlation of textual measures.}\label{tab:corTex}
+  \caption{Correlation of textual measures. See subsection~\ref{subsec:cor} for discussion and directions.}\label{tab:corTex}
 \end{longtable*}
 
 
@@ -993,7 +994,7 @@ ntd-$in\;cent$ & 0.523 & 0.036 & -0.019 & 0.451 & 0.631 & 0.096 & 0.105 & 0.318 
 ntd-sector & 0.686 & 0.000 & 0.000 & 0.000 & 0.778 & 0.000 & 0.000 & 0.000 & 0.784 & 0.000 & 0.000 & 0.000 & 0.837 & 0.000 & 0.000 & 0.000 \\ \hline
 ntd/nt-sector & -0.547 & 0.000 & 0.000 & 0.000 & -0.603 & 0.000 & 0.000 & 0.000 & -0.571 & 0.000 & 0.000 & 0.000 & -0.603 & 0.000 & 0.000 & 0.000 \\ \hline
 mtsw2\_-sector & 0.555 & 0.000 & 0.000 & 0.000 & 0.546 & 0.000 & 0.000 & 0.000 & 0.502 & 0.000 & 0.000 & 0.000 & 0.683 & 0.000 & 0.000 & 0.000 \\ \hline
-  \caption{Correlation of textual and topological measures.}\label{tab:corTexTop}
+  \caption{Correlation of textual and topological measures. See subsection~\ref{subsec:cor} for discussion and directions.}\label{tab:corTexTop}
 \end{longtable*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1028,7 +1029,7 @@ IN & -1.74 & 0.32 & -0.56 & -1.24 & 1.55 & 0.44 & -0.23 & 1.27 & -5.74 & -0.44 &
 PRP\$ & 6.51 & 0.22 & 0.29 & 0.41 & -0.77 & -0.18 & -0.11 & 0.25 & -0.26 & 0.22 & 0.14 & -0.08 & 0.14 & 0.34 & 0.00 & 0.00 \\\hline
 PDT & 5.12 & 0.11 & 0.24 & 0.41 & -0.14 & -0.15 & 0.19 & -0.25 & 0.31 & 0.56 & -0.43 & 0.40 & -1.40 & -0.37 & 0.00 & 0.00 \\\hline
 \end{tabular}
-  \caption{Composition of first component (threshold: $|val|>0.05$).}\label{tab:pca1}
+  \caption{Composition of first component (threshold: $|val|>0.05$). See subsection~\ref{subsec:pc} for discussion and directions.}\label{tab:pca1}
 \end{table*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% 1
@@ -1061,7 +1062,7 @@ $bc$ & 0.70 & 1.55 & 0.11 & -0.18 & -11.23 & -0.12 & -0.17 & 0.05 & -11.59 & 0.5
 $tri$ & -0.07 & 8.58 & 0.00 & -0.45 & -5.88 & -0.46 & 0.00 & 0.00 & -2.17 & 0.02 & 0.00 & -0.00 & -3.52 & -0.25 & -0.98 & 0.03 \\\hline
 $in\;cent$ & 15.09 & -0.00 & 0.00 & 0.53 & -0.06 & 0.00 & 0.00 & 0.00 & 0.15 & -0.00 & 0.00 & 0.00 & -0.79 & -0.00 & 0.06 & 1.25 \\\hline
 \end{tabular}
-  \caption{Composition of second component (threshold: $|val|>0.05$).}\label{tab:pca2}
+  \caption{Composition of second component (threshold: $|val|>0.05$). See subsection~\ref{subsec:pc} for discussion and directions.}\label{tab:pca2}
 \end{table*}
 
 
@@ -1090,7 +1091,7 @@ mtsmT & -0.33 & -5.56 & 4.20 & 1.39 & 5.68 & -4.48 & 2.97 & 2.34 & 3.76 & -7.62 
 dtsmT & -1.96 & 0.77 & 2.26 & -0.26 & 1.79 & 0.92 & 0.06 & -0.03 & 5.00 & 1.80 & -2.45 & 2.24 & 1.99 & -5.87 & 0.34 & 1.25 \\\hline
 NN & 2.78 & 0.13 & 0.15 & 1.10 & -0.60 & 6.82 & -0.07 & -0.10 & -2.70 & 4.95 & 1.05 & -1.69 & 0.46 & 3.08 & 0.34 & 1.25 \\\hline
 \end{tabular}
-  \caption{Composition of third component (threshold: $|val|>0.05$).}\label{tab:pca3}
+  \caption{Composition of third component (threshold: $|val|>0.05$). See subsection~\ref{subsec:pc} for discussion and directions.}\label{tab:pca3}
 \end{table*}
 
 
@@ -1125,7 +1126,7 @@ $tri$ & 1.09 & 0.11 & 0.00 & -0.31 & 0.11 & 14.18 & -0.00 & -0.00 & 1.23 & -0.40
 $cv$ & -0.24 & 0.24 & 0.00 & -0.25 & -2.62 & -4.41 & 0.00 & 0.00 & 0.34 & -15.74 & 0.00 & 0.00 & 14.09 & 16.09 & -0.36 & -0.24 \\\hline
 $in\;cent$ & 0.02 & -0.00 & 0.00 & -0.25 & 14.87 & 0.00 & 0.00 & 0.00 & 16.34 & -0.00 & -0.00 & 0.00 & 3.57 & -0.00 & -0.36 & -0.51 \\\hline
 \end{tabular}
-  \caption{Composition of fourth component (threshold: $|val|>0.05$).}\label{tab:pca4}
+  \caption{Composition of fourth component (threshold: $|val|>0.05$). See subsection~\ref{subsec:pc} for discussion and directions.}\label{tab:pca4}
 \end{table*}
 
 
@@ -1149,16 +1150,19 @@ dtsTSkw & 0.03 & -1.95 & 0.87 & -1.14 & -5.87 & -2.23 & 0.06 & -2.74 & -6.87 & -
 dtsTSpv & 1.87 & -0.41 & 0.82 & 3.16 & 2.28 & -5.32 & -1.16 & 1.35 & 4.05 & -4.68 & 3.13 & -0.67 & 3.68 & 3.04 & -0.58 & -0.84 \\\hline
 sector & 0.00 & 0.00 & 0.00 & 0.48 & 0.00 & 0.00 & 0.00 & -0.00 & 0.00 & 0.00 & 0.00 & 0.00 & -0.00 & -0.00 & 11.05 & 1.52 \\\hline
 \end{tabular}
-  \caption{Composition of fifth component (threshold: $|val|>0.05$).}\label{tab:pca5}
+  \caption{Composition of fifth component (threshold: $|val|>0.05$). See subsection~\ref{subsec:pc} for discussion and directions.}\label{tab:pca5}
 \end{table*}
 
-
+\clearpage
+\newpage
 \section{Histograms of existent and incident words}\label{sec:resE}
+ See subsection~\ref{subsec:sii}, and Figures~\ref{fig:kw}-\ref{fig:nssnsw} for discussion and directions.
+
 
 \begin{figure*}[h!]
     \centering
     \includegraphics[width=\textwidth]{figs/kw}
-    \caption{Size of words that are known in English. Crossing of incident and existential sizes is around 5 (figure~\ref{fig:kwnsw} shows a shift to length 6-7 when consideren only non stopwords). Words with three letters have maximum incidence, while most words have 7 letters.}
+    \caption{Size of words that are known in English. Crossing of incident and existential sizes is around 5 (Figure~\ref{fig:kwnsw} shows a shift to length 6-7 when consider only non stopwords). Words with three letters have maximum incidence, while most words have 7 letters. See subsection~\ref{subsec:sii} for discussion and directions.}
     \label{fig:kw}
 \end{figure*}
 
@@ -1166,17 +1170,14 @@ sector & 0.00 & 0.00 & 0.00 & 0.48 & 0.00 & 0.00 & 0.00 & -0.00 & 0.00 & 0.00 & 
 \begin{figure*}[h!]
     \centering
     \includegraphics[width=\textwidth]{figs/kwnsw}
-    \caption{Size of words that are known in English and are not stopwords. Crossing of incident and existential sizes is around 6-7 (figure~\ref{fig:kw} shows a shift to length 5 when considered stopwords). In this case, words with 4 letters have maximum incidence, while most words still have 7 letters. Exception for ELE, which exhibits maximum incidence of words with 5 letters and most words having 8 letters, which might be associated with ELE network typology discussed in tables~\ref{tab:tokens} and~\label{tab:caracteres}.}
+    \caption{Size of words that are known in English and are not stopwords. Crossing of incident and existential sizes is around 6-7 (figure~\ref{fig:kw} shows a shift to length 5 when considered stopwords). In this case, words with 4 letters have maximum incidence, while most words still have 7 letters. Exception for ELE, which exhibits maximum incidence of words with 5 letters and most words having 8 letters, which might be associated with ELE network typology discussed in tables~\ref{tab:tokens} and~\label{tab:caracteres}. See subsection~\ref{subsec:sii} for discussion and directions.}
     \label{fig:kwnsw}
 \end{figure*}
-
-
-
 
 \begin{figure*}[h!]
     \centering
     \includegraphics[width=\textwidth]{figs/kwssnsw}
-    \caption{Size of words that are known, are not stopwords and have synsets. Ressembles figure~\ref{fig:kwnsw}. Stopword sizes histogram are in figure~\ref{fig:sw}. Differences suggests $\approx 0.5$ might be constant. LAD and LAU exquisite vocabulary (GNU/Linux, programming, sound/signal processing, music) might be responsible for higher difference of distributions.}
+    \caption{Size of words that are known, are not stopwords and have synsets. Resembles figure~\ref{fig:kwnsw}. Stopword sizes histogram are in figure~\ref{fig:sw}. Differences suggests $\approx 0.5$ might be constant. LAD and LAU exquisite vocabulary (GNU/Linux, programming, sound/signal processing, music) might be responsible for higher difference of distributions. See subsection~\ref{subsec:sii} for discussion and directions. See subsection~\ref{subsec:sii} for discussion and directions.}
     \label{fig:kwssnsw}
 \end{figure*}
 
@@ -1184,7 +1185,7 @@ sector & 0.00 & 0.00 & 0.00 & 0.48 & 0.00 & 0.00 & 0.00 & -0.00 & 0.00 & 0.00 & 
 \begin{figure*}[h!]
     \centering
     \includegraphics[width=\textwidth]{figs/sw}
-    \caption{Size histogram of stopwords. Stopwords with two letters are the most frequent, while most of them have four letters. Differences in distribution seem stable around $\approx 0.6$.}
+    \caption{Size histogram of stopwords. Stopwords with two letters are the most frequent, while most of them have four letters. Differences in distribution seem stable around $\approx 0.6$. See subsection~\ref{subsec:sii} for discussion and directions.}
     \label{fig:sw}
 \end{figure*}
 
@@ -1193,16 +1194,17 @@ sector & 0.00 & 0.00 & 0.00 & 0.48 & 0.00 & 0.00 & 0.00 & -0.00 & 0.00 & 0.00 & 
 \begin{figure*}[h!]
     \centering
     \includegraphics[width=\textwidth]{figs/nssnsw}
-    \caption{Size histogram of known English words that are not stopwords and do not return synsets. Differences in distribution suggests less stable behavior, with high incidence of few words high number of existing words with many letters. Observe difference $\geq 1$, as observed only with all known words, but even higher.}
+    \caption{Size histogram of known English words that are not stopwords and do not return synsets. Differences in distribution suggests less stable behavior, with high incidence of few words high number of existing words with many letters. Observe difference $\geq 1$, as observed only with all known words, but even higher. See subsection~\ref{subsec:sii} for discussion and directions.}
     \label{fig:nssnsw}
 \end{figure*}
 
 
+\clearpage
 \section{Online scripts, data and writing}\label{sec:on}
-All data can be accessed in the GNAME database, which consists of some tenths of thousands of mailing lists, with constant updates~\cite{GMANE}. All scripts used on this article are in \url{http://sourceforge.net/p/labmacambira/fimDoMundo/ci/master/tree/python/toolkitGMANE/}. The git repository of this article itself is \url{https://github.com/ttm/artigoTextoNasRedes.git}.
+All data can be accessed in the GMANE database, which consists of some tenths of thousands of mailing lists, with constant updates~\cite{GMANE}. All scripts used on this article are in \url{http://sourceforge.net/p/labmacambira/fimDoMundo/ci/master/tree/python/toolkitGMANE/}. The git repository of this article itself is \url{https://github.com/ttm/artigoTextoNasRedes.git}.
 
 
-\nocite{*}
+%\nocite{*}
 \bibliography{paper}% Produces the bibliography via BibTeX.
 
 
