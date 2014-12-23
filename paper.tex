@@ -197,7 +197,7 @@ order, from the responder to the original sender, representing status attributio
 considered what the sender said worthy of responding. This is the ``status network''. As these networks
 are virtually equivalent, one considers but one of them, usually the information network.
 
-\begin{figure}[hb]
+\begin{figure}[h!]
     \centering
     \includegraphics[width=0.3\textwidth]{figs/criaRede_}
     \caption{Formation of interaction network. The edges are directed as information flows, from
@@ -330,42 +330,76 @@ Further information is given in Table~\ref{tab:sizesMsgs}.
 \subsection{POS tags}
 Lower connectivity delivers more nouns and less adjectives, adverbs and verbs. This suggests that the networks collect issues important to the world by the peripheral sector, which brings nouns. These issues are qualified, ellaborated about, by the more connected participants.
 
+Further information is given in Table~\ref{tab:pos}.
+
+\subsection{Differentiation of measures}
+The Kolmogorov-Smirnov test was adapted for our need to compare measures.
+Results suggests that the texts produced by each sector is very distinct.
+Counterintuitively, intermediary sector sometimes yields a greater difference from periphery that hubs (Tables~\ref{tab:kolSub} and~\ref{tab:kolSw}).
+
+At the core of the results presented on this article, are two strong and immediate interpretations that follows Tables~\ref{tab:kolSub}-\ref{tab:kolPctInter}:
+\begin{itemize}
+    \item Differences detected are very very big, as can be noticed from the values on these tables, beyond reference values used for understanding if the null hypothesis can be discarted (see Appendix~\ref{sec:ks}).
+    \item Differences between sectors on the same network (Tables~\ref{tab:kolSub},~\ref{tab:kolAdj},~\ref{tab:kolSw} and~\ref{tab:kolPct}) are bigger than differences between same sector from distinct lists (Tables~\ref{tab:kolSubInter},~\ref{tab:kolAdjInter},~\ref{tab:kolSwInter} and~\ref{tab:kolPctInter}).
+\end{itemize}
+
 \subsection{Correlation of measures}
 
-Correlation of degree (how many participants the participant related to) and strength (how many interactions) measures is substantially smaller for intermediary sector. This raises interesting inquiries, to which the reader is invited.
+Correlation of degree (how many participants the participant related to) and strength (how many interactions) measures is substantially smaller for intermediary sector. This raises interesting inquiries, to which the reader is invited, along with further analysis of Tables~\ref{tab:corTop},~\ref{tab:corTex} and~\ref{tab:corTexTop}. As detailing their interpretation goes beyond the scope of this article. Noteworthy is the negative correlation of degree and message size (number of characters, tokens or sentences) that intermediaries presented.
 
-Further information is given in Table~\ref{tab:pos}.
+\subsection{Formation of principal components}
+
+Principal components formation seem to be the less stable of all features considered. First component, with $\approx 25\%$ of dispersion, relies heavelly on POS tags, and slightly on sizes of tokens, sentences and messages. Second component, with almost $12\%$ of dispersion, blends topology, POS tags and size measures. Third component, with about $8.5\%$ is based on nouns frequency and size measures. Fourth and fifth components present less than $5\%$ of total dispersion, but are included for completeness of exposition.
+
+Tables~\ref{tab:pca1}-\ref{tab:pca5} exhibit these and further insights.
+
+\subsection{Results still to be interpreted}
+These networks yield diverse characteristics, some of which were not of core importance for this step of the research. Even so, at least one of these characteristics was found interesting enough to be considered a result and an example of interesting artifacts found.
+
+Histogram differences of incident and existent word sizes were found constant. That is, in each list, when a histogram of word sizes were made with all words written, and another histogram made with sizes of all \emph{different} words, the cumulative difference of the two histograms were found constant for all lists analysed. When all known english words were considered, the difference was always $\approx 1.0$. When stopwords were disconsidered, the difference found was different, but still constant, slightly above $0.5$. Whem only stopwords were considered, the difference was $\approx 0.6$. When only known english words that did not have wordnet synsets were used, this difference is $\approx 1.2$.
+
+These results currently lacks substantial interpretation, which is provocative and should lead at least to a research note. Section~\ref{sec:resE} and Figures~\ref{fig:kw}-\ref{fig:nssnsw} are dedicated to this histogram differences.
+
+
+
 \section{Final remarks}\label{sec:remarks}
+Human interaction networks yield diverse linguistic peculiarities reported by its members. This is a first sistematic exploratin of such peculiarities with primitive connective sectors in mind, as far the author knows. Results were regarded as stronger than enviosioned from start, which poses diverse en intriguing questions.
+
+All the data used is public, all scripts used are online (see Appendix~\ref{sec:on}. This results, confluent with recent research and development, some by the current author, are of core importance for social technologies and transformations, such as collection and diffusion and information, and open processes of legal documents refinement~\cite{ensaio,ops,prod5,evoSN,pbr}.
+
+
 \subsection{Further work}\label{subsec:fw}
-Current research, including this article, suggests that less connected participants bring external proposals, while hubs helps the network to process this new information being brought by peripheral and intermediary vertexes.
+Results suggests that less connected participants bring external content and concepts, while hubs qualify the content. This hold mainly as periphery uses more nouns while hubs present more adjectives. This should be further verified, maybe with a dedicated article.
 
-Simple wordnet related measures were also used, of plurals, gender. 
-
-
-Similarity of texts in message-response threads has been thought about by authors, and some results are being organized. These are two hypothesis, obtained from recent experiments, which has to do with similarity measures:
+Similarity measures of texts in message-response threads has been thought about by the author, and some results are being organized. These are two hypothesis obtained from recent experiments:
 \begin{itemize}
-    \item observance of information ``ducts'' through similarity measures. These might coincide with asymmetries of edges between vertexes pairs, with homophily or with message-response threads.
-    \item autossimilarity of messages by same authors, of messages sent at the same period of the day, etc. This includes incidences of word sizes and outliers, incidences of tags and morphosintactic classes, incidences of particular synset characterisctics. This includes wordnet word distances.
+    \item existence of information ``ducts'' through similarity measures. These might coincide with asymmetries of edges between vertexes pairs, with homophily or with message-response threads, to point just a few possibilites.
+    \item valuable insights can be driven from autossimilarity of messages by same authors, of messages sent at the same period of the day, etc. This includes incidences of word sizes, incidences of tags and morphosintactic classes, incidences of particular wordnet synset characterisctics and wordnet word distances.
 \end{itemize}
-For example, peripheric vertex messages should exhibit greater diversity. Self-similarity of messages might vary with respect to connectivity as well.
 
-mais coisa:
+Given current results, diversity and self-similarity should vary with respect to connectivity. Literature usually assumes that periphery holds greater diversity~\cite{coisa}, which should be further verified.
+
+Other directions for nexts steps are:
 \begin{itemize}
-    \item Histogram with respect to most occurent or most basic words and word types in the English language. Figures~\ref{fig:kw},~\ref{fig:kwnsw},~\ref{fig:kwssnsw},~\ref{fig:sw} and~\ref{fig:nssnsw}.
-    \item Fraction of plurals, gender, common prefixes and suffixes, etc.
-    \item Correlation of measures of each vertex, easing pattern detection involving topology of interaction and language used. ---> Date and time incidence measures should also addressed, as potentially linked to participation habits and purposes (e.g. low dispersion of sent time).
+    \item Word sets are very useful to derive and confirm hipothesis. As an example, one can observe most occurent or most basic words and word types in the English language.
+    \item Interpretation of various invealed results, such as the one exposed in Appendix~\cite{sec:resE}, and Figures~\ref{fig:kw},~\ref{fig:kwnsw},~\ref{fig:kwssnsw},~\ref{fig:sw} and~\ref{fig:nssnsw}.
+    \item Extend word class observations to include plurals, gender, common prefixes and suffixes, etc.
+    \item Date and time should also be addressed in textual production of interaction networks, as potentially linked to participation habits and purposes (e.g. low dispersion of sent time). This was tackled by the author for interaction networks~\cite{evoSN}, but left aside in this article.
     \item Balance token diversity with corpus size, as pointed in section~\ref{subsec:tw}.
-    \item The textual features distributions are likely to be have more than one peak or other non-trivial characteristic. Therefore, further analysis should be made for comparing selected measures.
+    \item The textual features distributions are likely to be have more than one peak or other non-trivial characteristic. Therefore, further analysis should be made for comparing measures of interest.
+    \item Extend analysis to the windowed approach used in the article where hub, peripheral and intermediary sectors where topologically characterized~\cite{evoSN}.
+    \item For ELE list, the more conected the sector, the longer the messages are. This is the inverse of what was found in the other lists, and was considered a peculiarity of the culture bonded with the political subject of ELE list, to be further verified.
+    \item Tackle Portuguese analysis of interaction networks, as this research have ongiong implications in Brazil~\cite{ensaio}.
+    \item Analyse other lists.
+    \item Analyse other interaction networks, from Twitter, Facebook, LinkedIn, Diaspora, etc.
+    \item Emotion classification has not been done and considered out of the scope for this stage of development, but should be addressed in a near future.
 \end{itemize}
-Wordnet synsets incidences was studied as well, as a potentially useful way to characterize networks and sectors:
+
+Wordnet synsets incidences was studied as well, as a potentially useful way to characterize networks and sectors. Core aspects studied includes:
 \begin{itemize}
     \item Incidence of hypernyms, hyponyms, holonyms and meronyms.
-    \item Similarity measures of words, phases and messages, by use of semantic criteria (Wordnet) and bag of words.
-    \item ELE list displayed an inverse situation: the more conected the sector, the longer the messages are. This was considered a peculiarity of the culture bonded with the political subject of ELE list, to be further verified.
+    \item Use and development of similarity measures of words, phrases and messages, by use of semantic criteria (Wordnet) and bag of words.
 \end{itemize}
-
-Emotion classification has not been done and considered out of the scope for this stage of development.
-
 
 
 \section{Acknowledgments}
@@ -394,6 +428,7 @@ the Postgraduate Committee of the IFSC/USP.
 \section{Adaptation of the Kolmogotov-Smirnof test}\label{sec:ks}
 \section{Support information}\label{sec:si}
 \subsection{Brief description of GMANE and the email lists chosen}\label{subsec:gm}
+\subsection{Meaning of achronims in the following tables}
 \subsection{Tables}
 
 \begin{table*}
@@ -789,13 +824,14 @@ $IC$ - $IP$ & -1.0010 & -1.0012 & 0.0000 & 0.0000 & -1.0008 & -1.0011 & 0.0000 &
   \label{tab:corTop}
 \end{table*}
 
-\newcolumntype{R}{>{}p{0.6cm}}
+%\newcolumntype{R}{>{}p{1.6cm}}
 \clearpage
 %\onecolumn
-\begin{longtable}{|p{2cm}||R|R|R|R|| R|R|R|R|| R|R|R|R|| R|R|R|R|}\hline
+%\begin{longtable*}{|p{2cm}||R|R|R|R|| R|R|R|R|| R|R|R|R|| R|R|R|R|}\hline
+\begin{longtable*}{|p{2cm}||c|c|c|c|| c|c|c|c|| c|c|c|c|| c|c|c|c|}\hline
   \centering
     \small
-\setlength{\tabcolsep}{.06667em}
+%\setlength{\tabcolsep}{.06667em}
 -\-  & \multicolumn{4}{c|}{CPP} & \multicolumn{4}{c|}{LAD} & \multicolumn{4}{c|}{LAU} & \multicolumn{4}{c|}{ELE} \\ \hline\hline
  & g. & p. & i. & h. &     g. & p. & i. & h. &    g. & p. & i. & h. &    g. & p. & i. & h. \\\hline \endfirsthead
 -\-  & \multicolumn{4}{c|}{CPP} & \multicolumn{4}{c|}{LAD} & \multicolumn{4}{c|}{LAU} & \multicolumn{4}{c|}{ELE} \\ \hline\hline
@@ -855,15 +891,16 @@ mlwss-dlwss & 0.804 & 0.809 & 0.792 & 0.648 & 0.852 & 0.852 & 0.889 & 0.823 & 0.
 mtamH-mprof & 0.994 & 0.995 & 1.004 & 1.016 & 0.997 & 0.997 & 1.001 & 1.006 & 0.997 & 0.997 & 1.004 & 1.005 & 1.000 & 1.001 & 1.026 & 1.023 \\ \hline
 dtamH-dprof & 0.996 & 0.997 & 1.001 & 1.016 & 0.999 & 0.999 & 1.003 & 1.000 & 0.999 & 0.999 & 1.006 & 1.003 & 1.002 & 1.003 & 1.021 & 1.022 \\ \hline
   \caption{Correlation of textual measures.}\label{tab:corTex}
-\end{longtable}
+\end{longtable*}
 
 
 
-
+\newpage
+\pagebreak
 \newcolumntype{R}{>{}p{0.6cm}}
 \clearpage
 %\onecolumn
-\begin{longtable}{|p{2cm}|| R|R|R|R|| R|R|R|R|| R|R|R|R|| R|R|R|R|}\hline
+\begin{longtable*}{|p{2cm}|| c|c|c|c|| c|c|c|c|| c|c|c|c|| c|c|c|c|}\hline
   \centering
     \small
 \setlength{\tabcolsep}{.06667em}
@@ -902,20 +939,19 @@ ntd-sector & 0.686 & 0.000 & 0.000 & 0.000 & 0.778 & 0.000 & 0.000 & 0.000 & 0.7
 ntd/nt-sector & -0.547 & 0.000 & 0.000 & 0.000 & -0.603 & 0.000 & 0.000 & 0.000 & -0.571 & 0.000 & 0.000 & 0.000 & -0.603 & 0.000 & 0.000 & 0.000 \\ \hline
 mtsw2\_-sector & 0.555 & 0.000 & 0.000 & 0.000 & 0.546 & 0.000 & 0.000 & 0.000 & 0.502 & 0.000 & 0.000 & 0.000 & 0.683 & 0.000 & 0.000 & 0.000 \\ \hline
   \caption{Correlation of textual and topological measures.}\label{tab:corTexTop}
-\end{longtable}
+\end{longtable*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcolumntype{R}{>{}p{0.6cm}}
-\clearpage
 %\onecolumn
-\begin{longtable}{|p{2cm}|| R|R|R|R|| R|R|R|R|| R|R|R|R|| R|R|R|R|}\hline
+\begin{table*}
   \centering
-    \scriptsize
-\setlength{\tabcolsep}{.06667em}
+    \footnotesize
+\setlength{\tabcolsep}{.26667em}
+\begin{tabular}{|c|| c|c|c|c|| c|c|c|c|| c|c|c|c|| c|c|c|c|}\hline
 -\-  & \multicolumn{4}{c|}{CPP} & \multicolumn{4}{c|}{LAD} & \multicolumn{4}{c|}{LAU} & \multicolumn{4}{c|}{ELE} \\ \hline\hline
- & g. & p. & i. & h. &     g. & p. & i. & h. &    g. & p. & i. & h. &    g. & p. & i. & h. \\\hline \endfirsthead
--\-  & \multicolumn{4}{c|}{CPP} & \multicolumn{4}{c|}{LAD} & \multicolumn{4}{c|}{LAU} & \multicolumn{4}{c|}{ELE} \\ \hline\hline
- & g. & p. & i. & h. &     g. & p. & i. & h. &    g. & p. & i. & h. &    g. & p. & i. & h. \\\hline \endhead
+ & g. & p. & i. & h. &     g. & p. & i. & h. &    g. & p. & i. & h. &    g. & p. & i. & h. \\\hline
+%-\-  & \multicolumn{4}{c|}{CPP} & \multicolumn{4}{c|}{LAD} & \multicolumn{4}{c|}{LAU} & \multicolumn{4}{c|}{ELE} \\ \hline\hline
+% & g. & p. & i. & h. &     g. & p. & i. & h. &    g. & p. & i. & h. &    g. & p. & i. & h. \\\hline \endhead
 $\lambda$ & 17.71 & 18.46 & 19.44 & 30.20 & 24.14 & 24.77 & 24.63 & 17.28 & 24.51 & 24.76 & 32.44 & 19.75 & 27.72 & 29.35 & 17.90 & 18.23 \\\hline
 mtkwnsw\_ & 0.09 & -1.13 & -2.89 & 0.94 & -0.29 & -1.85 & 0.56 & 0.17 & -0.25 & 1.40 & -5.10 & 0.37 & 1.97 & -0.79 & 1.40 & -1.24 \\\hline
 mtsw\_ & -0.34 & 1.56 & 0.86 & -0.09 & -0.37 & -2.48 & 1.97 & -0.55 & -1.80 & -2.90 & 1.88 & -2.21 & -0.85 & 1.08 & 6.66 & 3.57 \\\hline
@@ -936,21 +972,21 @@ VBG & 0.19 & -0.68 & 1.10 & -1.29 & 0.18 & 0.89 & 0.37 & 0.90 & 5.63 & -0.40 & 0
 IN & -1.74 & 0.32 & -0.56 & -1.24 & 1.55 & 0.44 & -0.23 & 1.27 & -5.74 & -0.44 & -1.66 & -0.60 & 1.09 & 0.32 & 0.00 & 0.00 \\\hline
 PRP\$ & 6.51 & 0.22 & 0.29 & 0.41 & -0.77 & -0.18 & -0.11 & 0.25 & -0.26 & 0.22 & 0.14 & -0.08 & 0.14 & 0.34 & 0.00 & 0.00 \\\hline
 PDT & 5.12 & 0.11 & 0.24 & 0.41 & -0.14 & -0.15 & 0.19 & -0.25 & 0.31 & 0.56 & -0.43 & 0.40 & -1.40 & -0.37 & 0.00 & 0.00 \\\hline
-  \caption{Composition of first component (threshold that |val|>0.05).}\label{tab:pca1}
-\end{longtable}
+\end{tabular}
+  \caption{Composition of first component (threshold: $|val|>0.05$).}\label{tab:pca1}
+\end{table*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% 1
-\newcolumntype{R}{>{}p{0.6cm}}
-\clearpage
 %\onecolumn
-\begin{longtable}{|p{2cm}|| R|R|R|R|| R|R|R|R|| R|R|R|R|| R|R|R|R|}\hline
-  \centering
-    \scriptsize
-\setlength{\tabcolsep}{.06667em}
+\begin{table*}
+    \centering
+    \footnotesize
+\setlength{\tabcolsep}{.26667em}
+\begin{tabular}{|c|| c|c|c|c|| c|c|c|c|| c|c|c|c|| c|c|c|c|}\hline
 -\-  & \multicolumn{4}{c|}{CPP} & \multicolumn{4}{c|}{LAD} & \multicolumn{4}{c|}{LAU} & \multicolumn{4}{c|}{ELE} \\ \hline\hline
- & g. & p. & i. & h. &     g. & p. & i. & h. &    g. & p. & i. & h. &    g. & p. & i. & h. \\\hline \endfirsthead
--\-  & \multicolumn{4}{c|}{CPP} & \multicolumn{4}{c|}{LAD} & \multicolumn{4}{c|}{LAU} & \multicolumn{4}{c|}{ELE} \\ \hline\hline
- & g. & p. & i. & h. &     g. & p. & i. & h. &    g. & p. & i. & h. &    g. & p. & i. & h. \\\hline \endhead
+ & g. & p. & i. & h. &     g. & p. & i. & h. &    g. & p. & i. & h. &    g. & p. & i. & h. \\\hline
+%-\-  & \multicolumn{4}{c|}{CPP} & \multicolumn{4}{c|}{LAD} & \multicolumn{4}{c|}{LAU} & \multicolumn{4}{c|}{ELE} \\ \hline\hline
+% & g. & p. & i. & h. &     g. & p. & i. & h. &    g. & p. & i. & h. &    g. & p. & i. & h. \\\hline \endhead
 $\lambda$ & 11.48 & 10.25 & 12.23 & 15.72 & 11.97 & 9.39 & 12.05 & 13.19 & 11.87 & 9.76 & 11.42 & 11.26 & 12.49 & 11.17 & 15.75 & 13.31 \\\hline
 nc & -5.21 & -3.60 & 3.06 & -4.12 & 4.62 & -3.49 & 2.30 & 0.94 & 4.49 & 3.76 & -2.75 & -0.53 & 2.87 & -2.66 & -3.97 & -0.03 \\\hline
 Nwsssw/Nwss & 0.43 & 0.34 & 0.35 & -0.66 & 0.21 & -0.10 & 0.93 & -0.30 & 0.07 & 0.20 & 0.23 & -0.54 & 1.10 & -0.44 & -5.11 & 4.46 \\\hline
@@ -969,22 +1005,22 @@ $s_o$ & -0.71 & 2.39 & -1.52 & 0.25 & 0.20 & 8.51 & -0.11 & 0.23 & -1.57 & -6.21
 $bc$ & 0.70 & 1.55 & 0.11 & -0.18 & -11.23 & -0.12 & -0.17 & 0.05 & -11.59 & 0.59 & 0.42 & 0.76 & -9.01 & -0.59 & -0.20 & 0.78 \\\hline
 $tri$ & -0.07 & 8.58 & 0.00 & -0.45 & -5.88 & -0.46 & 0.00 & 0.00 & -2.17 & 0.02 & 0.00 & -0.00 & -3.52 & -0.25 & -0.98 & 0.03 \\\hline
 $in\;cent$ & 15.09 & -0.00 & 0.00 & 0.53 & -0.06 & 0.00 & 0.00 & 0.00 & 0.15 & -0.00 & 0.00 & 0.00 & -0.79 & -0.00 & 0.06 & 1.25 \\\hline
-  \caption{Composition of second component (threshold that |val|>0.05).}\label{tab:pca2}
-\end{longtable}
+\end{tabular}
+  \caption{Composition of second component (threshold: $|val|>0.05$).}\label{tab:pca2}
+\end{table*}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 2
-\newcolumntype{R}{>{}p{0.6cm}}
-\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\onecolumn
-\begin{longtable}{|p{2cm}|| R|R|R|R|| R|R|R|R|| R|R|R|R|| R|R|R|R|}\hline
+\begin{table*}
+\begin{tabular}{|c|| c|c|c|c|| c|c|c|c|| c|c|c|c|| c|c|c|c|}\hline
   \centering
     \scriptsize
-\setlength{\tabcolsep}{.06667em}
+\setlength{\tabcolsep}{.26667em}
 -\-  & \multicolumn{4}{c|}{CPP} & \multicolumn{4}{c|}{LAD} & \multicolumn{4}{c|}{LAU} & \multicolumn{4}{c|}{ELE} \\ \hline\hline
- & g. & p. & i. & h. &     g. & p. & i. & h. &    g. & p. & i. & h. &    g. & p. & i. & h. \\\hline \endfirsthead
--\-  & \multicolumn{4}{c|}{CPP} & \multicolumn{4}{c|}{LAD} & \multicolumn{4}{c|}{LAU} & \multicolumn{4}{c|}{ELE} \\ \hline\hline
- & g. & p. & i. & h. &     g. & p. & i. & h. &    g. & p. & i. & h. &    g. & p. & i. & h. \\\hline \endhead
+ & g. & p. & i. & h. &     g. & p. & i. & h. &    g. & p. & i. & h. &    g. & p. & i. & h. \\\hline
+%-\-  & \multicolumn{4}{c|}{CPP} & \multicolumn{4}{c|}{LAD} & \multicolumn{4}{c|}{LAU} & \multicolumn{4}{c|}{ELE} \\ \hline\hline
+% & g. & p. & i. & h. &     g. & p. & i. & h. &    g. & p. & i. & h. &    g. & p. & i. & h. \\\hline \endhead
 $\lambda$ & 8.97 & 7.53 & 7.71 & 7.19 & 8.28 & 8.07 & 7.97 & 10.58 & 8.45 & 7.40 & 6.61 & 8.45 & 6.56 & 6.01 & 11.01 & 9.85 \\\hline
 Nkw/nt & 1.81 & 1.26 & -1.38 & 0.76 & -0.58 & -0.52 & -0.32 & -3.03 & 0.85 & 1.13 & -1.00 & -5.90 & -1.77 & -1.15 & 5.75 & -0.20 \\\hline
 mtsw2\_ & 2.46 & 1.66 & -1.23 & 3.90 & 0.17 & 0.55 & -1.23 & 0.16 & 0.60 & -1.59 & 0.10 & 6.54 & 0.27 & 0.86 & 0.19 & -1.89 \\\hline
@@ -998,22 +1034,22 @@ dttmT & 0.90 & -0.20 & -2.54 & 2.69 & 3.68 & 3.77 & -0.22 & -0.18 & -3.64 & 2.06
 mtsmT & -0.33 & -5.56 & 4.20 & 1.39 & 5.68 & -4.48 & 2.97 & 2.34 & 3.76 & -7.62 & 0.84 & 1.13 & 9.98 & 2.51 & -1.52 & -1.03 \\\hline
 dtsmT & -1.96 & 0.77 & 2.26 & -0.26 & 1.79 & 0.92 & 0.06 & -0.03 & 5.00 & 1.80 & -2.45 & 2.24 & 1.99 & -5.87 & 0.34 & 1.25 \\\hline
 NN & 2.78 & 0.13 & 0.15 & 1.10 & -0.60 & 6.82 & -0.07 & -0.10 & -2.70 & 4.95 & 1.05 & -1.69 & 0.46 & 3.08 & 0.34 & 1.25 \\\hline
-  \caption{Composition of third component (threshold that |val|>0.05).}\label{tab:pca3}
-\end{longtable}
+\end{tabular}
+  \caption{Composition of third component (threshold: $|val|>0.05$).}\label{tab:pca3}
+\end{table*}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% 3
-\newcolumntype{R}{>{}p{0.6cm}}
-\clearpage
 %\onecolumn
-\begin{longtable}{|p{2cm}|| R|R|R|R|| R|R|R|R|| R|R|R|R|| R|R|R|R|}\hline
+\begin{table*}
+\begin{tabular}{|c|| c|c|c|c|| c|c|c|c|| c|c|c|c|| c|c|c|c|}\hline
   \centering
     \scriptsize
 \setlength{\tabcolsep}{.06667em}
 -\-  & \multicolumn{4}{c|}{CPP} & \multicolumn{4}{c|}{LAD} & \multicolumn{4}{c|}{LAU} & \multicolumn{4}{c|}{ELE} \\ \hline\hline
- & g. & p. & i. & h. &     g. & p. & i. & h. &    g. & p. & i. & h. &    g. & p. & i. & h. \\\hline \endfirsthead
--\-  & \multicolumn{4}{c|}{CPP} & \multicolumn{4}{c|}{LAD} & \multicolumn{4}{c|}{LAU} & \multicolumn{4}{c|}{ELE} \\ \hline\hline
- & g. & p. & i. & h. &     g. & p. & i. & h. &    g. & p. & i. & h. &    g. & p. & i. & h. \\\hline \endhead
+ & g. & p. & i. & h. &     g. & p. & i. & h. &    g. & p. & i. & h. &    g. & p. & i. & h. \\\hline
+%-\-  & \multicolumn{4}{c|}{CPP} & \multicolumn{4}{c|}{LAD} & \multicolumn{4}{c|}{LAU} & \multicolumn{4}{c|}{ELE} \\ \hline\hline
+% & g. & p. & i. & h. &     g. & p. & i. & h. &    g. & p. & i. & h. &    g. & p. & i. & h. \\\hline \endhead
 $\lambda$ & 3.81 & 4.00 & 6.75 & 5.52 & 4.26 & 4.03 & 5.79 & 6.03 & 3.55 & 3.68 & 5.29 & 7.14 & 5.65 & 5.66 & 7.78 & 8.31 \\\hline
 ncont & 2.30 & 2.60 & -2.75 & -2.62 & -3.27 & -3.23 & -3.16 & -1.59 & -3.55 & 3.47 & -2.74 & 1.75 & -2.87 & -3.16 & 5.14 & 1.67 \\\hline
 dtsw & 0.58 & -0.12 & -0.84 & -1.52 & 0.38 & -0.19 & 0.27 & -0.83 & -0.06 & 0.10 & 0.99 & -0.62 & -0.04 & -0.34 & 12.71 & 1.12 \\\hline
@@ -1033,23 +1069,23 @@ $bc$ & -0.17 & -0.06 & 0.03 & -0.71 & -0.11 & -0.14 & -1.03 & -0.92 & 0.02 & 0.2
 $tri$ & 1.09 & 0.11 & 0.00 & -0.31 & 0.11 & 14.18 & -0.00 & -0.00 & 1.23 & -0.40 & -0.00 & 0.00 & 3.12 & -1.50 & -0.49 & -0.24 \\\hline
 $cv$ & -0.24 & 0.24 & 0.00 & -0.25 & -2.62 & -4.41 & 0.00 & 0.00 & 0.34 & -15.74 & 0.00 & 0.00 & 14.09 & 16.09 & -0.36 & -0.24 \\\hline
 $in\;cent$ & 0.02 & -0.00 & 0.00 & -0.25 & 14.87 & 0.00 & 0.00 & 0.00 & 16.34 & -0.00 & -0.00 & 0.00 & 3.57 & -0.00 & -0.36 & -0.51 \\\hline
-  \caption{Composition of fourth component (threshold that |val|>0.05).}\label{tab:pca4}
-\end{longtable}
+\end{tabular}
+  \caption{Composition of fourth component (threshold: $|val|>0.05$).}\label{tab:pca4}
+\end{table*}
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% 4
-\newcolumntype{R}{>{}p{0.6cm}}
-\clearpage
 %\onecolumn
-\begin{longtable}{|p{2cm}|| R|R|R|R|| R|R|R|R|| R|R|R|R|| R|R|R|R|}\hline
+\begin{table*}
+\begin{tabular}{|c|| c|c|c|c|| c|c|c|c|| c|c|c|c|| c|c|c|c|}\hline
   \centering
     \scriptsize
 \setlength{\tabcolsep}{.06667em}
 -\-  & \multicolumn{4}{c|}{CPP} & \multicolumn{4}{c|}{LAD} & \multicolumn{4}{c|}{LAU} & \multicolumn{4}{c|}{ELE} \\ \hline\hline
- & g. & p. & i. & h. &     g. & p. & i. & h. &    g. & p. & i. & h. &    g. & p. & i. & h. \\\hline \endfirsthead
--\-  & \multicolumn{4}{c|}{CPP} & \multicolumn{4}{c|}{LAD} & \multicolumn{4}{c|}{LAU} & \multicolumn{4}{c|}{ELE} \\ \hline\hline
- & g. & p. & i. & h. &     g. & p. & i. & h. &    g. & p. & i. & h. &    g. & p. & i. & h. \\\hline \endhead
+ & g. & p. & i. & h. &     g. & p. & i. & h. &    g. & p. & i. & h. &    g. & p. & i. & h. \\\hline
+%-\-  & \multicolumn{4}{c|}{CPP} & \multicolumn{4}{c|}{LAD} & \multicolumn{4}{c|}{LAU} & \multicolumn{4}{c|}{ELE} \\ \hline\hline
+% & g. & p. & i. & h. &     g. & p. & i. & h. &    g. & p. & i. & h. &    g. & p. & i. & h. \\\hline \endhead
 $\lambda$ & 3.48 & 3.38 & 4.54 & 4.16 & 3.42 & 3.74 & 4.60 & 4.41 & 2.97 & 3.14 & 3.83 & 5.33 & 3.32 & 3.58 & 5.95 & 7.29 \\\hline
 Nkwnssnsw/Nkw & -6.10 & -3.15 & 0.31 & 0.94 & -2.48 & -1.57 & -0.20 & 0.43 & 1.12 & 1.63 & 0.33 & 1.23 & -2.41 & -0.97 & -1.30 & 1.91 \\\hline
 mtsTS & -4.04 & -1.67 & -1.79 & 1.54 & -1.90 & 0.84 & -5.02 & -0.15 & -1.53 & -1.19 & 0.50 & 0.67 & 1.56 & -0.20 & 0.89 & 0.24 \\\hline
@@ -1057,13 +1093,14 @@ dtsTS & -0.97 & 3.59 & -1.47 & 0.09 & 5.70 & 0.45 & 2.78 & 0.45 & -3.19 & 6.97 &
 dtsTSkw & 0.03 & -1.95 & 0.87 & -1.14 & -5.87 & -2.23 & 0.06 & -2.74 & -6.87 & -4.49 & -0.07 & 1.36 & 2.53 & -0.85 & -0.44 & -0.20 \\\hline
 dtsTSpv & 1.87 & -0.41 & 0.82 & 3.16 & 2.28 & -5.32 & -1.16 & 1.35 & 4.05 & -4.68 & 3.13 & -0.67 & 3.68 & 3.04 & -0.58 & -0.84 \\\hline
 sector & 0.00 & 0.00 & 0.00 & 0.48 & 0.00 & 0.00 & 0.00 & -0.00 & 0.00 & 0.00 & 0.00 & 0.00 & -0.00 & -0.00 & 11.05 & 1.52 \\\hline
-  \caption{Composition of fifth component (threshold that |val|>0.05).}\label{tab:pca5}
-\end{longtable}
+\end{tabular}
+  \caption{Composition of fifth component (threshold: $|val|>0.05$).}\label{tab:pca5}
+\end{table*}
 
 
-\section{Example of unexplained results}\label{sec:resE}
+\section{Histograms of existent and incident words}\label{sec:resE}
 
-\begin{figure*}[hb]
+\begin{figure*}[h!]
     \centering
     \includegraphics[width=\textwidth]{figs/kw}
     \caption{Size of words that are known in English. Crossing of incident and existential sizes is around 5 (figure~\ref{fig:kwnsw} shows a shift to length 6-7 when consideren only non stopwords). Words with three letters have maximum incidence, while most words have 7 letters.}
@@ -1071,7 +1108,7 @@ sector & 0.00 & 0.00 & 0.00 & 0.48 & 0.00 & 0.00 & 0.00 & -0.00 & 0.00 & 0.00 & 
 \end{figure*}
 
 
-\begin{figure*}[hb]
+\begin{figure*}[h!]
     \centering
     \includegraphics[width=\textwidth]{figs/kwnsw}
     \caption{Size of words that are known in English and are not stopwords. Crossing of incident and existential sizes is around 6-7 (figure~\ref{fig:kw} shows a shift to length 5 when considered stopwords). In this case, words with 4 letters have maximum incidence, while most words still have 7 letters. Exception for ELE, which exhibits maximum incidence of words with 5 letters and most words having 8 letters, which might be associated with ELE network typology discussed in tables~\ref{tab:tokens} and~\label{tab:caracteres}.}
@@ -1081,7 +1118,7 @@ sector & 0.00 & 0.00 & 0.00 & 0.48 & 0.00 & 0.00 & 0.00 & -0.00 & 0.00 & 0.00 & 
 
 
 
-\begin{figure*}[hb]
+\begin{figure*}[h!]
     \centering
     \includegraphics[width=\textwidth]{figs/kwssnsw}
     \caption{Size of words that are known, are not stopwords and have synsets. Ressembles figure~\ref{fig:kwnsw}. Stopword sizes histogram are in figure~\ref{fig:sw}. Differences suggests $\approx 0.5$ might be constant. LAD and LAU exquisite vocabulary (GNU/Linux, programming, sound/signal processing, music) might be responsible for higher difference of distributions.}
@@ -1089,7 +1126,7 @@ sector & 0.00 & 0.00 & 0.00 & 0.48 & 0.00 & 0.00 & 0.00 & -0.00 & 0.00 & 0.00 & 
 \end{figure*}
 
 
-\begin{figure*}[hb]
+\begin{figure*}[h!]
     \centering
     \includegraphics[width=\textwidth]{figs/sw}
     \caption{Size histogram of stopwords. Stopwords with two letters are the most frequent, while most of them have four letters. Differences in distribution seem stable around $\approx 0.6$.}
@@ -1098,12 +1135,15 @@ sector & 0.00 & 0.00 & 0.00 & 0.48 & 0.00 & 0.00 & 0.00 & -0.00 & 0.00 & 0.00 & 
 
 
 
-\begin{figure*}[hb]
+\begin{figure*}[h!]
     \centering
     \includegraphics[width=\textwidth]{figs/nssnsw}
     \caption{Size histogram of known English words that are not stopwords and do not return synsets. Differences in distribution suggests less stable behavior, with high incidence of few words high number of existing words with many letters. Observe difference $\geq 1$, as observed only with all known words, but even higher.}
     \label{fig:nssnsw}
 \end{figure*}
+
+
+\section{Online scripts and data}\label{sec:on}
 
 
 \nocite{*}
@@ -1113,85 +1153,4 @@ sector & 0.00 & 0.00 & 0.00 & 0.48 & 0.00 & 0.00 & 0.00 & -0.00 & 0.00 & 0.00 & 
 %\balancecolumns
 % That's all folks!
 \end{document}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Delete after transition
-\section{\label{sec:into}Introduction}
-This work observes elementary textual production in interaction networks.
-Studied networks takes place in four public email lists: responses yield
-interaction between authors. A topological characterization of these same
-networks are presented in~\cite{topSN}. This article exposes general textual
-characteristics and relates textual and topological traces. 
 
-\section{Materials and methods}
-
-\subsection{Trivial incidences}
-On characters, letters, tokens and word incidences and sizes, important measures are:
-\begin{itemize}
-    \item Number of characters, letters, numeric types and vogals.
-    \item Number of tokens, percentage of puntcuations, of known words, of words that returns synsets, of tokens that are stopwords, of words that return synsets and and are stop words (which are they).
-    \item Distribution of word sizes that are not stop words and return synsets, distribution of sizes of stopwords.
-    \item Mean an standard deviation of word sizes with and without stopwords.
-    \item Sentences sizes distribution. Number of empty lines (as paragraph/block organizaation measures).
-    \item Number of characters and words per messages.
-    \item Histogram with respect to most occurent or most basic words in english language, such as in~\cite{wordLists}.
-\end{itemize}
-
-Morpholinguistics and POS tags is also of interest:
-\begin{itemize}
-    \item Fraction of plurals, gender, common prefixes and suffixes, etc.
-    \item Fraction of adverbs, adjectives, verbs, etc.
-    \item Fraction of incidences of POS tags and other sintagma classification (see doctorate of Michel Kearns)
-\end{itemize}
-
-Emotion classification has been done as well.
-
-Wordnet synsets incidences was studied as well, as a potentially useful way to characterize networks and sectors:
-\begin{itemize}
-    \item Incidence of hypernyms, hyponyms, holonyms and meronyms.
-    \item Similarity measures of words, phases and messages, by use of semantic criteria (Wordnet) and bag of words.
-\end{itemize}
-
-\subsection{Observation of structure}
-Key observations for a deeper insight about network structure depend on
-theoretical background and intentions. For this article, these were considered:
-\begin{itemize}
-    \item autossimilarity of messages them selfs and by authors. This include sharp incidences of word sizes and outliers, particularly high incidences of tags and morphosintactic classes, high incidences of particular synset characterisctics.
-    \item correlation of measures of each vertex, easing pattern detection involving topology of interaction and language used. Date and time incidence measures is also addressed, as potentially linked to participation habits and purposes.
-    \item incidences of these linguistic traces in hub, intermediary and peripheral network sectors.
-    \item observanse of information ``ducts'' through similarity measures.
-\end{itemize}
-Criteria for these priorization include integration with previous topological results, lack of concise results that
-could substantiate correlations of topological and textual traces, and common sense as mundane integrant of these networks.
-
-\section{Results}
-Hypothesis:
-\begin{itemize}
-    \item incidences of primitive textual features are informative. This should hold true in respect to overall observations and dedicated inspections of sectors.
-    \item By measuring similarities of message-response pairs, in respect to textual content of messages, information ``ducts'' might be observed. These might coincide with asymmetries of edges between vertexes pairs or with homophily.
-    \item Compared to all written text of the 20 thousand messages, peripheric vertex messages should exhibit greater diversity. Self-similarity of messages might vary with respect to connectivity as well.
-\end{itemize}
-
-\subsection{Punctual observations}
-From known words, between 1-2\% are not stopwords and does not have Wordnet synsets. These include 1) generic terms, like ``anyone'' or ``everything''. Also, 2) proper names, like Fred, Tony or IEEE. Finally, 3) compound formation, like without and underpowered.
-
-
-
-\section{Concluding remarks and future work}\label{conc}
-
-\begin{acknowledgments}
-This article is heavily influenced by Protege and BFO documentation. Authors thank
-community and researchers related to these projects~\cite{protege,bfo}.
-Renato Fabbri is grateful to CNPq (project 870336/1997-5) and 
-the Postgraduate Committee of the IFSC/USP.
-\end{acknowledgments}
-
-
-\appendix
-
-\nocite{*}
-\bibliography{paper}% Produces the bibliography via BibTeX.
-
-\end{document}
-%
-% ****** End of file aipsamp.tex ******
