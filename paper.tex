@@ -70,6 +70,13 @@
      morestring=[b]",                           % string format
 }
 
+\hypersetup{
+	colorlinks,
+	linkcolor={red!50!black},
+	citecolor={blue!50!black},
+	urlcolor={blue!80!black}
+}
+
 
 \begin{document}
 
@@ -189,46 +196,99 @@ Section~\ref{sec:methods} explains the analysis roadmap, with the measures chose
 for understanding data. Section~\ref{sec:results} is dedicated to detailing results and discussion.
 Section~\ref{sec:remarks} has concluding remarks and further works envisioned.
 The Appendix give directions on data and scripts while
-Supporting Information hold further tables and results still to interpret.
+Supporting Information hold further tables, figures and results still to interpret.
 
 \section{Materials}\label{sec:materials}
-Eighty thousand messages were analysed, twenty thousand from each email list (see Appendix~\ref{sec:si}).
-This data was accessed online through the GMANE database~\cite{GMANE}. Each message
-has an ID, the ID of the message it is a response to (if any), an author,
-a ``date and time'' field registering the moment the message was sent, and the textual content.
-Other fields are also available, but plays no direct role in the work here presented.
-Basic information of messages, threads and authors are summarized in Table~\ref{tab:bas}.
+%The data analysed is mainly derived from email lists.
+%For a throughout exposition,
+%eighty thousand messages were analysed,
+%twenty thousand from each email list (see Appendix~\ref{sec:si}).
+%This data was accessed online through the GMANE public database~\cite{GMANE}.
+%Each message has an ID, the ID of the message it is a response to (if any), an author,
+%a ``date and time'' field registering the moment the message was sent, and the textual content.
+%Other fields are also available, but plays no direct role in the work here presented.
+%Basic information of messages, threads and authors are summarized in Table~\ref{tab:bas}.
+%
+%Other sources of data, derived from Twitter, IRC and Facebook 
+%are used to corroborate results.
 
-\subsection{Network formation}\label{subsec:net}
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.3\textwidth]{figs/criaRede_}
-    \caption{Formation of interaction network. Edges are directed as information flows, from
-    an original message's author to the observed responder. Further information is given in Section~\ref{subsec:net}}
-    \label{formationNetwork}
-\end{figure}
+Email list messages were obtained from
+the GMANE email archive~\cite{gmanePack}, which consists of more than 20,000 email lists and more than 130,000,000 messages~\cite{GMANEwikipedia}. These lists cover a variety of topics, mostly technology-related. The archive can be described as a corpus with metadata of its messages, including sent time, place, sender name, and sender email address.
+The GMANE usage in scientific research is reported in studies of isolated lists and of lexical innovations~\cite{GMANE2,bird}. 
 
-Message-response pairs yield interaction networks, such as shown in Figure~\ref{formationNetwork}.
-Each participant is represented by a vertex, and each response is considered evidence that
-information emitted by the first author was received
-by the responder (that had to read, process its contents and render a relevant textual response). Therefore, an edge from first author to the second author (responder) is considered.
-This is the ``information network'' of the system. Edges can be considered in the reverse
-order, from the responder to the original sender, representing status attribution, as the responder
-considered what the sender said worthy of responding and is directing his attention to him. This is the ``status network''. As these networks
-are virtually equivalent, one considers but one of them, usually the information network.
+We analyzed many email lists (and data from Twitter, Facebook, IRC and Participa.br) but selected only four in order to make a thorough analysis, from which general properties can be inferred. These lists, selected as representative of both a diverse set and ordinary lists, are:
+\begin{itemize}
+	\item Linux Audio Users list\footnote{gmane.linux.audio.users is list ID in GMANE.}, with participants holding hybrid artistic and technological interests, from different countries. Abbreviated as LAU from now on.
+	\item Linux Audio Developers list\footnote{gmane.linux.audio.devel is list ID in GMANE.}, with participants from different countries. A more technical and less active version of LAU. Abbreviated LAD from now on.
+	\item Development list for the standard C++ library\footnote{gmane.comp.gcc.libstdc++.devel is list ID in GMANE.}, with computer programmers from different countries. Abbreviated as CPP from now on.
+	\item List for de discussion of the election reform\footnote{gmane.politics.election-methods is list ID in GMANE.}.
+		Abbreviated ELE from now on.
+\end{itemize} 
+The first 20,000 messages of each list were considered, with total timespan, authors, threads and missing messages indicated in Table~\ref{tab:bas}.
+Furthermore, we used additional networks from Facebook, Twitter, IRC and Participa.br to grasp the generality of the results derived manly from email lists.
 
-\subsection{Verbal observations}
+%\begin{table}
+%	\centering
+%	\caption{Columns $date_1$ and $date_M$ have dates of first and last messages from the 20,000 messages considered in each email list.
+%		$N$ is the number of participants (number of different email addresses).
+%		$\Gamma$ is the number of discussion threads (count of messages without antecedent).
+%		$\overline{M}$ is the number of messages missing in the 20,000 collection, $100\frac{23}{20000}=0.115$ percent in the worst case.
+%	}
+%	\label{tab:genLists}
+%	\begin{tabular}{|l|c|c|c|c|c|}\hline
+%		list & $date_1$ & $date_{M}$    & $N$  & $\Gamma$ & $\overline{M}$ \\\hline
+%		\input{tables/tab1Geral}
+%	\end{tabular}
+%\end{table}
+
+
+\section{Methodology}\label{sec:methods}
+%This article is dedicated to reporting differentiation in the textual production of the network as connectivity changes. Here, the observance of primary textual statistics is needed, and both overall incidences, and correlation to topological aspects, were tackled.
+%Participants are references for the messages sent, the texts produced and the activity along time.
+%The texts produced by all participants on each of the
+%peripheral, intermediary and hub sectors
+%are considered as different classes of .
+%To observe correlation of textual and topological characteristics, we take measures on each vertex.
+
+
+\subsection{Network formation, topological measures and Erd\"os sectioning}\label{subsec:net}
+Figure~\cite{} is illustrative of the formation of interaction networks.
+Avoiding identical repetition of content,
+Please refer to~\cite{evoSN} for:
+\begin{itemize}
+	\item further details on network formation.
+	\item A concise consideration of the basic topological measures of vertex $i$: degree $k_i$, in-degree $k_i^{in}$, out-degree $k_i^{out}$ strength $s_i$, in-strength $s_i^{in}$, out-strength $s_i^{out}$, betweenness centrality $bt_i$, clustering coefficient $cc_i$.
+	\item A specification of the symmetry measures for a vertex $i$:
+		asymmetry $asy_i$, mean of asymmetry of edges $\mu_i^{asy}$, standard deviation of asymmetry of edges $\sigma_I^{asy}$, disequilibrium $dis_i$, mean of disequilibrium of edges $\mu_i^{dis}$, standard deviation of disequilibrium of edges $\sigma_i^{dis}$.
+	\item The partitioning of the real network in periphery, intermediary and hub sectors through a comparison of the real network with an Erd\"os-R\'enyi network with the same number of vertices and edges. 
+\end{itemize}
+Such partition of the network is called ``Erd\"os sectioning'' and is performed with degree $k_i$ unless stated otherwise.
+
+%\begin{figure}[h!]
+%    \centering
+%    \includegraphics[width=0.3\textwidth]{figs/criaRede_}
+%    \caption{Formation of interaction network. Edges are directed as information flows, from
+%    an original message's author to the observed responder. Further information is given in Section~\ref{subsec:net}}
+%    \label{formationNetwork}
+%\end{figure}
+%
+%Message-response pairs yield interaction networks, such as shown in Figure~\ref{formationNetwork}.
+%Each participant is represented by a vertex, and each response is considered evidence that
+%information emitted by the first author was received
+%by the responder (that had to read, process its contents and render a relevant textual response). Therefore, an edge from first author to the second author (responder) is considered.
+%This is the ``information network'' of the system. Edges can be considered in the reverse
+%order, from the responder to the original sender, representing status attribution, as the responder
+%considered what the sender said worthy of responding and is directing his attention to him. This is the ``status network''. As these networks
+%are virtually equivalent, one considers but one of them, usually the information network.
+
+\subsection{Textual measures}
 Each message has a textual content. 
 Analysis this content can consider author, network section or community, or messages independently.
 As these are informal communities, there are typos, \emph{leet} and invented words.
 This diversity and informality poses some challenges, by which the methodology was shaped.
 
-\section{Methodology}\label{sec:methods}
-An article was written for reporting stability in such networks from the topological viewpoint~\cite{evoSN}.
-This article is dedicated to reporting differentiation in the textual production of the network as connectivity changes. Here, the observance of primary textual statistics is needed, and both overall incidences, and correlation to topological aspects, were tackled.
 
-It is coherent to have participants as vertexes and as references for the messages sent, for the text produced and for activity (related to time and date). Thus, to observe the text produced in a certain section, one might gather all text produced by all participants on that section. To observe correlation of textual and topological characteristics, one can take measures on each vertex.
 
 \subsection{Network measurements and partitioning}
 Basic network measures of connectivity, in the same networks, were observed in a previous article~\cite{evoSN}.
@@ -474,7 +534,7 @@ GMANE is a public email list database with some tenths of thousand of lists~\cit
     \item CPP, the development list of the standard C++ library\footnote{gmane.comp.gcc.libstdc++.devel is list ID in GMANE archive.}. Dominated by specialized computer programmers.
     \item LAD: Linux Audio Developers list\footnote{gmane.linux.audio.devel is list ID in GMANE archive.}.
     \item LAU: Linux Audio Users list\footnote{gmane.linux.audio.users is list ID in GMANE archive.}.
-    \item ELE: list for discussion of the election reform\footnote{gmane.politics.election-methods is list ID in GMANE archive}.
+    \item ELE: list for discussion of the election reform\footnote{gmane.politics.election-methods is list ID in GMANE}.
 \end{itemize}
 
 Table~\ref{tab:bas} has an overview of these lists, in terms of participants, threads and messages in each of the primitive connective sectors.
