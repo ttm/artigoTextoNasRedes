@@ -253,7 +253,9 @@ Furthermore, we used additional networks from Facebook, Twitter, IRC and Partici
 
 
 \subsection{Network formation, topological measures and Erd\"os sectioning}\label{subsec:net}
-Figure~\cite{} is illustrative of the formation of interaction networks.
+
+
+Figure~\ref{fig:formation} is illustrative of the formation of interaction networks.
 Avoiding identical repetition of content,
 Please refer to~\cite{evoSN} for:
 \begin{itemize}
@@ -263,7 +265,16 @@ Please refer to~\cite{evoSN} for:
 		asymmetry $asy_i$, mean of asymmetry of edges $\mu_i^{asy}$, standard deviation of asymmetry of edges $\sigma_I^{asy}$, disequilibrium $dis_i$, mean of disequilibrium of edges $\mu_i^{dis}$, standard deviation of disequilibrium of edges $\sigma_i^{dis}$.
 	\item The partitioning of the real network in periphery, intermediary and hub sectors through a comparison of the real network with an Erd\"os-R\'enyi network with the same number of vertices and edges. 
 \end{itemize}
-Such partition of the network is called ``Erd\"os sectioning'' and is performed with degree $k_i$ unless stated otherwise.
+Such partition of the network is called ``Erd\"os sectioning'' and is
+herein performed with degree $k_i$ unless stated otherwise.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.3\textwidth]{figs/criaRede__}
+	\caption{The formation of interaction networks from email messages. Each vertex represents a participant. A reply message from B to a message from A is regarded as evidence that B has received information from A and yields a directed edge. Multiple messages add ``weight'' to a directed edge. Further details are given in~\cite{evoSN}.}
+	\label{fig:formation}
+\end{figure}
+
 
 %\begin{figure}[h!]
 %    \centering
@@ -282,59 +293,51 @@ Such partition of the network is called ``Erd\"os sectioning'' and is performed 
 %considered what the sender said worthy of responding and is directing his attention to him. This is the ``status network''. As these networks
 %are virtually equivalent, one considers but one of them, usually the information network.
 
-\subsection{Textual measures}
-Each message has a textual content. 
-Analysis this content can consider author, network section or community, or messages independently.
-As these are informal communities, there are typos, \emph{leet} and invented words.
-This diversity and informality poses some challenges, by which the methodology was shaped.
+% token size counting
+% token type counting
+% POS tag via brittle tagger
 
 
-
-\subsection{Network measurements and partitioning}
-Basic network measures of connectivity, in the same networks, were observed in a previous article~\cite{evoSN}.
-The present article uses the same topological measures to observe correlations, PCA formation and network sectioning in peripheral, intermediary and hub sectors,
-through strength measure. As described in that article, the ``exclusivist criteria'' for such partitioning is found to be the closest to literature
-predictions (5\% of hubs, 15\% of intermediary and 80\% of peripheral vertex). Even so, strength-based
-criteria is simpler and yields reasonable results (5-10\%, 5-25\%, 65-90\%).
-Beyond that, changing the sectioning to a degree or a compound criteria did not significantly change the presented results.
-
-Consequently, herein is considered a strength partitioning each sector (periphery, intermediary, hubs) is regarded as a \emph{primitive sector} of the \emph{primitive partitioning}.
+%\subsection{Network measurements and partitioning}
+%The present article uses the same topological measures to observe correlations, PCA formation and network sectioning in peripheral, intermediary and hub sectors,
+%Basic network measures of connectivity, in the same networks, were observed in a previous article~\cite{evoSN}.
+%The present article uses the same topological measures to observe correlations, PCA formation and network sectioning in peripheral, intermediary and hub sectors,
+%through strength measure. As described in that article, the ``exclusivist criteria'' for such partitioning is found to be the closest to literature
+%predictions (5\% of hubs, 15\% of intermediary and 80\% of peripheral vertex). Even so, strength-based
+%criteria is simpler and yields reasonable results (5-10\%, 5-25\%, 65-90\%).
+%Beyond that, changing the sectioning to a degree or a compound criteria did not significantly change the presented results.
+%
+%Consequently, herein is considered a strength partitioning each sector (periphery, intermediary, hubs) is regarded as a \emph{primitive sector} of the \emph{primitive partitioning}.
 
 %Tests done while mining the data,
 %suggested that boudaries should not be considered sharp, but as smooth transitions.
 
-
 \subsection{Textual measures}
-An infinitude of textual measures can be drawn from texts. This work focuses on the simplest of them, as they proved sufficient for current step. These measures include frequency of individual letters and punctuations (Tables~\ref{tab:cha}), of words and tokens (Table~\ref{tab:tokens}), sizes of tokens, sentences and messages (Table~\ref{tab:sizesTokens},~\ref{tab:sizesSents} and~\ref{tab:sizesMsgs}) and POS (Part-Of-Speech) tags (Table~\ref{tab:pos}). Other measures envisioned are in subsection~\ref{subsec:fw}.
-
-This choice is based on: 1) the lack of such information in literature, as far as authors know; 
-2) potential relations of these incidences with topological aspects, such as connectivity; 3) the interdependence of textual artifacts suggests that simple measures should reflect complex behaviors subtle aspects.
-A preliminary study, with all the work from Machado de Assis~\cite{letrasMachado}, made clear that these measures vary with respect to style.
-
-
+This work focuses on the most simple measures from texts, as they proved sufficient for current step.
+%These measures include frequency of individual letters and punctuations (Tables~\ref{tab:cha}), of words and tokens (Table~\ref{tab:tokens}), sizes of tokens, sentences and messages (Table~\ref{tab:sizesTokens},~\ref{tab:sizesSents} and~\ref{tab:sizesMsgs}) and POS (Part-Of-Speech) tags (Table~\ref{tab:pos}). Other measures envisioned are in subsection~\ref{subsec:fw}.
 Considered measures are:
 \begin{itemize}
-    \item Frequency of characters: letters, vowels, punctuations and uppercase. Table~\ref{tab:cha} is dedicated to such measures.
-    \item Number of tokens, frequency of punctuations, of known words, of words that has wordnet synsets, of tokens that are stopwords, of words that return synsets and are stop words, etc. Table~\ref{tab:tokens} is dedicated to measures of this kind.
-    \item Mean and standard deviation for word and token sizes. Table~\ref{tab:sizesTokens} is dedicated to these measures.
-    \item Mean and standard deviation of sentence sizes. Table~\ref{tab:sizesSents} is dedicates to this sort of measures.
-    \item Mean and standard deviation of message sizes. Table~\ref{tab:sizesMsgs} presents some of these measures.
-    \item Fraction of morphosyntactic classes, such as adverbs, adjectives and nouns, represented by POS (Part-Of-Speech) tags. Table~\ref{tab:pos} displays such measures.
+    \item Frequency of characters: letters, vowels, punctuations and uppercase.
+    \item Number of tokens, frequency of punctuations, of known words, of words that has wordnet synsets, of tokens that are stopwords, of words that return synsets and are stop words, etc.
+    \item Mean and standard deviation for word and token sizes.
+    \item Mean and standard deviation of sentence sizes.
+    \item Mean and standard deviation of message sizes.
+    \item Fraction of morphosyntactic classes, such as adverbs, adjectives and nouns, represented by POS (Part-Of-Speech) tags.
 \end{itemize}
+\noindent To such measures are dedicated Tables~\ref{tab:cha},~\ref{tab:tokens},~\ref{tab:sizesTokens},~\ref{tab:sizesSents},~\ref{tab:sizesMsgs},~\ref{tab:pos}.
 
-For sections (hubs, intermediary and peripheral),
-all messages written by authors in each section were considered together. For the histograms, independent messages were considered from each sector. 
+This choice is based on: 1) the lack of such information in literature, as far as authors know; 
+2) potential relations of these incidences with topological aspects, such as connectivity; 3) the interdependence of textual artifacts suggests that simple measures should reflect complex behaviors and more subtle aspects.
+A preliminary study, with the complete works from Machado de Assis, made clear that these measures vary with respect to style~\cite{letrasMachado}.
 
-\subsection{Topological measures}\label{subsec:top}
-Degree (in, out and total), strength (in, out and total), betweenness centrality and clustering coefficient were measured for each vertex in the interaction network. This served two purposes:
-\begin{itemize}
-    \item Obtaining a sound partitioning of the network in peripheral, intermediary and hub sectors. This was developed in a previous article by the same author~\cite{evoSN}.
-    \item Observance of correlation with textual measures and principal components formation.
-\end{itemize}
-
-These measures are not developed here extensively as they are very consolidated, simple, and was the core of a previous article this subject by the same author~\cite{evoSN}.
-
-
+%\subsection{Topological measures}\label{subsec:top}
+%Degree (in, out and total), strength (in, out and total), betweenness centrality and clustering coefficient were measured for each vertex in the interaction network. This served two purposes:
+%\begin{itemize}
+%    \item Obtaining a sound partitioning of the network in peripheral, intermediary and hub sectors. This was developed in a previous article by the same author~\cite{evoSN}.
+%    \item Observance of correlation with textual measures and principal components formation.
+%\end{itemize}
+%
+%These measures are not developed here extensively as they are very consolidated, simple, and was the core of a previous article this subject by the same author~\cite{evoSN}.
 %\subsection{Observation of structure}
 \subsection{Relating text and topology}
 Key observations for a deeper insight about network structure depend on
@@ -351,6 +354,9 @@ could substantiate correlations of topological and textual traces, and common se
 First task, of textual production in hubs, intermediary and peripheral sectors, is observed by Tables~\ref{tab:cha}-\ref{tab:kolPctInter}. An adaptation of the Kolmogorov-Smirnov test was used to observe differences in textual productions, as exposed in Appendix~\ref{sec:ks}.
 
 Second task is addressed by the correlation matrix with both textual and topological measurements of each participant, in Tables~\ref{tab:corTop}-\ref{tab:corTexTop}. Third, principal components composition are in Tables~\ref{tab:pca1}-\ref{tab:pca5}. 
+
+For sections (hubs, intermediary and peripheral),
+all messages written by authors in each section were considered together. For the histograms, independent messages were considered from each sector. 
 
 \section{Results and discussion}\label{sec:results}
 
@@ -430,6 +436,13 @@ These networks yield diverse characteristics, some of which were not of core imp
 Histogram differences of incident and existent word sizes were found constant. That is, in each list, when a histogram of word sizes were made with all words written, and another histogram made with sizes of all \emph{different} words, the cumulative positive difference of the two histograms were found constant for all lists analysed. When all known English words were considered, the difference was always $\approx 1.0$. When stopwords were discarded, the difference found was different, but still constant, slightly above $0.5$. When only stopwords were considered, the difference was $\approx 0.6$. When only known English words that does not have wordnet synsets are used, this difference is $\approx 1.2$.
 
 These results currently lacks substantial interpretation, which is provocative and should lead at least to a research note. Appendix ~\ref{sec:resE} and Figures~\ref{fig:kw}-\ref{fig:nssnsw} are dedicated to this histogram differences.
+
+Typos, \emph{leet},
+slang and invented words
+pose some challenges,
+by which the methodology was partially shaped.
+Nonetheless, future work might bring these entries
+to forefront.
 
 
 
