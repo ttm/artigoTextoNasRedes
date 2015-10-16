@@ -339,28 +339,63 @@ A preliminary study, with the complete works from Machado de Assis, made clear t
 %
 %These measures are not developed here extensively as they are very consolidated, simple, and was the core of a previous article this subject by the same author~\cite{evoSN}.
 %\subsection{Observation of structure}
-\subsection{Relating text and topology}
-Key observations for a deeper insight about network structure depend on
-theoretical background and intentions. For this article, were considered:
+\subsection{Relating text and topology}\label{sec:ks}
+%Key observations for a deeper insight about network structure depend on
+%theoretical background and intentions. 
+The topological and textual measures were related by:
 \begin{enumerate}
-    \item Incidences of linguistic traces in hub, intermediary and peripheral network sectors.
+    \item incidences of linguistic traces in hub, intermediary and peripheral network sectors, which are delimited by topological criteria.
     \item Correlation of measures of each vertex, easing pattern detection involving topology of interaction and language used.
-    \item PCA to gain further insights about how measures combine in principal components formation.
+    \item Principal components formation derived from usual PCA.
 \end{enumerate}
 
-Criteria for this choice include integration with previous topological results, lack of concise results in literature (as far as author knows) that
-could substantiate correlations of topological and textual traces, and common sense as a long-time member of these networks.
+%This choice include integration with previous topological results, lack of concise results in literature (as far as author knows) that
+%could substantiate correlations of topological and textual traces, and common sense as a long-time member of these networks.
+%First task, of textual production in hubs, intermediary and peripheral sectors, is observed by Tables~\ref{tab:cha}-\ref{tab:kolPctInter}.
+An adaptation of the Kolmogorov-Smirnov test was used to observe differences in textual content, as follows.
+Be $F_{1,n}$ and $F_{2,n'}$ two empirical distribution functions, where $n$ and $n'$ are the number of observations on each sample. The two-sample Kolmogorov-Smirnov test rejects the null hypothesis if:
+\begin{equation}\label{eq:ks}
+D_{n,n'} > c(\alpha)\sqrt{\frac{n+n'}{nn'}}
+\end{equation}
 
-First task, of textual production in hubs, intermediary and peripheral sectors, is observed by Tables~\ref{tab:cha}-\ref{tab:kolPctInter}. An adaptation of the Kolmogorov-Smirnov test was used to observe differences in textual productions, as exposed in Appendix~\ref{sec:ks}.
+\noindent where $D_{n,n'}=sup_x[F_{1,n}-F_{2,n'}]$ and $c(\alpha)$ is related to the critical region $\alpha$ by:
 
-Second task is addressed by the correlation matrix with both textual and topological measurements of each participant, in Tables~\ref{tab:corTop}-\ref{tab:corTexTop}. Third, principal components composition are in Tables~\ref{tab:pca1}-\ref{tab:pca5}. 
+\begin{table}[H]
+\centering
+\begin{tabular}{|l||c|c|c|c|c|c|}\hline
+$\alpha$    & 0.1  & 0.05 & 0.025 & 0.01 & 0.005 & 0.001 \\\hline
+$c(\alpha)$ & 1.22 & 1.36 & 1.48  & 1.63 & 1.73  & 1.95  \\\hline
+\end{tabular}
+\end{table}
 
-For sections (hubs, intermediary and peripheral),
-all messages written by authors in each section were considered together. For the histograms, independent messages were considered from each sector. 
+We need to compare empirical distribution functions, therefore $D_{n,n'}$ is given, as are $n$ and $n'$. All terms in equation~\ref{eq:ks} are positive and $c(\alpha)$ can be isolated:
 
+\begin{equation}\label{eq:ks2}
+c(\alpha) < \frac{D_{n,n'}}{\sqrt{\frac{n+n'}{nn'}}} = c'(\alpha)
+\end{equation}
+
+%Tables~\ref{tab:kolSub}-\ref{tab:kolPctInter} are populated with values for $c'(\alpha)$.
+When $c'(\alpha)$ is high, low values of $\alpha$ favor rejecting the null hypothesis.
+For example, when $c'(\alpha)$ is greater than $\approx 1.7$, one might assume that $F_{1,n}$ and $F_{2,n'}$ differ.
+More importantly for us is that $c'(\alpha)$ is a measure of distance between both distributions~\cite{kolm}.
+We use collections of these values for deriving conclusions
+about how different are the underlying mechanisms of the collections.
+
+%Second task is addressed by the correlation matrix with both textual and topological measurements of each participant, in Tables~\ref{tab:corTop}-\ref{tab:corTexTop}. Third, principal components composition are in Tables~\ref{tab:pca1}-\ref{tab:pca5}. 
+
+%For sections (hubs, intermediary and peripheral),
+%all messages written by authors in each section were considered together. For the histograms, independent messages were considered from each sector. 
 \section{Results and discussion}\label{sec:results}
 
-Although the results drawn from experiments and statistics were diverse, some fundamental insights can be obtained by going through tables and figures in the Appendix~\ref{sec:si}. Most importantly: connectivity has strong influence in textual production of participants in the network. For example: hubs use more contractions, more adjectives, more common words, and less punctuation if compared to the rest of the network, specially the peripheral sector. In general, rise or fall of a measure was monotonic, but some of them reached extreme values in the intermediary sector.
+The most important result in this article is the
+extreme differentiation of the Erd\"os sectors.
+
+
+, connectivity has strong influence in textual production of participants in the network.
+For example: hubs use more contractions, more adjectives, more common words, and less punctuation if compared to the rest of the network, specially the peripheral sector.
+In general, rise or fall of a measure was monotonic, but some of them reached extreme values in the intermediary sector.
+
+Many insights can be obtained by skipping through tables and figures in the Supporting Information.
 
 Next subsections exhibit particular results of interests.
 
@@ -514,32 +549,6 @@ mailing lists analysed.
 %\balancecolumns
 \newpage
 \appendix
-\section{Adaptation of the Kolmogotov-Smirnov test}\label{sec:ks}
-\subsection{Canonical Kolmogorov-Smirnov test}
-Be $F_{1,n}$ and $F_{2,n'}$ two empirical distribution functions, where $n$ and $n'$ are the number of observations on each sample. The two-sample Kolmogorov-Smirnov test rejects the null hypothesis if:
-\begin{equation}\label{eq:ks}
-D_{n,n'} > c(\alpha)\sqrt{\frac{n+n'}{nn'}}
-\end{equation}
-
-where $D_{n,n'}=sup_x[F_{1,n}-F_{2,n'}]$ and $c(\alpha)$ is given for each level of $\alpha$:
-
-\begin{table}[H]
-\centering
-\begin{tabular}{|l||c|c|c|c|c|c|}\hline
-$\alpha$    & 0.1  & 0.05 & 0.025 & 0.01 & 0.005 & 0.001 \\\hline
-$c(\alpha)$ & 1.22 & 1.36 & 1.48  & 1.63 & 1.73  & 1.95  \\\hline
-\end{tabular}
-\end{table}
-
-\subsection{Adaptation}
-We need to compare empirical distribution functions, so $D_{n,n'}$ is given, as are $n$ and $n'$. Therefore, as all terms in equation~\ref{eq:ks} are positive and $c(\alpha)$ can be isolated:
-
-\begin{equation}\label{eq:ks2}
-c(\alpha) < \frac{D_{n,n'}}{\sqrt{\frac{n+n'}{nn'}}} = c'(\alpha)
-\end{equation}
-
-Tables~\ref{tab:kolSub}-\ref{tab:kolPctInter} are populated with values for $c'(\alpha)$. When $c'(\alpha)$ is high, low values of $\alpha$ are possible for the test to reject the null hypothesis. Therefore, when $c'(\alpha)$ is greater than $\approx 1.7$, it is reasonable to assume that $F_{1,n}$ and $F_{2,n'}$ differ.
-
 \section{Support information}\label{sec:si}
 \subsection{Brief description of the email lists chosen}\label{subsec:gm}
 GMANE is a public email list database with some tenths of thousand of lists~\cite{GMANE}. Four email lists were selected, in a similar fashion developed in~\cite{evoSN}, but with MET substituted by ELE list so that all lists are in English. The lists are:
