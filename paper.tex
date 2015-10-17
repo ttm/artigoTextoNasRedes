@@ -226,7 +226,18 @@ We analyzed many email lists (and data from Twitter, Facebook, IRC and Participa
 		Abbreviated ELE from now on.
 \end{itemize} 
 The first 20,000 messages of each list were considered, with total timespan, authors, threads and missing messages indicated in Table~\ref{tab:bas}.
-Furthermore, we used additional networks from Facebook, Twitter, IRC and Participa.br to grasp the generality of the results derived manly from email lists.
+Furthermore, additional networks from Twitter, IRC and Participa.br
+are scrutinized to grasp the generality of the results derived manly from email lists.
+
+Typos, \emph{leetspeak},
+slang and invented words
+pose some challenges to current analysis
+which influenced the methodology to employ numerous 
+metrics for the texts.
+Future work might bring these entries to forefront 
+as neologisms and other linguistic innovations.
+
+
 
 %\begin{table}
 %	\centering
@@ -378,7 +389,7 @@ c(\alpha) < \frac{D_{n,n'}}{\sqrt{\frac{n+n'}{nn'}}} = c'(\alpha)
 When $c'(\alpha)$ is high, low values of $\alpha$ favor rejecting the null hypothesis.
 For example, when $c'(\alpha)$ is greater than $\approx 1.7$, one might assume that $F_{1,n}$ and $F_{2,n'}$ differ.
 More importantly for us is that $c'(\alpha)$ is a measure of distance between both distributions~\cite{kolm}.
-We use collections of these values for deriving conclusions
+We use collections of these values for deriving hypotheses
 about how different are the underlying mechanisms of the collections.
 
 %Second task is addressed by the correlation matrix with both textual and topological measurements of each participant, in Tables~\ref{tab:corTop}-\ref{tab:corTexTop}. Third, principal components composition are in Tables~\ref{tab:pca1}-\ref{tab:pca5}. 
@@ -388,107 +399,207 @@ about how different are the underlying mechanisms of the collections.
 \section{Results and discussion}\label{sec:results}
 
 The most important result in this article is the
-extreme differentiation of the Erd\"os sectors.
+extreme differentiation of each Erd\"os sectors with respect to the texts produced.
+For example: hubs use more contractions, more adjectives,
+more common words, and less punctuation if compared to the rest of the network,
+specially the peripheral sector.
+In general, the rise or fall of a metric is monotonic along connectivity,
+but some of them reached extreme values in the intermediary sector.
 
-
-, connectivity has strong influence in textual production of participants in the network.
-For example: hubs use more contractions, more adjectives, more common words, and less punctuation if compared to the rest of the network, specially the peripheral sector.
-In general, rise or fall of a measure was monotonic, but some of them reached extreme values in the intermediary sector.
-
-Many insights can be obtained by skipping through tables and figures in the Supporting Information.
-
-Next subsections exhibit particular results of interests.
+Next sections summarize results of immediate interest
+and further insights can be obtained by skipping through
+the tables and figures in the Supporting Information document.
 
 \subsection{General characteristics of activity distribution among participants}\label{sec:gen}
-Hubs and periphery swap fraction of participants and activity. While peripheral sector has $\approx 75\%$ of participants, it produces $\approx 10\%$ of all messages. Conversely, hubs has $\approx 10\%$ of participants and produces $\approx 75\%$ of all messages. Fewer threads are created in proportion to total messages sent by the hubs, while threads created by peripheral are twice as frequent as general peripheral messages.
-This suggests a symbiosis of peripheral diversity and hub activity. 
+Hubs and periphery swap fractions of participants and activity:
+while peripheral sector has $\approx 75\%$ of participants, it produces $\approx 10\%$ of all messages.
+Conversely, hubs sector present $\approx 10\%$ of participants and produces $\approx 75\%$ of all messages.
+% verificar TTM
+Fewer threads are created in proportion to total messages sent by the hubs,
+while threads created by the periphery are twice as frequent as general peripheral messages.
+% medir
+This suggests a complementarity between peripheral diversity and hub specialization
+which, on its turn, deepens the understanding of the interaction network as a meaningful system, 
+notably if yielded by online activity.
+These assertions are condensed in Table~\ref{geralListas}.
 
-Also, comparing lists with a fixed number of messages, the number of threads created seem to increase as the number of participants decrease. These information is condensed in Table~\ref{geralListas}, with further details.
+%Also, comparing lists with a fixed number of messages,
+%the number of threads created seem to increase as the number of participants decrease.
 
 \subsection{Characters}\label{sec:cha}
-Peripheral vertex use more punctuation characters, digits and uppercase letters. Hubs use more letters and vowels among letters. The use of space does not seem to have any relation to connectivity, with the exception that the intermediary presented a slightly lower incidence of spaces than both peripheral and hub sectors. 
-    
-Total number of characters in ELE list, in the 20 thousand messages, is more than three times what other lists exhibited. This suggests peculiarities related to communication conventions and style (see Appendix~\ref{subsec:gm}).
-
+Peripheral vertices use more punctuation characters, digits and uppercase letters.
+Hubs use more letters and vowels among letters.
+The use of white spaces does not seem to have any relation to connectivity, with the exception that the intermediary presented a slightly lower incidence of spaces than both peripheral and hub sectors. 
+The total number of characters in ELE list,
+in the 20 thousand messages,
+is more than three times what other lists exhibited.
+This suggests peculiarities related to communication conventions and style (see Appendix~\ref{subsec:gm}) and were found not related to topological features.
 Further information is given in Table~\ref{tab:cha}.
 
 \subsection{Tokens and words}\label{subsec:tw}
 
-Largest average size of tokens is with  the most wordy list (ELE). This implies that is has more characters, tokens, and characters per token in comparison to the other lists. Longer words used by hubs might be related to the use of a specialized vocabulary. Although the token diversity ($\frac{|tokens \neq|}{|tokens|}$) found in peripheral sector is far greater, this result has the masking artifact that the peripheral sector corpus is smaller, yielding a larger token diversity. This can be noticed by the token diversity of the whole network, which is lower than in the sections. This same discussion applies to the lexical diversity ($\frac{|kw\neq|}{kw}$).
+The largest average size of tokens is from the most wordy list (ELE).
+This implies that is has more characters, tokens, and characters per token in comparison to the other lists. 
+The longer words used by hubs might be related to the use of a specialized vocabulary.
+% VERITICCAR TTM
+% palavras mais longas podem vir dos perifericos pois nao usam jargao
+Although the token diversity ($\frac{|tokens \neq|}{|tokens|}$) found in peripheral sector is far greater, this result has the masking artifact that the peripheral sector corpus is smaller, yielding a larger token diversity.
+% medir para tamanhos equivalentes de texto
+This can be noticed by the token diversity of the whole network, which is lower than in any of the sections.
+This same results apply to the lexical diversity ($\frac{|kw\neq|}{kw}$).
 
-Punctuations among tokens are less abundant in hubs, and discrepancies here are larger that with characters comparisons (subsection~\ref{sec:cha}). Known words are used more frequently by hubs.
+Punctuations among tokens are less abundant in hubs, and discrepancies here are larger than with characters comparisons (subsection~\ref{sec:cha}). Known words are used more frequently by hubs.
 
-ELE and CPP both exhibit intermediaries with the more frequent production of punctuation, less frequent production of known words, the highest incidence of words with wordnet synsets among known words. This suggests some peculiarity in network structure, such as the intermediary be strong authorities in such networks, using smaller sentences and a larger jargon.
+ELE and CPP both exhibit intermediaries 
+with the more frequent production of punctuation,
+less frequent production of known words, and
+the highest incidence of words with wordnet synsets among known words.
+This suggests some peculiarity in network structure,
+such as authorities in the intermediary sector of such networks,
+using smaller sentences and a more intensive use of jargons,
+as made explicit in the following sections.
+% verificar isso e ver o que fazer
 
-Words with synsets, among known English words, are less frequent in hubs further evidencing the jargon hubs develop.
+Words with synsets,
+among known English words, are less frequent in hubs sector,
+further evidencing the jargon and specialization hubs develop.
+% verificar, desenvolvar
 
 Further information is given in Table~\ref{tab:tokens}.
 
 \subsection{Sizes of tokens and words}\label{subsec:tw2}
-Sizes of known words are smaller for hubs, which suggests its use of more common words, although some of the previous results suggests that hubs have a very differentiated and specialized vocabulary. Larger words seems to be related to intermediary sector, which might be related to cultured vocabulary.
-
-Further information is given in Table~\ref{tab:sizesTokens}.
+Sizes of known words are smaller for hubs, which suggests its use of more common words, although some of the previous results suggests that hubs have a very differentiated and specialized vocabulary. 
+Larger words seems to be related to intermediary sector,
+which might be related to the use of elaborated vocabulary.
+Further details are given in Table~\ref{tab:sizesTokens}.
 
 \subsection{Sizes of sentences}\label{subsec:ss}
-Hubs present the lowest average sentence size, both in characters and in tokens. Also, the incidence of usual known words seems to decay with connectivity, as does the number of known words with synsets.
+Hubs present the lowest average sentence size,
+both in characters and in tokens.
+We hypothesize that this smaller sentence use
+is related to the efficiency of hub specialization.
+Also, the incidence of usual known words seems to decay with connectivity, as does the number of known words with wordnet synsets.
+This reflects our view that connectivity is inversely proportional
+to diversity.
 
 Further information is given in Table~\ref{tab:sizesSents}.
 
 \subsection{Messages}\label{subsec:mm}
-Regarding characters and tokens, connectivity was related to smaller messages. ELE list displayed an inverse situation: the more connected the sector, the longer the messages are. This was considered a peculiarity of the culture bonded with the political subject of ELE list, to be further verified. Regarding sentences, the size of messages seem to hold steady until hubs are reached.
-
+Connectivity was related to smaller messages in terms of characters and tokens.
+% tirar medidas de correlacao: perason e spearmanA TTM
+ELE list displayed an inverse situation:
+the more connected the sector,
+the longer the messages are.
+This was considered a peculiarity of the culture bonded
+with the political subject of ELE list, to be further verified.
+% make some sort of verification TTM
+% process the lists just for this feature
+Regarding sentences,
+the size of messages seem to hold steady throughout connectivity.
+% ver a correlação das medidas de grau e força com TTM
+% texto
+% ver em especial se algo eh mais para in ou out
+% e se indifere greu e força como no particionamento de erdos
 Further information is given in Table~\ref{tab:sizesMsgs}.
 
 \subsection{POS tags}\label{subsec:pos}
-Lower connectivity delivers more nouns and less adjectives, adverbs and verbs. This suggests that the networks collect issues important to the world by the peripheral sector. These issues are qualified, elaborated about, by the more connected participants.
-
+% rever taggeamento e tentar melhor accuracy com o Bril Tagger TTM
+Lower connectivity yields more nouns and less adjectives,
+adverbs and verbs.
+This suggests that the networks collect issues important
+to the world by the peripheral sector. 
+These issues are qualified, elaborated about,
+by the more connected participants.
+This is a further indicative that peripheral sectors
+are related to diversity while hubs relate to specialization.
 Further information is given in Table~\ref{tab:pos}.
 
-\subsection{Differentiation of measures}\label{subsec:di}
-The Kolmogorov-Smirnov test was adapted for our need to compare measures.
-Results suggests that the texts produced by each sector is very distinct.
-Counterintuitively, intermediary sector sometimes yields a greater difference from periphery and hubs than these extreme sectors themselves (Tables~\ref{tab:kolSub} and~\ref{tab:kolSw}).
+\subsection{Differentiation of the texts from Erd\"os sectors}\label{subsec:di}
+Results from our adaptation of the Kolmogorov-Smirnov test
+suggest that the texts produced by each sector are extremely different.
+Intermediary sectors sometimes exhibit greater differences 
+from periphery and hubs than these extreme sectors themselves 
+(Tables~\ref{tab:kolSub} and~\ref{tab:kolSw}).
+This differentiation of the three sectors is a
+strong indicative that the Erd\"os Sectioning
+described in~\cite{evoSN} reveals meaningful
+sectors of the networks.
 
-At the core of the results presented on this article, are two strong and immediate interpretations that follows Tables~\ref{tab:kolSub}-\ref{tab:kolPctInter}:
+Tables~\ref{tab:kolSub}-\ref{tab:kolPctInter}
+illustrate two strong results:
 \begin{itemize}
-    \item Differences of textual production of the primitive sectors are extreme, as can be noticed from the values on these tables, beyond reference values used for considering the null hypothesis (see Appendix~\ref{sec:ks}).
-    \item Differences between sectors on the same network (Tables~\ref{tab:kolSub},~\ref{tab:kolAdj},~\ref{tab:kolSw} and~\ref{tab:kolPct}) are bigger than differences between same sector from distinct lists (Tables~\ref{tab:kolSubInter},~\ref{tab:kolAdjInter},~\ref{tab:kolSwInter} and~\ref{tab:kolPctInter}).
+    \item Differences of textual production of the Erd\"os sectors are extreme.
+	    This can be noticed from the high values on these tables,
+	    beyond reference values used for the acceptance of the 
+	    null hypothesis (see Section~\ref{sec:ks}).
+    \item Differences between sectors on the same network 
+	    (Tables~\ref{tab:kolSub},~\ref{tab:kolAdj},~\ref{tab:kolSw} and~\ref{tab:kolPct}) are greater than differences between same sector from distinct lists (Tables~\ref{tab:kolSubInter},~\ref{tab:kolAdjInter},~\ref{tab:kolSwInter} and~\ref{tab:kolPctInter}).
 \end{itemize}
 
-\subsection{Correlation of measures}\label{subsec:cor}
+We can summarize these results stating that the extreme difference
+found between the texts produced the Erd\"os sectors
+are greater that that found between that of texts from different
+networks or from the same sector of different networks.
 
-Correlation of degree (how many participants the participant related to) and strength (how many interactions) measures is substantially smaller for intermediary sector. This raises interesting inquiries, to which the reader is invited, along with further analysis of Tables~\ref{tab:corTop},~\ref{tab:corTex} and~\ref{tab:corTexTop}, as detailing their interpretation goes beyond the scope of this article. Noteworthy is the negative correlation of degree and message size (number of characters, tokens or sentences) that intermediaries presented.
+\subsection{Correlation of topological and textual metrics}\label{subsec:cor}
+Correlation of degree 
+and strength metrics is
+substantially smaller for intermediary sector.
+% verificar e quantificar TTM
+Also noteworthy is the negative correlation of degree and message size (number of characters, tokens or sentences) that intermediaries presented.
+This and other insights can be drawn from Tables~\ref{tab:corTop},~\ref{tab:corTex} and~\ref{tab:corTexTop}.
+Overall, negligible correlation is found between textual and topological metrics.
+% verificar e fazer tabelas corretamente:
+% focadas para texto, extensivas para SI
 
 \subsection{Formation of principal components}\label{subsec:pc}
+Principal components formation seem to be the less stable of all results reported in this study.
+First component, with $\approx 25\%$ of dispersion, relies heavily on POS tags,
+and slightly on sizes of tokens, sentences and messages.
+Second component, with almost $12\%$ of dispersion, blends topology, POS tags and size of textual units.
+Third component, with about $8.5\%$ of dispersion is mostly nouns frequency and size of textual units.
+Fourth and fifth components present less than $5\%$ of total dispersion,
+but are included in the Supporting Information document for completeness of exposition.
 
-Principal components formation seem to be the less stable of all features considered. First component, with $\approx 25\%$ of dispersion, relies heavily on POS tags, and slightly on sizes of tokens, sentences and messages. Second component, with almost $12\%$ of dispersion, blends topology, POS tags and size measures. Third component, with about $8.5\%$ is based on nouns frequency and size measures. Fourth and fifth components present less than $5\%$ of total dispersion, but are included for completeness of exposition.
-
-Tables~\ref{tab:pca1}-\ref{tab:pca5} exhibit these and further insights.
+Tables~\ref{tab:pca1}-\ref{tab:pca5} yield these results and further insights.
 
 \subsection{Results still to be interpreted}\label{subsec:sii}
-These networks yield diverse characteristics, some of which were not of core importance for this step of the research. Even so, at least one of these characteristics was found interesting enough to be considered a result and an example of interesting artifacts found.
-
-Histogram differences of incident and existent word sizes were found constant. That is, in each list, when a histogram of word sizes were made with all words written, and another histogram made with sizes of all \emph{different} words, the cumulative positive difference of the two histograms were found constant for all lists analysed. When all known English words were considered, the difference was always $\approx 1.0$. When stopwords were discarded, the difference found was different, but still constant, slightly above $0.5$. When only stopwords were considered, the difference was $\approx 0.6$. When only known English words that does not have wordnet synsets are used, this difference is $\approx 1.2$.
-
-These results currently lacks substantial interpretation, which is provocative and should lead at least to a research note. Appendix ~\ref{sec:resE} and Figures~\ref{fig:kw}-\ref{fig:nssnsw} are dedicated to this histogram differences.
-
-Typos, \emph{leet},
-slang and invented words
-pose some challenges,
-by which the methodology was partially shaped.
-Nonetheless, future work might bring these entries
-to forefront.
-
-
+%These networks yield diverse characteristics,
+%some of which were not of core importance for this step of the research.
+%Even so, at least one of these characteristics was found interesting enough to be considered a result and an example of interesting artifacts found.
+Histogram differences of incident word sizes with and without repetition of words are constant.
+That is, in each email list, when a histogram of word sizes were made with all words written,
+and another histogram made with sizes of all \emph{different} words,
+the cumulative absolute difference of the two histograms throughout the bins were found constant for all lists analysed.
+When all known English words were considered, 
+the difference sums up to $\approx 1.0$.
+When stopwords are discarded,
+the difference found was different, but still constant, slightly above $0.5$.
+When only stopwords were considered, the difference is $\approx 0.6$.
+When only known English words that does not have wordnet synsets are used,
+this difference is $\approx 1.2$.
+Appendix ~\ref{sec:resE} and Figures~\ref{fig:kw}-\ref{fig:nssnsw} are dedicated to this histogram differences.
+% fazer plot desta diferença ao longo do aumento do número de mensagens (talvez de caracteres como metriac mais estável)
+% Jogar td para o SI e só apontar este blueprint? TTM
+%These results currently lacks substantial interpretation,
+%which is provocative and should lead at least to a research note.
 
 \section{Final remarks}\label{sec:remarks}
-Human interaction networks yield diverse linguistic peculiarities reported by its members. This is a first systematic exploration of such peculiarities with primitive connective sectors (hubs, intermediary and periphery) in mind, as far the author knows. Results were regarded as stronger than envisioned from start, which poses diverse and intriguing questions.
-This results, confluent with recent research and development, some by the current author, are of core importance for social technologies and transformations, such as collection and diffusion and information, resource recommendation in linked data contexts, and open processes of legal documents refinement~\cite{ensaio,OPS,pnud5,evoSN,pbr}.
-
-All the data used is public, all scripts used are online (see Appendix~\ref{sec:on}). 
+%Human interaction networks yield diverse linguistic peculiarities reported by its members.
+This is a first systematic exploration of the relation between topological and textual
+metrics in human interaction networks, as far the author knows.
+Different textual features were scrutinized and were found to present
+evident patterns, specially in relation to topological measures and the Erd\"os sectors.
+%Results were regarded as stronger than envisioned from start, which poses diverse and intriguing questions.
+%This results, confluent with recent research and development, some by the current author, are of core importance for social technologies and transformations, such as 
+% Summarize main results TTM
+Furthermore, results suggest that less connected participants bring external content and concepts,
+while hubs qualify the content.
+For example, periphery sectors present more nouns while hubs use more adjectives and usual words.
+Such findings have potential applications in the collection and diffusion and information,
+resources recommendation in linked data contexts, and open processes of document elaboration and refinement~\cite{ensaio,OPS,pnud5,evoSN,pbr}.
 
 \subsection{Further work}\label{subsec:fw}
-Results suggests that less connected participants bring external content and concepts, while hubs qualify the content. This hold mainly as periphery uses more nouns while hubs present more adjectives. This should be further verified, maybe with a dedicated article.
 
 Similarity measures of texts in message-response threads has been thought about by the author, and some results are being organized. These are two hypothesis obtained from recent experiments:
 \begin{itemize}
