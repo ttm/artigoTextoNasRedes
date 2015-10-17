@@ -212,7 +212,6 @@ Supporting Information hold further tables, figures and results still to interpr
 %Other sources of data, derived from Twitter, IRC and Facebook 
 %are used to corroborate results.
 
-
 Email list messages were obtained from
 the GMANE email archive~\cite{gmanePack}, which consists of more than 20,000 email lists and more than 130,000,000 messages~\cite{GMANEwikipedia}. These lists cover a variety of topics, mostly technology-related. The archive can be described as a corpus with metadata of its messages, including sent time, place, sender name, and sender email address.
 The GMANE usage in scientific research is reported in studies of isolated lists and of lexical innovations~\cite{GMANE2,bird}. 
@@ -341,6 +340,13 @@ This choice is based on: 1) the lack of such information in literature, as far a
 2) potential relations of these incidences with topological aspects, such as connectivity; 3) the interdependence of textual artifacts suggests that simple measures should reflect complex behaviors and more subtle aspects.
 A preliminary study, with the complete works from Machado de Assis, made clear that these measures vary with respect to style~\cite{letrasMachado}.
 
+Wordnet synsets of each word were also used for:
+\begin{itemize}
+    \item Incidence of hypernyms, hyponyms, holonyms and meronyms.
+    \item Use and development of similarity measures of words, phrases and messages, by use of semantic criteria (Wordnet) and bag of words.
+\end{itemize}
+
+
 %\subsection{Topological measures}\label{subsec:top}
 %Degree (in, out and total), strength (in, out and total), betweenness centrality and clustering coefficient were measured for each vertex in the interaction network. This served two purposes:
 %\begin{itemize}
@@ -433,7 +439,7 @@ The use of white spaces does not seem to have any relation to connectivity, with
 The total number of characters in ELE list,
 in the 20 thousand messages,
 is more than three times what other lists exhibited.
-This suggests peculiarities related to communication conventions and style (see Appendix~\ref{subsec:gm}) and were found not related to topological features.
+This suggests peculiarities related to communication conventions and style (see Appendix~\ref{sec:materials}) and were found not related to topological features.
 Further information is given in Table~\ref{tab:cha}.
 
 \subsection{Tokens and words}\label{subsec:tw}
@@ -444,7 +450,7 @@ The longer words used by hubs might be related to the use of a specialized vocab
 % VERITICCAR TTM
 % palavras mais longas podem vir dos perifericos pois nao usam jargao
 Although the token diversity ($\frac{|tokens \neq|}{|tokens|}$) found in peripheral sector is far greater, this result has the masking artifact that the peripheral sector corpus is smaller, yielding a larger token diversity.
-% medir para tamanhos equivalentes de texto
+% medir para tamanhos equivalentes de texto TTM
 This can be noticed by the token diversity of the whole network, which is lower than in any of the sections.
 This same results apply to the lexical diversity ($\frac{|kw\neq|}{kw}$).
 
@@ -601,47 +607,66 @@ resources recommendation in linked data contexts, and open processes of document
 
 \subsection{Further work}\label{subsec:fw}
 
-Similarity measures of texts in message-response threads has been thought about by the author, and some results are being organized. These are two hypothesis obtained from recent experiments:
+Similarity measures of texts in message-response threads has been thought about by the author, and some results are being organized.
+These are two hypothesis obtained from recent experiments:
 \begin{itemize}
     \item existence of information ``ducts'', observable through similarity measures. These might coincide with asymmetries of edges between vertexes pairs, with homophily or with message-response threads, to point just a few possibilities.
-    \item Valuable insights can be driven from self-similarity of messages by same authors, of messages sent at the same period of the day, etc. This includes incidences of word sizes, incidences of tags and morphosintactic classes, incidences of particular wordnet synset characteristics and wordnet word distances.
+    \item Valuable insights can be derived from the self-similarity of messages by same author,
+	    of messages sent at the same period of the day, etc.
+	    This includes incidences of word sizes, incidences of tags and morphosintactic classes,
+	    incidences of particular wordnet synset characteristics and wordnet word distances.
 \end{itemize}
 
-Given current results, diversity and self-similarity should vary with respect to connectivity. Literature usually assumes that periphery holds greater diversity~\cite{easley}, which should be further verified.
+Current results suggests that diversity and self-similarity should vary with respect to connectivity. 
+Literature usually assumes that periphery holds greater diversity~\cite{easley},
+which can be further verified, for example through the diversity of entries.
 
-Other directions for next steps are:
+Other potential next steps are:
 \begin{itemize}
-    \item Word sets are very useful to derive and confirm hypothesis. As an example, one can observe most incident or most basic words and word types in the English language, curses or words related to food.
-    \item Interpretation of various unveiled results, such as the one exposed in Appendix~\ref{sec:resE}, and Figures~\ref{fig:kw},~\ref{fig:kwnsw},~\ref{fig:kwssnsw},~\ref{fig:sw} and~\ref{fig:nssnsw}.
-    \item Extend word class observations to include plurals, gender, common prefixes and suffixes, etc.
-    \item Date and time should also be addressed in textual production of interaction networks, as potentially linked to participation habits and purposes (e.g. low dispersion of sent time). This was tackled by the author for the topological characterization of interaction networks~\cite{evoSN}, but left aside in this article.
-    \item Balance token diversity with corpus size, as pointed in section~\ref{subsec:tw}.
-    \item The textual features distributions are likely to be have more than one peak or other non-trivial characteristic. Therefore, further analysis should be made for comparing measures of interest.
-    \item Extend analysis to the windowed approach used in the article where hub, peripheral and intermediary sectors where topologically characterized~\cite{evoSN}.
-    \item For ELE list, the more connected the sector, the longer the messages are. This is the inverse of what was found in the other lists, and was considered a peculiarity of the culture bonded with the political subject of ELE list, to be further verified.
-    \item Tackle Portuguese analysis of interaction networks, as this research have ongoing implications in Brazil~\cite{ensaio}.
-    \item Analyse other lists.
-    \item Analyse interaction networks from other platforms such as Twitter, Facebook, LinkedIn, Diaspora, etc.
-    \item Emotion classification has not been done and was considered out of the scope for this stage of development, but should be addressed in a near future.
+    \item The observation of most incident words and word types,
+	    such as words related to cursing or to food.
+    \item Interpretation of the results
+	    exposed in Section~\ref{subsec:sii}.
+    \item Extend word class observations, e.g. to include plurals, gender, common prefixes and suffixes.
+    \item The observation of date and time in relation to textual production of interaction networks and
+	    to activity characteristics (e.g. dispersion of sent time along the day or the week).
+	    This was tackled by the author for the topological characterization of interaction networks~\cite{evoSN}, but left aside in this article.
+	    % fazer aqui também ou em separado soh esse relacionamento TTM
+    \item A careful analysis of each textual features distribution which is likely to reveal multimodal outlines and other non-trivial characteristics.
+    \item Extend analysis to the windowed approach along the timelines used in the article where hub, peripheral and intermediary sectors where topologically characterized~\cite{evoSN}.
+    \item For ELE list, the more connected the sector, the longer the messages are.
+	    This is the inverse of what was found in the other lists,
+	    and was considered a peculiarity of the culture bonded with the political subject of ELE list.
+	    This hypothesis should be further verified.
+    \item Tackle the same analysis on networks with languages other than English.
+	    This is especially important for easing applications~\cite{ensaio}
+	    and should rely on dedicated implementation of 
+	    tokenization, lemmatization and attribution of POS tags.
+    \item Observe a broader set of human interaction networks and the resulting types
+	    of networks and participants with respect to topological and textual features.
+    \item Analyse interaction networks from other platforms such as from LinkedIn and Facebook, etc.
+    \item Sentiment analysis.
 \end{itemize}
 
-Wordnet synsets incidences was studied as well, as a potentially useful way to characterize networks and sectors. Core aspects understood as useful for this research include:
-\begin{itemize}
-    \item Incidence of hypernyms, hyponyms, holonyms and meronyms.
-    \item Use and development of similarity measures of words, phrases and messages, by use of semantic criteria (Wordnet) and bag of words.
-\end{itemize}
 
+%\section{Acknowledgments}
+%Renato Fabbri is grateful to CNPq 
+%(processo 140860/2013-4, project 870336/1997-5);
+%Postgraduate Committee of the IFSC/USP;
+%%Prof. Dr. Leonardo Paulo Maia for the insights
+%%which lead to the adaptation of the Kolmogorov-Smirnov
+%%test presented in Appendix~\ref{sec:ks};
+%GMANE
+%developers and maintainers; participants of the
+%mailing lists analysed.
+%
+\begin{acknowledgments}
+	Financial support was obtained from CNPq (140860/2013-4,
+	project 870336/1997-5), United Nations Development Program (contract: 2013/000566; project BRA/12/018) and FAPESP. 
+	The authors are grateful to the American Jewish Committee for maintaining an online copy of the Adorno book used on the epigraph~\cite{adorno}, to GMANE creators and maintainers for the public email list data, to the communities of the email lists and other groups used in the analysis, and to the Brazilian Presidency of the Republic for keeping Participabr code and data open.
+	We are also grateful to developers and users of Python scientific tools.
+\end{acknowledgments}
 
-
-\section{Acknowledgments}
-Renato Fabbri is grateful to CNPq 
-(processo 140860/2013-4, project 870336/1997-5);
-Postgraduate Committee of the IFSC/USP;
-Prof. Dr. Leonardo Paulo Maia for the insights
-which lead to the adaptation of the Kolmogorov-Smirnov
-test presented in Appendix~\ref{sec:ks}; GMANE
-developers and maintainers; participants of the
-mailing lists analysed.
 
 %
 % The following two commands are all you need in the
@@ -658,22 +683,22 @@ mailing lists analysed.
 %
 %APPENDICES are optional
 %\balancecolumns
-\newpage
+%\newpage
 \appendix
-\section{Support information}\label{sec:si}
-\subsection{Brief description of the email lists chosen}\label{subsec:gm}
-GMANE is a public email list database with some tenths of thousand of lists~\cite{GMANE}. Four email lists were selected, in a similar fashion developed in~\cite{evoSN}, but with MET substituted by ELE list so that all lists are in English. The lists are:
-\begin{itemize}
-    \item CPP, the development list of the standard C++ library\footnote{gmane.comp.gcc.libstdc++.devel is list ID in GMANE archive.}. Dominated by specialized computer programmers.
-    \item LAD: Linux Audio Developers list\footnote{gmane.linux.audio.devel is list ID in GMANE archive.}.
-    \item LAU: Linux Audio Users list\footnote{gmane.linux.audio.users is list ID in GMANE archive.}.
-    \item ELE: list for discussion of the election reform\footnote{gmane.politics.election-methods is list ID in GMANE}.
-\end{itemize}
+%\section{Support information}\label{sec:si}
+%\subsection{Brief description of the email lists chosen}\label{subsec:gm}
+%GMANE is a public email list database with some tenths of thousand of lists~\cite{GMANE}. Four email lists were selected, in a similar fashion developed in~\cite{evoSN}, but with MET substituted by ELE list so that all lists are in English. The lists are:
+%\begin{itemize}
+%    \item CPP, the development list of the standard C++ library\footnote{gmane.comp.gcc.libstdc++.devel is list ID in GMANE archive.}. Dominated by specialized computer programmers.
+%    \item LAD: Linux Audio Developers list\footnote{gmane.linux.audio.devel is list ID in GMANE archive.}.
+%    \item LAU: Linux Audio Users list\footnote{gmane.linux.audio.users is list ID in GMANE archive.}.
+%    \item ELE: list for discussion of the election reform\footnote{gmane.politics.election-methods is list ID in GMANE}.
+%\end{itemize}
+%
+%Table~\ref{tab:bas} has an overview of these lists, in terms of participants, threads and messages in each of the primitive connective sectors.
 
-Table~\ref{tab:bas} has an overview of these lists, in terms of participants, threads and messages in each of the primitive connective sectors.
-
-\subsection{Meaning of achronims and abbreviations in the following tables}
-
+\section{Meaning of acronyms and abbreviations used the tables}
+% completar tabela TTM
 \begin{table}[H]
 \centering
 \begin{tabular}{|p{1cm}|p{6cm}|}\hline
@@ -688,7 +713,8 @@ $|x\neq|$ & number of different $x$ found \\\hline
 \end{tabular}
 \end{table}
 
-Other symbols are explained on the tables itself. Some concepts, such as \emph{contractions}, \emph{token} and \emph{char} are standard in natural language processing, and the reader is invited to visit~\cite{nltkBook}.
+%Other symbols are explained on the tables itself.
+Some concepts, such as \emph{contractions}, \emph{token} and \emph{char} are standard in natural language processing, and the reader is invited to visit~\cite{nltkBook}.
 
 \subsection{Tables}
 
