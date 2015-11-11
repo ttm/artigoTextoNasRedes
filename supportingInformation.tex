@@ -56,6 +56,16 @@
 \newcommand{\minput}[1]{%
 \IfFileExists{#1}{\input{#1}}{}
 }
+
+\newcommand{\finput}[1]{%
+\IfFileExists{#1}{
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.43\textwidth]{#1}
+	\caption{First two principal components.}
+\end{figure}
+}{}
+}
 \newcommand{\beginsupplement}{%
 %	\setcounter{table}{0}
 	\renewcommand{\thesection}{S\Roman{section}}%
@@ -506,12 +516,57 @@ erived from email lists, Twitter, Participabr and IRC.
 
 \subsubsection{Snapshots of 1000 messages}\label{sec:simsg1000}
 \foreach \index in {0, ..., 20} {
-
+\minput{tables/SI/ksTokens\index _}
+\minput{tables/SI/ksWords\index _}
+\minput{tables/SI/ksSents\index _}
+\minput{tables/SI/ksAdjs\index _}
+\minput{tables/SI/ksSubs\index _}
+\minput{tables/SI/ksPuns\index _}
 \clearpage
 }
+
 \subsubsection{Snapshots of 2000 messages}\label{sec:siwn2000}
 \FloatBarrier
+\foreach \index in {0, ..., 20} {
+\minput{tables/SI2/ksTokens\index _}
+\minput{tables/SI2/ksWords\index _}
+\minput{tables/SI2/ksSents\index _}
+\minput{tables/SI2/ksAdjs\index _}
+\minput{tables/SI2/ksSubs\index _}
+\minput{tables/SI2/ksPuns\index _}
+\clearpage
+}
 
+\FloatBarrier
+\subsection{Correlation of topological and textual metrics}\label{subsec:cor}
+\subsubsection{Snapshots of 1000 messages}\label{sec:simsg1000}
+\foreach \index in {0, ..., 20} {
+\minput{tables/SI/correlationInline\index _}
+}
+\FloatBarrier
+\subsubsection{Snapshots of 2000 messages}\label{sec:simsg1000}
+\foreach \index in {0, ..., 20} {
+\minput{tables/SI2/correlationInline\index _}
+}
+
+\FloatBarrier
+\subsection{Formation of principal components}\label{subsec:pc}
+%\input{tables/pcaInline_}
+\subsubsection{Snapshots of 1000 messages}\label{sec:simsg1000}
+\foreach \index in {0, ..., 20} {
+\minput{tables/SI/pcaInline\index _}
+\finput{figs/SI/plot_pca-\index.png}
+\clearpage
+\FloatBarrier
+}
+\FloatBarrier
+\subsubsection{Snapshots of 2000 messages}\label{sec:simsg1000}
+\foreach \index in {0, ..., 20} {
+\minput{tables/SI2/pcaInline\index _}
+\finput{figs/SI2/plot_pca-\index .png}
+\clearpage
+\FloatBarrier
+}
 
 
 
