@@ -87,7 +87,7 @@
 \preprint{XXXXX (preprint)}
 
 %\title[Text differentiation in interaction networks]{A connective differentiation of text in interaction networks}% Force line breaks with \\
-\title[Text and topology in interaction networks]{Text and topology in in human interaction networks: differences among Erd\"os sectors and correlation of metrics}% Force line breaks with \\
+\title[Text and topology in interaction networks]{Text and topology in human interaction networks}% Force line breaks with \\
 
 \author{Renato Fabbri}%
 % \homepage{http://ifsc.usp.br/~fabbri/}
@@ -142,10 +142,10 @@ Instituto de F\'isica de S\~ao Carlos, Universidade de S\~ao Paulo (IFSC/USP)%\\
 % \altaffiliation[Also at ]{IFSC-USP}%Lines break automatically or can be forced with \\
 %
 %
-%\author{Osvaldo Novais de Oliveira Junior}
-%  \homepage{www.polimeros.ifsc.usp.br/professors/professor.php?id=4}
-%  \email{chu@ifsc.usp.br}
-% \altaffiliation[Also at ]{IFSC-USP}%Lines break automatically or can be forced with \\
+\author{Osvaldo Novais de Oliveira Junior}
+  \homepage{www.polimeros.ifsc.usp.br/professors/professor.php?id=4}
+  \email{chu@ifsc.usp.br}
+ \altaffiliation[Also at ]{IFSC-USP}%Lines break automatically or can be forced with \\
 
 %\author{Dilvan de Abreu Moreira}
 %  \homepage{http://www.icmc.usp.br/pessoas/dilvan/}
@@ -166,42 +166,41 @@ Instituto de F\'isica de S\~ao Carlos, Universidade de S\~ao Paulo (IFSC/USP)%\\
 
 \begin{abstract}
 This paper explores textual production in interaction networks
-and its relation to topological measures. 
-Measures were taken from open email lists interaction networks.
+and its relation to topological metrics.
+% Measures were taken from open email lists interaction networks.
 Texts from the email messages were grouped by source: peripheral, intermediary and hub sectors.
-Correlation of textual and topological measures were observed for the entire network and for each connective sector.
+Correlation of textual and topological measures were observed for the entire network and for each os such sectors.
 The formation of principal components is used for further insights of how measures are related.
-Network sectors presented discrepant linguistic elaborations and each principal component
+Network sectors presented discrepant linguistic features and each principal component
 exhibit predominance of textual or topological measures.
-Textual discrepancies, correlation and principal components corroborate the
+Textual differences, correlation and principal components corroborate the
 stability of such interaction networks reported in previous works.
-Noteworthy is that the difference in textual production is more prominent between
-sectors of the same network than between different networks or even same sectors
-of different networks.
+% Noteworthy is that the difference in textual production is more prominent between
+% sectors of the same network than between different networks or even same sectors
+% of different networks.
 
 \end{abstract}
 
 \pacs{89.75.Fb,05.65.+b,89.65.-s}
-\keywords{statistical physics, complex networks, natural language processing, text mining, pattern recognition, social network analysis, anthropological physics} % NOT required for Proceedings
+\keywords{statistical physics, complex networks, text mining, pattern recognition, social network analysis} % NOT required for Proceedings
 \maketitle
 \section{Introduction}
-Textual production has received considerable attention from the social network analysis community.
-Sentiment analysis and vocabulary compilation are among a number of examples~\cite{easley}.
-The relation of topological and textual measures is the subject of this article, for the following reasons:
+Sentiment analysis and vocabulary compilation are among a number of examples
+of the considerable attention that textual production has received from the social network analysis research community~\cite{easley}.
+The relation of topological and textual metrics is the subject of this article for the following reasons:
 \begin{itemize}
     \item This relation has been set aside in literature, with scattered and vague suggestions of mutual implications of the text produced and topological characteristics of the agents in the network~\cite{easley}.
-    \item The results ease understanding of human interaction, which is useful for the observation of personality and cultural ``types''~\cite{Deborah}.
+    \item The results ease understanding of human interaction, which is useful for the observation of personality and cultural types~\cite{Deborah}.
     \item There are hypothesis about verbal differentiation of network sections,
 	    derived from a previous article by the same authors~\cite{evoSN},
 	    some of which are herein confirmed.
 \end{itemize}
 
-Next section exposes materials used for this research, its textual and network facets.
-Section~\ref{sec:methods} explains the analysis roadmap, with the measures chosen and methods
-for understanding data. Section~\ref{sec:results} is dedicated to detailing results and discussion.
-Section~\ref{sec:remarks} has concluding remarks and further works envisioned.
-The Appendix give directions on data and scripts while
-Supporting Information hold further tables, figures and results still to interpret.
+Next section exposes materials used for this research, its textual and network aspects.
+Section~\ref{sec:methods} explains the analysis framework including.
+Section~\ref{sec:results} is dedicated to detailing results and discussion.
+Section~\ref{sec:remarks} holds concluding remarks and further work envisioned.
+The Supporting Information presents further tables and figures.
 
 \section{Materials}\label{sec:materials}
 %The data analysed is mainly derived from email lists.
@@ -218,20 +217,23 @@ Supporting Information hold further tables, figures and results still to interpr
 %are used to corroborate results.
 
 Email list messages were obtained from
-the GMANE email archive~\cite{gmanePack}, which consists of more than 20,000 email lists and more than 130,000,000 messages~\cite{GMANEwikipedia}. These lists cover a variety of topics, mostly technology-related. The archive can be described as a corpus with metadata of its messages, including sent time, place, sender name, and sender email address.
-The GMANE usage in scientific research is reported in studies of isolated lists and of lexical innovations~\cite{GMANE2,bird}. 
+the public Gmane email archive~\cite{gmanePack},
+which consists of more than 20,000 email lists and more than 130,000,000 messages~\cite{GMANEwikipedia}.
+These lists cover a variety of topics, mostly technology-related.
+The archive can be described as a corpus with metadata of its messages, including sent time, sender name and email address.
+The Gmane usage in scientific research is reported in studies of isolated lists and of lexical innovations~\cite{GMANE2,bird}. 
 
-We analyzed many email lists (and data from Twitter, Facebook, IRC and Participa.br) but selected only four in order to make a thorough analysis, from which general properties can be inferred. These lists, selected as representative of both a diverse set and ordinary lists, are:
-\begin{itemize}
-	\item Linux Audio Users list\footnote{gmane.linux.audio.users is list ID in GMANE.}, with participants holding hybrid artistic and technological interests, from different countries. Abbreviated as LAU from now on.
-	\item Linux Audio Developers list\footnote{gmane.linux.audio.devel is list ID in GMANE.}, with participants from different countries. A more technical and less active version of LAU. Abbreviated LAD from now on.
-	\item Development list for the standard C++ library\footnote{gmane.comp.gcc.libstdc++.devel is list ID in GMANE.}, with computer programmers from different countries. Abbreviated as CPP from now on.
-	\item List for de discussion of the election reform\footnote{gmane.politics.election-methods is list ID in GMANE.}.
-		Abbreviated ELE from now on.
-\end{itemize} 
-The first 20,000 messages of each list were considered, with total timespan, authors, threads and missing messages indicated in Table~\ref{tab:bas}.
-Furthermore, additional networks from Twitter, IRC and Participa.br
-are scrutinized to grasp the generality of the results derived manly from email lists.
+% We analyzed many email lists (and data from Twitter, Facebook, IRC and Participa.br) but selected only four in order to make a thorough analysis, from which general properties can be inferred. These lists, selected as representative of both a diverse set and ordinary lists, are:
+% \begin{itemize}
+% 	\item Linux Audio Users list\footnote{gmane.linux.audio.users is list ID in GMANE.}, with participants holding hybrid artistic and technological interests, from different countries. Abbreviated as LAU from now on.
+% 	\item Linux Audio Developers list\footnote{gmane.linux.audio.devel is list ID in GMANE.}, with participants from different countries. A more technical and less active version of LAU. Abbreviated LAD from now on.
+% 	\item Development list for the standard C++ library\footnote{gmane.comp.gcc.libstdc++.devel is list ID in GMANE.}, with computer programmers from different countries. Abbreviated as CPP from now on.
+% 	\item List for de discussion of the election reform\footnote{gmane.politics.election-methods is list ID in GMANE.}.
+% 		Abbreviated ELE from now on.
+% \end{itemize} 
+% The first 20,000 messages of each list were considered, with total timespan, authors, threads and missing messages indicated in Table~\ref{tab:bas}.
+% Furthermore, additional networks from Twitter, IRC and Participa.br
+% are scrutinized to grasp the generality of the results derived manly from email lists.
 
 Typos, \emph{leetspeak},
 slang and invented words
@@ -241,12 +243,13 @@ metrics for the texts.
 Future work might bring these entries to forefront 
 as neologisms and other linguistic innovations.
 
-All data and scripts needed to derive results, figures, tables and this article itself
+\subsection{Availability}
+Data and scripts needed to derive results, figures, tables and this article itself
 are publicly available.
-Email messages are downloadable from the GMANE public database~\cite{GMANEwikipedia}.
-Data annotated from Facebook, IRC and Twitter are in a public repository~\cite{fbtwData}.
-Data from Participabr was used from the linked data/semantic web RDF triples
-reported in~\cite{opa} and available in~\cite{datahub}.
+Email messages are downloadable from the Gmane public database~\cite{GMANEwikipedia}.
+% Data annotated from Facebook, IRC and Twitter are in a public repository~\cite{fbtwData}.
+% Data from Participabr was used from the linked data/semantic web RDF triples
+% reported in~\cite{opa} and available in~\cite{datahub}.
 Computer scripts are delivered through a public domain Python PyPI package and
 an open Git repository~\cite{gmanePack}.
 This open approach to both data and scripts
@@ -281,7 +284,6 @@ human individuals~\cite{anPhy,ccs15}.
 
 \subsection{Network formation, topological measures and Erd\"os sectioning}\label{subsec:net}
 
-
 Figure~\ref{fig:formation} is illustrative of the formation of interaction networks.
 Avoiding identical repetition of content,
 Please refer to~\cite{evoSN} for:
@@ -290,15 +292,19 @@ Please refer to~\cite{evoSN} for:
 	\item A concise consideration of the basic topological measures of vertex $i$: degree $k_i$, in-degree $k_i^{in}$, out-degree $k_i^{out}$ strength $s_i$, in-strength $s_i^{in}$, out-strength $s_i^{out}$, betweenness centrality $bt_i$, clustering coefficient $cc_i$.
 	\item A specification of the symmetry measures for a vertex $i$:
 		asymmetry $asy_i$, mean of asymmetry of edges $\mu_i^{asy}$, standard deviation of asymmetry of edges $\sigma_I^{asy}$, disequilibrium $dis_i$, mean of disequilibrium of edges $\mu_i^{dis}$, standard deviation of disequilibrium of edges $\sigma_i^{dis}$.
-	\item The partitioning of the real network in periphery, intermediary and hub sectors through a comparison of the real network with an Erd\"os-R\'enyi network with the same number of vertices and edges. 
+	\item The sectorialization of the real network in the periphery, intermediary and hub sectors through a comparison of the real network against an Erd\"os-R\'enyi model with the same number of vertices and edges. 
 \end{itemize}
-Such partition of the network is called ``Erd\"os sectioning'' and is
-herein performed with degree $k_i$ unless stated otherwise.
+Such sectorialization of the network is herein called ``Erd\"os sectioning'' and
+performed with degree $k_i$ unless stated otherwise.
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.3\textwidth]{figs/criaRede__}
-	\caption{The formation of interaction networks from email messages. Each vertex represents a participant. A reply message from B to a message from A is regarded as evidence that B has received information from A and yields a directed edge. Multiple messages add ``weight'' to a directed edge. Further details are given in~\cite{evoSN}.}
+	\includegraphics[width=0.3\textwidth]{figs/criaRede3_}
+	\caption{The formation of interaction networks from email messages.
+	Each vertex represents a participant.
+	A reply message from B to a message from A is regarded as evidence that B has received information from A and yields a directed edge.
+	Multiple messages add ``weight'' to a directed edge.
+	Further details are given in~\cite{evoSN}.}
 	\label{fig:formation}
 \end{figure}
 
@@ -340,29 +346,29 @@ herein performed with degree $k_i$ unless stated otherwise.
 %suggested that boudaries should not be considered sharp, but as smooth transitions.
 
 \subsection{Textual measures}
-This work focuses on the most simple measures from texts, as they proved sufficient for current step.
+This work focuses on very simple metrics derived from texts as they were sufficient for current step:
 %These measures include frequency of individual letters and punctuations (Tables~\ref{tab:cha}), of words and tokens (Table~\ref{tab:tokens}), sizes of tokens, sentences and messages (Table~\ref{tab:sizesTokens},~\ref{tab:sizesSents} and~\ref{tab:sizesMsgs}) and POS (Part-Of-Speech) tags (Table~\ref{tab:pos}). Other measures envisioned are in subsection~\ref{subsec:fw}.
-Considered measures are:
 \begin{itemize}
-    \item Frequency of characters: letters, vowels, punctuations and uppercase.
-    \item Number of tokens, frequency of punctuations, of known words, of words that has wordnet synsets, of tokens that are stopwords, of words that return synsets and are stop words, etc.
-    \item Mean and standard deviation for word and token sizes.
-    \item Mean and standard deviation of sentence sizes.
-    \item Mean and standard deviation of message sizes.
+    \item Frequency of characters: letters, vowels, punctuations and uppercase letters.
+    \item Number of tokens, frequency of punctuations among tokens, frequecy of known words, frequency of words that has wordnet synsets, frequency of tokens that are stopwords.
+    \item Mean and standard deviation for word, token sentence and message sizes.
     \item Fraction of morphosyntactic classes, such as adverbs, adjectives and nouns, represented by POS (Part-Of-Speech) tags.
+    \item Fraction of words in each wordnet~\cite{wordnet} top-most hypernyms, such as abstraction and physical entities for nouns or act for verbs.
 \end{itemize}
 \noindent To such measures are dedicated Tables~\ref{tab:cha},~\ref{tab:tokens},~\ref{tab:sizesTokens},~\ref{tab:sizesSents},~\ref{tab:sizesMsgs},~\ref{tab:pos}.
 
 This choice is based on: 1) the lack of such information in literature, as far as authors know; 
-2) potential relations of these incidences with topological aspects, such as connectivity; 3) the interdependence of textual artifacts suggests that simple measures should reflect complex behaviors and more subtle aspects.
-A preliminary study, with the complete works from Machado de Assis, made clear that these measures vary with respect to style~\cite{letrasMachado}.
+2) potential relations of these incidences with topological aspects, such as connectivity;
+3) the interdependence of textual artifacts suggests that simple measures should reflect complex behaviors and more subtle aspects.
+A preliminary study, with the complete works from the Brazilian writer Machado de Assis~\cite{letrasMachado},
+made clear that these metrics vary with respect to style.
 
-Wordnet synsets of each word were also used for:
-\begin{itemize}
-    \item Incidence of hypernyms, hyponyms, holonyms and meronyms.
-    \item Use and development of similarity measures of words, phrases and messages, by use of semantic criteria (Wordnet) and bag of words.
-\end{itemize}
-
+% Wordnet synsets of each word were also used for:
+% \begin{itemize}
+%     \item Incidence of hypernyms, hyponyms, holonyms and meronyms.
+%     \item Use and development of similarity measures of words, phrases and messages, by use of semantic criteria (Wordnet) and bag of words.
+% \end{itemize}
+% 
 
 %\subsection{Topological measures}\label{subsec:top}
 %Degree (in, out and total), strength (in, out and total), betweenness centrality and clustering coefficient were measured for each vertex in the interaction network. This served two purposes:
@@ -379,20 +385,21 @@ Wordnet synsets of each word were also used for:
 The topological and textual measures were related by:
 \begin{enumerate}
     \item incidences of linguistic traces in hub, intermediary and peripheral network sectors, which are delimited by topological criteria.
-    \item Correlation of measures of each vertex, easing pattern detection involving topology of interaction and language used.
-    \item Principal components formation derived from usual PCA.
+    \item Correlation of measures of each vertex, easing pattern detection involving topology of interaction and language.
+    \item Principal components formation derived from usual Principal Components Analysis.
 \end{enumerate}
 
 %This choice include integration with previous topological results, lack of concise results in literature (as far as author knows) that
 %could substantiate correlations of topological and textual traces, and common sense as a long-time member of these networks.
 %First task, of textual production in hubs, intermediary and peripheral sectors, is observed by Tables~\ref{tab:cha}-\ref{tab:kolPctInter}.
 An adaptation of the Kolmogorov-Smirnov test was used to observe differences in textual content, as follows.
-Be $F_{1,n}$ and $F_{2,n'}$ two empirical distribution functions, where $n$ and $n'$ are the number of observations on each sample. The two-sample Kolmogorov-Smirnov test rejects the null hypothesis if:
+Be $F_{1,n}$ and $F_{2,n'}$ two empirical distribution functions, where $n$ and $n'$ are the number of observations on each sample.
+The two-sample Kolmogorov-Smirnov test rejects the null hypothesis if:
 \begin{equation}\label{eq:ks}
 D_{n,n'} > c(\alpha)\sqrt{\frac{n+n'}{nn'}}
 \end{equation}
 
-\noindent where $D_{n,n'}=sup_x[F_{1,n}-F_{2,n'}]$ and $c(\alpha)$ is related to the critical region $\alpha$ by:
+\noindent where $D_{n,n'}=sup_x[F_{1,n}-F_{2,n'}]$ and $c(\alpha)$ is related to the significance level $\alpha$ by:
 
 \begin{table}[H]
 \centering
@@ -402,18 +409,21 @@ $c(\alpha)$ & 1.22 & 1.36 & 1.48  & 1.63 & 1.73  & 1.95  \\\hline
 \end{tabular}
 \end{table}
 
-We need to compare empirical distribution functions, therefore $D_{n,n'}$ is given, as are $n$ and $n'$. All terms in equation~\ref{eq:ks} are positive and $c(\alpha)$ can be isolated:
+We need to compare empirical distribution functions,
+therefore $D_{n,n'}$ is given, as are $n$ and $n'$.
+All terms in the equation~\ref{eq:ks} are positive and $c(\alpha)$ can be isolated:
 
 \begin{equation}\label{eq:ks2}
-c(\alpha) < \frac{D_{n,n'}}{\sqrt{\frac{n+n'}{nn'}}} = c'(\alpha)
+c(\alpha) < \frac{D_{n,n'}}{\sqrt{\frac{n+n'}{nn'}}} = c'
 \end{equation}
 
 %Tables~\ref{tab:kolSub}-\ref{tab:kolPctInter} are populated with values for $c'(\alpha)$.
-When $c'(\alpha)$ is high, low values of $\alpha$ favor rejecting the null hypothesis.
-For example, when $c'(\alpha)$ is greater than $\approx 1.7$, one might assume that $F_{1,n}$ and $F_{2,n'}$ differ.
-More importantly for us is that $c'(\alpha)$ is a measure of distance between both distributions~\cite{kolm}.
-We use collections of these values for deriving hypotheses
-about how different are the underlying mechanisms of the collections.
+When $c'$ is high, low values of $\alpha$ favor rejecting the null hypothesis.
+For example, when $c'$ is greater than $\approx 1.7$, one might assume that $F_{1,n}$ and $F_{2,n'}$ differ.
+More importantly for us is that $c'$ can be taken a measure of how much
+the distributions differ~\cite{kolm}.
+We use collections of such values for deriving hypotheses
+about how different are the underlying mechanisms of generation of texts.
 
 %Second task is addressed by the correlation matrix with both textual and topological measurements of each participant, in Tables~\ref{tab:corTop}-\ref{tab:corTexTop}. Third, principal components composition are in Tables~\ref{tab:pca1}-\ref{tab:pca5}. 
 
@@ -422,7 +432,7 @@ about how different are the underlying mechanisms of the collections.
 \section{Results and discussion}\label{sec:results}
 
 The most important result in this article is the
-extreme differentiation of each Erd\"os sectors with respect to the texts produced.
+extreme differentiation of each Erd\"os sector with respect to the texts produced.
 For example: hubs use more contractions, more adjectives,
 more common words, and less punctuation if compared to the rest of the network,
 specially the peripheral sector.
@@ -741,7 +751,7 @@ Other potential next steps are:
 \begin{acknowledgments}
 	Financial support was obtained from CNPq (140860/2013-4,
 	project 870336/1997-5), United Nations Development Program (contract: 2013/000566; project BRA/12/018) and FAPESP. 
-	The authors are grateful to the GMANE creators and maintainers for the public email list data, to the communities of the email lists and other groups used in the analysis, and to the Brazilian Presidency of the Republic for keeping Participabr code and data open.
+	The authors are grateful to the Gmane creators and maintainers for the public email list data, to the communities of the email lists and other groups used in the analysis, and to the Brazilian Presidency of the Republic for keeping Participabr code and data open.
 	We are also grateful to developers and users of Python scientific tools.
 \end{acknowledgments}
 
