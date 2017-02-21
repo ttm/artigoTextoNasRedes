@@ -209,15 +209,17 @@ erived from email lists, Twitter, Participabr and IRC.
 
 \section{Measures}\label{sec:sigen}
 \subsection{General characteristics of activity distribution among participants}\label{sec:sigen}
-\FloatBarrier
-\subsubsection{Snapshots of 1000 messages}\label{sec:sigen1000}
-\foreach \index in {0, ..., 20} {
-\minput{tables/SI/mergedA\index}
-}
+% \FloatBarrier
+% \subsubsection{Snapshots of 1000 messages}\label{sec:sigen1000}
+% \minput{tables/SI/labelsIDs}
+% \foreach \index in {0, ..., 20} {
+% \minput{tables/SI/mergedA\index}
+% }
 \clearpage
 
 \FloatBarrier
 \subsubsection{Snapshots of 2000 messages}\label{sec:sichar2000}
+\minput{tables/SI2/labelsIDs}
 \foreach \index in {0, ..., 20} {
 \minput{tables/SI2/mergedA\index}
 }
@@ -225,41 +227,48 @@ erived from email lists, Twitter, Participabr and IRC.
 
 \FloatBarrier
 \subsection{POS tags and wordnet synsets}\label{sec:sipos}
-\subsubsection{Snapshots of 1000 messages}\label{sec:simsg1000}
-\foreach \index in {0, ..., 20} {
-\minput{tables/SI/posMerged\index}
-\minput{tables/SI/wnPOSInline2-n-\index}
-\minput{tables/SI/wnPOSInline2-as-\index}
-\minput{tables/SI/wnPOSInline2-v-\index}
-\minput{tables/SI/wnPOSInline2-r-\index}
-\clearpage
-}
-\FloatBarrier
+% \subsubsection{Snapshots of 1000 messages}\label{sec:simsg1000}
+% \foreach \index in {0, ..., 20} {
+% \minput{tables/SI/posMerged\index}
+% \minput{tables/SI/wnPOSInline2-n-\index}
+% \minput{tables/SI/wnPOSInline2-as-\index}
+% \minput{tables/SI/wnPOSInline2-v-\index}
+% \minput{tables/SI/wnPOSInline2-r-\index}
+% \clearpage
+% }
+% \FloatBarrier
 \subsubsection{Snapshots of 2000 messages}\label{sec:sichar2000}
 \foreach \index in {0, ..., 20} {
 \minput{tables/SI2/posMerged\index}
-\minput{tables/SI/wnPOSInline2-n-\index}
-\minput{tables/SI/wnPOSInline2-as-\index}
-\minput{tables/SI/wnPOSInline2-v-\index}
-\minput{tables/SI/wnPOSInline2-r-\index}
+\minput{tables/SI2/wnPOSInline2-n-\index}
+\minput{tables/SI2/wnPOSInline2-n-\index tag_}
+\clearpage
+\minput{tables/SI2/wnPOSInline2-as-\index}
+\minput{tables/SI2/wnPOSInline2-as-\index tag_}
+\clearpage
+\minput{tables/SI2/wnPOSInline2-v-\index}
+\minput{tables/SI2/wnPOSInline2-v-\index tag_}
+\clearpage
+\minput{tables/SI2/wnPOSInline2-r-\index}
+\minput{tables/SI2/wnPOSInline2-r-\index tag_}
 \clearpage
 }
 
 \FloatBarrier
 \subsection{Differentiation of the texts from Erd\"os sectors}\label{subsec:di}
 
-\subsubsection{Snapshots of 1000 messages}\label{sec:simsg1000}
-\foreach \index in {0, ..., 20} {
-\minput{tables/SI/ksTokens\index _}
-\minput{tables/SI/ksWords\index _}
-\minput{tables/SI/ksSents\index _}
-\minput{tables/SI/ksAdjs\index _}
-\minput{tables/SI/ksSubs\index _}
-\minput{tables/SI/ksPuns\index _}
-\minput{tables/SI/ksChars\index _}
-\minput{tables/SI/ksVerbs\index _}
-\clearpage
-}
+% \subsubsection{Snapshots of 1000 messages}\label{sec:simsg1000}
+% \foreach \index in {0, ..., 20} {
+% \minput{tables/SI/ksTokens\index _}
+% \minput{tables/SI/ksWords\index _}
+% \minput{tables/SI/ksSents\index _}
+% \minput{tables/SI/ksAdjs\index _}
+% \minput{tables/SI/ksSubs\index _}
+% \minput{tables/SI/ksPuns\index _}
+% \minput{tables/SI/ksChars\index _}
+% \minput{tables/SI/ksVerbs\index _}
+% \clearpage
+% }
 
 \subsubsection{Snapshots of 2000 messages}\label{sec:siwn2000}
 \FloatBarrier
@@ -277,11 +286,11 @@ erived from email lists, Twitter, Participabr and IRC.
 
 \FloatBarrier
 \subsection{Correlation of topological and textual metrics}\label{subsec:cor}
-\subsubsection{Snapshots of 1000 messages}\label{sec:simsg1000}
-\foreach \index in {0, ..., 20} {
-\minput{tables/SI/correlationInline\index _}
-}
-\FloatBarrier
+% \subsubsection{Snapshots of 1000 messages}\label{sec:simsg1000}
+% \foreach \index in {0, ..., 20} {
+% \minput{tables/SI/correlationInline\index _}
+% }
+% \FloatBarrier
 \subsubsection{Snapshots of 2000 messages}\label{sec:simsg1000}
 \foreach \index in {0, ..., 20} {
 \minput{tables/SI2/correlationInline\index _}
@@ -290,13 +299,13 @@ erived from email lists, Twitter, Participabr and IRC.
 \FloatBarrier
 \subsection{Formation of principal components}\label{subsec:pc}
 %\input{tables/pcaInline_}
-\subsubsection{Snapshots of 1000 messages}\label{sec:simsg1000}
-\foreach \index in {0, ..., 20} {
-\minput{tables/SI/pcaInline\index _}
-\finput{figs/SI/plot_pca-\index.png}
-\clearpage
-\FloatBarrier
-}
+% \subsubsection{Snapshots of 1000 messages}\label{sec:simsg1000}
+% \foreach \index in {0, ..., 20} {
+% \minput{tables/SI/pcaInline\index _}
+% \finput{figs/SI/plot_pca-\index.png}
+% \clearpage
+% \FloatBarrier
+% }
 \FloatBarrier
 \subsubsection{Snapshots of 2000 messages}\label{sec:simsg1000}
 \foreach \index in {0, ..., 20} {
