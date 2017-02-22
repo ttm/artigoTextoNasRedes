@@ -1,0 +1,16 @@
+\contentsline {title}{Text and topology in in human interaction networks: differences among Erd\"os sectors and correlation of metrics (Supporting Information document)}{1}{section*.1}
+\tocdepth@munge 
+\contentsline {section}{\numberline {}Contents}{1}{section*.2}
+\tocdepth@restore 
+\contentsline {section}{\numberline {SI}Measures}{1}{section*.3}
+\contentsline {subsection}{\numberline {A}General characteristics of activity distribution among participants}{1}{section*.4}
+\contentsline {subsubsection}{\numberline {1}Snapshots of 2000 messages}{2}{section*.5}
+\contentsline {subsection}{\numberline {B}POS tags and wordnet synsets}{12}{section*.6}
+\contentsline {subsubsection}{\numberline {1}Snapshots of 2000 messages}{12}{section*.7}
+\contentsline {subsection}{\numberline {C}Differentiation of the texts from Erd\"os sectors}{102}{section*.8}
+\contentsline {subsubsection}{\numberline {1}Snapshots of 2000 messages}{102}{section*.9}
+\contentsline {subsection}{\numberline {D}Correlation of topological and textual metrics}{120}{section*.10}
+\contentsline {subsubsection}{\numberline {1}Snapshots of 2000 messages}{120}{section*.11}
+\contentsline {subsection}{\numberline {E}Formation of principal components}{139}{section*.12}
+\contentsline {subsubsection}{\numberline {1}Snapshots of 2000 messages}{139}{section*.13}
+\contentsline {section}{\numberline {SII}Histograms of existent and incident words}{157}{section*.14}

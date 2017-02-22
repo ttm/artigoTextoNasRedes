@@ -315,6 +315,56 @@ erived from email lists, Twitter, Participabr and IRC.
 \FloatBarrier
 }
 \clearpage
+
+%\nocite{*}
+\newpage
+\section{Histograms of existent and incident words}\label{sec:resE}
+ See subsection~\ref{subsec:sii}, and Figures~\ref{fig:kw}-\ref{fig:nssnsw} for discussion and directions.
+
+
+\begin{figure*}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{figs/kw}
+    \caption{Size of words that are known in English. Crossing of incident and existential sizes is around 5 (Figure~\ref{fig:kwnsw} shows a shift to length 6-7 when consider only non stopwords). Words with three letters have maximum incidence, while most words have 7 letters. See subsection~\ref{subsec:sii} for discussion and directions.}
+    \label{fig:kw}
+\end{figure*}
+
+
+\begin{figure*}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{figs/kwnsw}
+    \caption{Size of words that are known in English and are not stopwords. Crossing of incident and existential sizes is around 6-7 (figure~\ref{fig:kw} shows a shift to length 5 when considered stopwords). In this case, words with 4 letters have maximum incidence, while most words still have 7 letters. Exception for ELE, which exhibits maximum incidence of words with 5 letters and most words having 8 letters, which might be associated with ELE network typology discussed in tables~\ref{tab:tokens} and~\label{tab:caracteres}. See subsection~\ref{subsec:sii} for discussion and directions.}
+    \label{fig:kwnsw}
+\end{figure*}
+
+\begin{figure*}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{figs/kwssnsw}
+    \caption{Size of words that are known, are not stopwords and have synsets. Resembles figure~\ref{fig:kwnsw}. Stopword sizes histogram are in figure~\ref{fig:sw}. Differences suggests $\approx 0.5$ might be constant. LAD and LAU exquisite vocabulary (GNU/Linux, programming, sound/signal processing, music) might be responsible for higher difference of distributions. See subsection~\ref{subsec:sii} for discussion and directions. See subsection~\ref{subsec:sii} for discussion and directions.}
+    \label{fig:kwssnsw}
+\end{figure*}
+
+
+\begin{figure*}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{figs/sw}
+    \caption{Size histogram of stopwords. Stopwords with two letters are the most frequent, while most of them have four letters. Differences in distribution seem stable around $\approx 0.6$. See subsection~\ref{subsec:sii} for discussion and directions.}
+    \label{fig:sw}
+\end{figure*}
+
+
+
+\begin{figure*}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{figs/nssnsw}
+    \caption{Size histogram of known English words that are not stopwords and do not return synsets. Differences in distribution suggests less stable behavior, with high incidence of few words high number of existing words with many letters. Observe difference $\geq 1$, as observed only with all known words, but even higher. See subsection~\ref{subsec:sii} for discussion and directions.}
+    \label{fig:nssnsw}
+\end{figure*}
+
+
+
+ 
+%\nocite{*}
 %\nocite{*}
 \bibliography{supportingInformation}% Produces the bibliography via BibTeX.
 \end{document}

@@ -1,0 +1,1983 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.10.28)  22 FEB 2017 10:12
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**supportingInformation
+(./supportingInformation.tex
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 9 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/revtex/revtex4-1.cls
+Document Class: revtex4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revt
+ex4/ for documentation)
+ Copyright (c) 2009 The American Physical Society.
+ mailto:revtex@aps.org
+ Licensed under the LPPL:
+http://www.ctan.org/tex-archive/macros/latex/base/lppl.txt
+ Arthur Ogawa <arthur_ogawa at sbcglobal dot net>
+ Based on work by David Carlisle <david at dcarlisle.demon.co.uk>.
+ltxutil[2010/07/25/20:33:00 4.1r utilities package (portions licensed from W. E
+. Baxter web at superscript.com)]
+LaTeX Info: Redefining \@centercr on input line 308.
+Class revtex4-1 Info: Repairing broken LaTeX eqnarray on input line 358.
+\eqncolsep=\skip41
+Class revtex4-1 Info: Repairing hyperref-unfriendly LaTeX definition of \mpfoot
+note on input line 433.
+Class revtex4-1 Info: Repairing broken LateX \@sect on input line 755.
+\intertabularlinepenalty=\count79
+\@tbpen=\count80
+\@arstrutbox@hline=\box26
+Class revtex4-1 Info: Repairing broken LaTeX \@xbitor on input line 1786.
+Class revtex4-1 Info: Making \typeout \long on input line 2046.
+ltxfront[2010/07/25/20:33:00 4.1r frontmatter package (AO,DPC)]
+\c@affil=\count81
+\c@collab=\count82
+\absbox=\box27
+ltxgrid[2010/07/25/20:33:00 4.1r page grid package (portions licensed from W. E
+. Baxter web at superscript.com)]
+\c@linecount=\count83
+\output@latex=\toks14
+\box@size@1=\box28
+\box@size@2=\box29
+\@protection@box=\box30
+\@topmark@saved=\toks15
+\footins@saved=\box31
+\footins@recovered=\box32
+\column@recovered=\box33
+\pagesofar=\box34
+\footsofar=\box35
+\pagegrid@col=\count84
+Class revtex4-1 Info: Overriding \@vspace, \@vspacer, \@no@pgbk, \@newline, and
+ \\  on input line 5578.
+\c@part=\count85
+\c@section=\count86
+\c@subsection=\count87
+\c@subsubsection=\count88
+\c@paragraph=\count89
+\c@subparagraph=\count90
+\abovecaptionskip=\skip42
+\belowcaptionskip=\skip43
+\c@figure=\count91
+\fbox@1=\box36
+\c@table=\count92
+\fbox@2=\box37
+\c@video=\count93
+\fbox@4=\box38
+\@bibdataout=\write3
+\widetext@top=\box39
+\widetext@bot=\box40
+Class revtex4-1 Info: Selecting society aip on input line 7542.
+(/usr/share/texlive/texmf-dist/tex/latex/revtex/aip4-1.rtx
+File: aip4-1.rtx 2010/07/25 4.1r AIP substyle for REVTeX
+Class revtex4-1 Info: RevTeX society AIP selected on input line 67.
+)
+Class revtex4-1 Info: Selecting journal jmp on input line 7544.
+
+Using journal substyle jmp.
+Class revtex4-1 Info: Reading file aps10pt4-1.rtx on input line 7547.
+(/usr/share/texlive/texmf-dist/tex/latex/revtex/aps10pt4-1.rtx
+File: aps10pt4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for 
+documentation)
+Class revtex4-1 Info: RevTeX pointsize 10pt selected on input line 30.
+)
+Class revtex4-1 Info: Overriding 10pt on input line 7547.
+
+(/usr/share/texlive/texmf-dist/tex/latex/textcase/textcase.sty
+Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks16
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/03/03 v2.15a AMS math features
+\@mathmargin=\skip44
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen102
+)
+LaTeX Info: Redefining \text on input line 28.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen103
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count94
+LaTeX Info: Redefining \frac on input line 199.
+\uproot@=\count95
+\leftroot@=\count96
+LaTeX Info: Redefining \overline on input line 297.
+\classnum@=\count97
+\DOTSCASE@=\count98
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
+\Mathstrutbox@=\box41
+\strutbox@=\box42
+\big@size=\dimen104
+LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
+\macc@depth=\count99
+\c@MaxMatrixCols=\count100
+\dotsspace@=\muskip10
+\c@parentequation=\count101
+\dspbrk@lvl=\count102
+\tag@help=\toks18
+\row@=\count103
+\column@=\count104
+\maxfields@=\count105
+\andhelp@=\toks19
+\eqnshift@=\dimen105
+\alignsep@=\dimen106
+\tagshift@=\dimen107
+\tagwidth@=\dimen108
+\totwidth@=\dimen109
+\lineht@=\dimen110
+\@envbody=\toks20
+\multlinegap=\skip45
+\multlinetaggap=\skip46
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2735.
+LaTeX Info: Redefining \] on input line 2736.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip47
+\bibsep=\skip48
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count106
+)
+Class revtex4-1 Info: Repairing natbib's \BibitemShut on input line 7549.
+
+(/usr/share/texlive/texmf-dist/tex/latex/revtex/revsymb4-1.sty
+Package: revsymb4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ f
+or documentation)
+LaTeX Info: Redefining \frak on input line 95.
+LaTeX Info: Redefining \Bbb on input line 111.
+LaTeX Info: Redefining \REV@mathfrak on input line 119.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks22
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 95.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count107
+))
+\Gin@req@height=\dimen111
+\Gin@req@width=\dimen112
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grffile.sty
+Package: grffile 2012/04/05 v1.16 Extended file name support for graphics (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package grffile Info: Option `multidot' is set to `true'.
+Package grffile Info: Option `extendedchars' is set to `false'.
+Package grffile Info: Option `space' is set to `true'.
+Package grffile Info: \Gin@ii of package `graphicx' fixed on input line 486.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/dcolumn.sty
+Package: dcolumn 2014/10/28 v1.06 decimal alignment package (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen113
+\extrarowheight=\dimen114
+\NC@list=\toks23
+\extratabsurround=\skip49
+\backup@length=\skip50
+))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2014/10/28 v1.1c Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 207.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen115
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/01/03 v1.1b Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 143.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/etex-pkg/etex.sty
+Package: etex 2016/01/11 v2.6 eTeX basic definition package (PEB,DPC)
+\et@xins=\count108
+)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count109
+\float@exts=\toks24
+\float@box=\box43
+\@float@everytoks=\toks25
+\@floatcapt=\box44
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks26
+\pgfutil@tempdima=\dimen116
+\pgfutil@tempdimb=\dimen117
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
+ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box45
+(/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks27
+\pgfkeys@temptoks=\toks28
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
+ex
+\pgfkeys@tmptoks=\toks29
+))) (/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+\pgf@x=\dimen118
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+\pgf@xa=\dimen119
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+\pgf@xb=\dimen120
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+\pgf@xc=\dimen121
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+\pgf@y=\dimen122
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+\pgf@ya=\dimen123
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+\pgf@yb=\dimen124
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+\pgf@yc=\dimen125
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+\c@pgf@counta=\count110
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+\c@pgf@countb=\count111
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+\c@pgf@countc=\count112
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+\c@pgf@countd=\count113
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen126
+\pgfmath@count=\count114
+\pgfmath@box=\box46
+\pgfmath@toks=\toks30
+\pgfmath@stack@operand=\toks31
+\pgfmath@stack@operation=\toks32
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
+ric.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
+thmetics.code.tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count115
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen127
+\pgffor@skip=\dimen128
+\pgffor@stack=\toks33
+\pgffor@toks=\toks34
+))
+(/usr/share/texlive/texmf-dist/tex/latex/morefloats/morefloats.sty
+Package: morefloats 2015/07/22 v1.0h Raise limit of unprocessed floats (HMM)
+Package morefloats Info: Maximum number of possible floats asked for: 36
+(morefloats)             (i.e. 18 more floats).
+(morefloats)             LaTeX might run out of memory before this
+(morefloats)             (in which case it will notify you).
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package hobsub Info: Skipping package `ifluatex' (already loaded).
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package hobsub Info: Skipping package `etexcmds' (already loaded).
+Package hobsub Info: Skipping package `kvsetkeys' (already loaded).
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package hobsub Info: Skipping package `pdftexcmds' (already loaded).
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+Normal \dimen register pool exhausted, switching to extended pool.
+\@linkdim=\dimen256
+Normal \count register pool exhausted, switching to extended pool.
+\Hy@linkcounter=\count277
+\Hy@pagecounter=\count278
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count279
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+LaTeX Info: Redefining \href on input line 4952.
+\c@Hy@tempcnt=\count280
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen257
+\Fld@menulength=\count281
+\Field@Width=\dimen258
+\Fld@charsize=\dimen259
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count282
+\c@Item=\count283
+\c@Hfootnote=\count284
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count285
+\c@bookmark@seq@number=\count286
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+Normal \skip register pool exhausted, switching to extended pool.
+\Hy@SectionHShift=\skip256
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Package option `usenames' ignored on input line 216.
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 702.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2015/12/30 v3.0k Driver-dependent file (DPC,SPQR)
+))
+Package hyperref Info: Option `colorlinks' set `true' on input line 43.
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip257
+\LTright=\skip258
+\LTpre=\skip259
+\LTpost=\skip260
+\LTchunksize=\count287
+\LTcapwidth=\dimen260
+Normal \box register pool exhausted, switching to extended pool.
+\LT@head=\box256
+\LT@firsthead=\box257
+\LT@foot=\box258
+\LT@lastfoot=\box259
+\LT@cols=\count288
+\LT@rows=\count289
+\c@LT@tables=\count290
+\c@LT@chunks=\count291
+\LT@p@ftn=\toks35
+)
+(/usr/share/texlive/texmf-dist/tex/latex/supertabular/supertabular.sty
+Package: supertabular 2004/02/20 v4.1e the supertabular environment
+\c@tracingst=\count292
+\ST@wd=\dimen261
+\ST@rightskip=\skip261
+\ST@leftskip=\skip262
+\ST@parfillskip=\skip263
+\ST@pageleft=\dimen262
+\ST@headht=\dimen263
+\ST@tailht=\dimen264
+\ST@pagesofar=\dimen265
+\ST@pboxht=\dimen266
+\ST@lineht=\dimen267
+\ST@stretchht=\dimen268
+\ST@prevht=\dimen269
+\ST@toadd=\dimen270
+\ST@dimen=\dimen271
+\ST@pbox=\box260
+)
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen272
+\lightrulewidth=\dimen273
+\cmidrulewidth=\dimen274
+\belowrulesep=\dimen275
+\belowbottomsep=\dimen276
+\aboverulesep=\dimen277
+\abovetopsep=\dimen278
+\cmidrulesep=\dimen279
+\cmidrulekern=\dimen280
+\defaultaddspace=\dimen281
+\@cmidla=\count293
+\@cmidlb=\count294
+\@aboverulesep=\dimen282
+\@belowrulesep=\dimen283
+\@thisruleclass=\count295
+\@lastruleclass=\count296
+\@thisrulewidth=\dimen284
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/xr.sty
+Package: xr 1994/05/28 v5.02 eXternal References (DPC)
+)
+Package xr Info: IMPORTING LABELS FROM paper.aux on input line 53.
+
+
+LaTeX Warning: Label `subsec:pos' multiply defined.
+
+
+LaTeX Warning: Label `fig:formation' multiply defined.
+
+(/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
+)
+Class revtex4-1 Info: Patching array package. on input line 80.
+
+
+Class revtex4-1 Warning: Repair the float package.
+
+Class revtex4-1 Info: Patching longtable package on input line 80.
+Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 80.
+
+Class revtex4-1 Info: cite was not loaded (OK!) on input line 80.
+Class revtex4-1 Info: mcite was not loaded (OK!) on input line 80.
+Class revtex4-1 Info: multicol was not loaded (OK!) on input line 80.
+(./supportingInformation.aux
+
+LaTeX Warning: Label `FirstPage' multiply defined.
+
+
+LaTeX Warning: Label `sec:sigen' multiply defined.
+
+
+LaTeX Warning: Label `sec:sichar2000' multiply defined.
+
+
+LaTeX Warning: Label `subsec:di' multiply defined.
+
+
+LaTeX Warning: Label `subsec:cor' multiply defined.
+
+
+LaTeX Warning: Label `subsec:pc' multiply defined.
+
+
+LaTeX Warning: Label `sec:simsg1000' multiply defined.
+
+
+LaTeX Warning: Label `LastPage' multiply defined.
+
+)
+\openout1 = `supportingInformation.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+ (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count297
+\scratchdimen=\dimen285
+\scratchbox=\box261
+\nofMPsegments=\count298
+\nofMParguments=\count299
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count300
+\MPscratchDim=\dimen286
+\MPnumerator=\count301
+\makeMPintoPDFobject=\count302
+\everyMPtoPDFconversion=\toks37
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+ABD: EveryShipout initializing macros
+\AtBeginShipoutBox=\box262
+Package hyperref Info: Link coloring ON on input line 80.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count303
+)
+LaTeX Info: Redefining \ref on input line 80.
+LaTeX Info: Redefining \pageref on input line 80.
+LaTeX Info: Redefining \nameref on input line 80.
+
+(./supportingInformation.out) (./supportingInformation.out)
+\@outlinefile=\write4
+\openout4 = `supportingInformation.out'.
+
+Class revtex4-1 Info: Taking \maketitle back from hyperref on input line 80.
+\openout3 = `supportingInformationNotes.bib'.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 197.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 197.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+(./supportingInformation.toc)
+\tf@toc=\write5
+\openout5 = `supportingInformation.toc'.
+
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
+(Font)              using `OT1/cmss/bx/n' instead on input line 221.
+
+(./tables/SI2/labelsIDs.tex) (./tables/SI2/mergedA0.tex
+
+LaTeX Warning: Float too large for page by 37.54771pt on input line 67.
+
+) (./tables/SI2/mergedA1.tex
+
+LaTeX Warning: Float too large for page by 37.54771pt on input line 67.
+
+) (./tables/SI2/mergedA2.tex
+
+LaTeX Warning: Float too large for page by 37.54771pt on input line 67.
+
+) (./tables/SI2/mergedA3.tex
+
+LaTeX Warning: Float too large for page by 37.54771pt on input line 67.
+
+) (./tables/SI2/mergedA4.tex
+
+LaTeX Warning: Float too large for page by 37.54771pt on input line 67.
+
+) (./tables/SI2/mergedA5.tex
+
+LaTeX Warning: Float too large for page by 37.54771pt on input line 67.
+
+) (./tables/SI2/mergedA6.tex
+
+LaTeX Warning: Float too large for page by 37.54771pt on input line 67.
+
+) (./tables/SI2/mergedA7.tex
+
+LaTeX Warning: Float too large for page by 37.54771pt on input line 67.
+
+) (./tables/SI2/mergedA8.tex
+
+LaTeX Warning: Float too large for page by 37.54771pt on input line 67.
+
+) (./tables/SI2/mergedA9.tex
+
+LaTeX Warning: Float too large for page by 37.54771pt on input line 67.
+
+) (./tables/SI2/mergedA10.tex
+
+LaTeX Warning: Float too large for page by 37.54771pt on input line 67.
+
+) (./tables/SI2/mergedA11.tex
+
+LaTeX Warning: Float too large for page by 37.54771pt on input line 67.
+
+) (./tables/SI2/mergedA12.tex
+
+LaTeX Warning: Float too large for page by 37.54771pt on input line 67.
+
+) (./tables/SI2/mergedA13.tex
+
+LaTeX Warning: Float too large for page by 37.54771pt on input line 67.
+
+) (./tables/SI2/mergedA14.tex
+
+LaTeX Warning: Float too large for page by 37.54771pt on input line 67.
+
+) (./tables/SI2/mergedA15.tex
+
+LaTeX Warning: Float too large for page by 37.54771pt on input line 67.
+
+) (./tables/SI2/mergedA16.tex
+
+LaTeX Warning: Float too large for page by 37.54771pt on input line 67.
+
+) (./tables/SI2/mergedA17.tex
+
+LaTeX Warning: Float too large for page by 37.54771pt on input line 67.
+
+)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[2]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 227.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[3]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 227.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[4]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 227.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[5]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 227.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[6]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 227.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[7]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 227.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[8]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 227.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[9]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 227.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[10]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 227.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[11] (./tables/SI2/posMerged0.tex) (./tables/SI2/wnPOSInline2-n-0.tex)
+(./tables/SI2/wnPOSInline2-n-0tag_.tex)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-as-0.tex) (./tables/SI2/wnPOSInline2-as-0tag_.tex)
+[12]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 255.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[13] (./tables/SI2/wnPOSInline2-v-0.tex) (./tables/SI2/wnPOSInline2-v-0tag_.tex
+) [14]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-r-0.tex) (./tables/SI2/wnPOSInline2-r-0tag_.tex)
+[15] (./tables/SI2/posMerged1.tex) (./tables/SI2/wnPOSInline2-n-1.tex)
+(./tables/SI2/wnPOSInline2-n-1tag_.tex) [16]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-as-1.tex) (./tables/SI2/wnPOSInline2-as-1tag_.tex)
+[17]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 255.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[18] (./tables/SI2/wnPOSInline2-v-1.tex) (./tables/SI2/wnPOSInline2-v-1tag_.tex
+) [19]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-r-1.tex) (./tables/SI2/wnPOSInline2-r-1tag_.tex)
+[20] (./tables/SI2/posMerged2.tex) (./tables/SI2/wnPOSInline2-n-2.tex)
+(./tables/SI2/wnPOSInline2-n-2tag_.tex) [21]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-as-2.tex) (./tables/SI2/wnPOSInline2-as-2tag_.tex)
+[22]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 255.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[23] (./tables/SI2/wnPOSInline2-v-2.tex) (./tables/SI2/wnPOSInline2-v-2tag_.tex
+) [24]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-r-2.tex) (./tables/SI2/wnPOSInline2-r-2tag_.tex)
+[25] (./tables/SI2/posMerged3.tex) (./tables/SI2/wnPOSInline2-n-3.tex)
+(./tables/SI2/wnPOSInline2-n-3tag_.tex) [26]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-as-3.tex) (./tables/SI2/wnPOSInline2-as-3tag_.tex)
+[27]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 255.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[28] (./tables/SI2/wnPOSInline2-v-3.tex) (./tables/SI2/wnPOSInline2-v-3tag_.tex
+) [29]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-r-3.tex) (./tables/SI2/wnPOSInline2-r-3tag_.tex)
+[30] (./tables/SI2/posMerged4.tex) (./tables/SI2/wnPOSInline2-n-4.tex)
+(./tables/SI2/wnPOSInline2-n-4tag_.tex) [31]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-as-4.tex) (./tables/SI2/wnPOSInline2-as-4tag_.tex)
+[32]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 255.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[33] (./tables/SI2/wnPOSInline2-v-4.tex) (./tables/SI2/wnPOSInline2-v-4tag_.tex
+) [34]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-r-4.tex) (./tables/SI2/wnPOSInline2-r-4tag_.tex)
+[35] (./tables/SI2/posMerged5.tex) (./tables/SI2/wnPOSInline2-n-5.tex)
+(./tables/SI2/wnPOSInline2-n-5tag_.tex) [36]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-as-5.tex) (./tables/SI2/wnPOSInline2-as-5tag_.tex)
+[37]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 255.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[38] (./tables/SI2/wnPOSInline2-v-5.tex) (./tables/SI2/wnPOSInline2-v-5tag_.tex
+) [39]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-r-5.tex) (./tables/SI2/wnPOSInline2-r-5tag_.tex)
+[40] (./tables/SI2/posMerged6.tex) (./tables/SI2/wnPOSInline2-n-6.tex)
+(./tables/SI2/wnPOSInline2-n-6tag_.tex) [41]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-as-6.tex) (./tables/SI2/wnPOSInline2-as-6tag_.tex)
+[42]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 255.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[43] (./tables/SI2/wnPOSInline2-v-6.tex) (./tables/SI2/wnPOSInline2-v-6tag_.tex
+) [44]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-r-6.tex) (./tables/SI2/wnPOSInline2-r-6tag_.tex)
+[45] (./tables/SI2/posMerged7.tex) (./tables/SI2/wnPOSInline2-n-7.tex)
+(./tables/SI2/wnPOSInline2-n-7tag_.tex) [46]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-as-7.tex) (./tables/SI2/wnPOSInline2-as-7tag_.tex)
+[47]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 255.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[48] (./tables/SI2/wnPOSInline2-v-7.tex) (./tables/SI2/wnPOSInline2-v-7tag_.tex
+) [49]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-r-7.tex) (./tables/SI2/wnPOSInline2-r-7tag_.tex)
+[50] (./tables/SI2/posMerged8.tex) (./tables/SI2/wnPOSInline2-n-8.tex)
+(./tables/SI2/wnPOSInline2-n-8tag_.tex) [51]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-as-8.tex) (./tables/SI2/wnPOSInline2-as-8tag_.tex)
+[52]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 255.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[53] (./tables/SI2/wnPOSInline2-v-8.tex) (./tables/SI2/wnPOSInline2-v-8tag_.tex
+) [54]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-r-8.tex) (./tables/SI2/wnPOSInline2-r-8tag_.tex)
+[55] (./tables/SI2/posMerged9.tex) (./tables/SI2/wnPOSInline2-n-9.tex)
+(./tables/SI2/wnPOSInline2-n-9tag_.tex) [56]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-as-9.tex) (./tables/SI2/wnPOSInline2-as-9tag_.tex)
+[57]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 255.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[58] (./tables/SI2/wnPOSInline2-v-9.tex) (./tables/SI2/wnPOSInline2-v-9tag_.tex
+) [59]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-r-9.tex) (./tables/SI2/wnPOSInline2-r-9tag_.tex)
+[60] (./tables/SI2/posMerged10.tex) (./tables/SI2/wnPOSInline2-n-10.tex)
+(./tables/SI2/wnPOSInline2-n-10tag_.tex) [61]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-as-10.tex) (./tables/SI2/wnPOSInline2-as-10tag_.tex)
+[62]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 255.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[63] (./tables/SI2/wnPOSInline2-v-10.tex)
+(./tables/SI2/wnPOSInline2-v-10tag_.tex) [64]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-r-10.tex) (./tables/SI2/wnPOSInline2-r-10tag_.tex)
+[65] (./tables/SI2/posMerged11.tex) (./tables/SI2/wnPOSInline2-n-11.tex)
+(./tables/SI2/wnPOSInline2-n-11tag_.tex) [66]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-as-11.tex) (./tables/SI2/wnPOSInline2-as-11tag_.tex)
+[67]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 255.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[68] (./tables/SI2/wnPOSInline2-v-11.tex)
+(./tables/SI2/wnPOSInline2-v-11tag_.tex) [69]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-r-11.tex) (./tables/SI2/wnPOSInline2-r-11tag_.tex)
+[70] (./tables/SI2/posMerged12.tex) (./tables/SI2/wnPOSInline2-n-12.tex)
+(./tables/SI2/wnPOSInline2-n-12tag_.tex) [71]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-as-12.tex) (./tables/SI2/wnPOSInline2-as-12tag_.tex)
+[72]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 255.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[73] (./tables/SI2/wnPOSInline2-v-12.tex)
+(./tables/SI2/wnPOSInline2-v-12tag_.tex) [74]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-r-12.tex) (./tables/SI2/wnPOSInline2-r-12tag_.tex)
+[75] (./tables/SI2/posMerged13.tex) (./tables/SI2/wnPOSInline2-n-13.tex)
+(./tables/SI2/wnPOSInline2-n-13tag_.tex) [76]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-as-13.tex) (./tables/SI2/wnPOSInline2-as-13tag_.tex)
+[77]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 255.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[78] (./tables/SI2/wnPOSInline2-v-13.tex)
+(./tables/SI2/wnPOSInline2-v-13tag_.tex) [79]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-r-13.tex) (./tables/SI2/wnPOSInline2-r-13tag_.tex)
+[80] (./tables/SI2/posMerged14.tex) (./tables/SI2/wnPOSInline2-n-14.tex)
+(./tables/SI2/wnPOSInline2-n-14tag_.tex) [81]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-as-14.tex) (./tables/SI2/wnPOSInline2-as-14tag_.tex)
+[82]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 255.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[83] (./tables/SI2/wnPOSInline2-v-14.tex)
+(./tables/SI2/wnPOSInline2-v-14tag_.tex) [84]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-r-14.tex) (./tables/SI2/wnPOSInline2-r-14tag_.tex)
+[85] (./tables/SI2/posMerged15.tex) (./tables/SI2/wnPOSInline2-n-15.tex)
+(./tables/SI2/wnPOSInline2-n-15tag_.tex) [86]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-as-15.tex) (./tables/SI2/wnPOSInline2-as-15tag_.tex)
+[87]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 255.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[88] (./tables/SI2/wnPOSInline2-v-15.tex)
+(./tables/SI2/wnPOSInline2-v-15tag_.tex) [89]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-r-15.tex) (./tables/SI2/wnPOSInline2-r-15tag_.tex)
+[90] (./tables/SI2/posMerged16.tex) (./tables/SI2/wnPOSInline2-n-16.tex)
+(./tables/SI2/wnPOSInline2-n-16tag_.tex) [91]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-as-16.tex) (./tables/SI2/wnPOSInline2-as-16tag_.tex)
+[92]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 255.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[93] (./tables/SI2/wnPOSInline2-v-16.tex)
+(./tables/SI2/wnPOSInline2-v-16tag_.tex) [94]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-r-16.tex) (./tables/SI2/wnPOSInline2-r-16tag_.tex)
+[95] (./tables/SI2/posMerged17.tex) (./tables/SI2/wnPOSInline2-n-17.tex)
+(./tables/SI2/wnPOSInline2-n-17tag_.tex) [96]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-as-17.tex) (./tables/SI2/wnPOSInline2-as-17tag_.tex)
+[97]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 255.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[98] (./tables/SI2/wnPOSInline2-v-17.tex)
+(./tables/SI2/wnPOSInline2-v-17tag_.tex) [99]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/wnPOSInline2-r-17.tex) (./tables/SI2/wnPOSInline2-r-17tag_.tex)
+[100] [101] (./tables/SI2/ksTokens0_.tex) (./tables/SI2/ksWords0_.tex)
+(./tables/SI2/ksSents0_.tex) (./tables/SI2/ksAdjs0_.tex)
+(./tables/SI2/ksSubs0_.tex) (./tables/SI2/ksPuns0_.tex)
+(./tables/SI2/ksChars0_.tex) (./tables/SI2/ksVerbs0_.tex)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/ksTokens1_.tex) (./tables/SI2/ksWords1_.tex)
+(./tables/SI2/ksSents1_.tex) (./tables/SI2/ksAdjs1_.tex)
+(./tables/SI2/ksSubs1_.tex) (./tables/SI2/ksPuns1_.tex)
+(./tables/SI2/ksChars1_.tex) (./tables/SI2/ksVerbs1_.tex) [102]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/ksTokens2_.tex) (./tables/SI2/ksWords2_.tex)
+(./tables/SI2/ksSents2_.tex) (./tables/SI2/ksAdjs2_.tex)
+(./tables/SI2/ksSubs2_.tex) (./tables/SI2/ksPuns2_.tex)
+(./tables/SI2/ksChars2_.tex) (./tables/SI2/ksVerbs2_.tex) [103]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/ksTokens3_.tex) (./tables/SI2/ksWords3_.tex)
+(./tables/SI2/ksSents3_.tex) (./tables/SI2/ksAdjs3_.tex)
+(./tables/SI2/ksSubs3_.tex) (./tables/SI2/ksPuns3_.tex)
+(./tables/SI2/ksChars3_.tex) (./tables/SI2/ksVerbs3_.tex) [104]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/ksTokens4_.tex) (./tables/SI2/ksWords4_.tex)
+(./tables/SI2/ksSents4_.tex) (./tables/SI2/ksAdjs4_.tex)
+(./tables/SI2/ksSubs4_.tex) (./tables/SI2/ksPuns4_.tex)
+(./tables/SI2/ksChars4_.tex) (./tables/SI2/ksVerbs4_.tex) [105]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/ksTokens5_.tex) (./tables/SI2/ksWords5_.tex)
+(./tables/SI2/ksSents5_.tex) (./tables/SI2/ksAdjs5_.tex)
+(./tables/SI2/ksSubs5_.tex) (./tables/SI2/ksPuns5_.tex)
+(./tables/SI2/ksChars5_.tex) (./tables/SI2/ksVerbs5_.tex) [106]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/ksTokens6_.tex) (./tables/SI2/ksWords6_.tex)
+(./tables/SI2/ksSents6_.tex) (./tables/SI2/ksAdjs6_.tex)
+(./tables/SI2/ksSubs6_.tex) (./tables/SI2/ksPuns6_.tex)
+(./tables/SI2/ksChars6_.tex) (./tables/SI2/ksVerbs6_.tex) [107]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/ksTokens7_.tex) (./tables/SI2/ksWords7_.tex)
+(./tables/SI2/ksSents7_.tex) (./tables/SI2/ksAdjs7_.tex)
+(./tables/SI2/ksSubs7_.tex) (./tables/SI2/ksPuns7_.tex)
+(./tables/SI2/ksChars7_.tex) (./tables/SI2/ksVerbs7_.tex) [108]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/ksTokens8_.tex) (./tables/SI2/ksWords8_.tex)
+(./tables/SI2/ksSents8_.tex) (./tables/SI2/ksAdjs8_.tex)
+(./tables/SI2/ksSubs8_.tex) (./tables/SI2/ksPuns8_.tex)
+(./tables/SI2/ksChars8_.tex) (./tables/SI2/ksVerbs8_.tex) [109]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/ksTokens9_.tex) (./tables/SI2/ksWords9_.tex)
+(./tables/SI2/ksSents9_.tex) (./tables/SI2/ksAdjs9_.tex)
+(./tables/SI2/ksSubs9_.tex) (./tables/SI2/ksPuns9_.tex)
+(./tables/SI2/ksChars9_.tex) (./tables/SI2/ksVerbs9_.tex) [110]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/ksTokens10_.tex) (./tables/SI2/ksWords10_.tex)
+(./tables/SI2/ksSents10_.tex) (./tables/SI2/ksAdjs10_.tex)
+(./tables/SI2/ksSubs10_.tex) (./tables/SI2/ksPuns10_.tex)
+(./tables/SI2/ksChars10_.tex) (./tables/SI2/ksVerbs10_.tex) [111]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/ksTokens11_.tex) (./tables/SI2/ksWords11_.tex)
+(./tables/SI2/ksSents11_.tex) (./tables/SI2/ksAdjs11_.tex)
+(./tables/SI2/ksSubs11_.tex) (./tables/SI2/ksPuns11_.tex)
+(./tables/SI2/ksChars11_.tex) (./tables/SI2/ksVerbs11_.tex) [112]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/ksTokens12_.tex) (./tables/SI2/ksWords12_.tex)
+(./tables/SI2/ksSents12_.tex) (./tables/SI2/ksAdjs12_.tex)
+(./tables/SI2/ksSubs12_.tex) (./tables/SI2/ksPuns12_.tex)
+(./tables/SI2/ksChars12_.tex) (./tables/SI2/ksVerbs12_.tex) [113]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/ksTokens13_.tex) (./tables/SI2/ksWords13_.tex)
+(./tables/SI2/ksSents13_.tex) (./tables/SI2/ksAdjs13_.tex)
+(./tables/SI2/ksSubs13_.tex) (./tables/SI2/ksPuns13_.tex)
+(./tables/SI2/ksChars13_.tex) (./tables/SI2/ksVerbs13_.tex) [114]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/ksTokens14_.tex) (./tables/SI2/ksWords14_.tex)
+(./tables/SI2/ksSents14_.tex) (./tables/SI2/ksAdjs14_.tex)
+(./tables/SI2/ksSubs14_.tex) (./tables/SI2/ksPuns14_.tex)
+(./tables/SI2/ksChars14_.tex) (./tables/SI2/ksVerbs14_.tex) [115]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/ksTokens15_.tex) (./tables/SI2/ksWords15_.tex)
+(./tables/SI2/ksSents15_.tex) (./tables/SI2/ksAdjs15_.tex)
+(./tables/SI2/ksSubs15_.tex) (./tables/SI2/ksPuns15_.tex)
+(./tables/SI2/ksChars15_.tex) (./tables/SI2/ksVerbs15_.tex) [116]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/ksTokens16_.tex) (./tables/SI2/ksWords16_.tex)
+(./tables/SI2/ksSents16_.tex) (./tables/SI2/ksAdjs16_.tex)
+(./tables/SI2/ksSubs16_.tex) (./tables/SI2/ksPuns16_.tex)
+(./tables/SI2/ksChars16_.tex) (./tables/SI2/ksVerbs16_.tex) [117]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./tables/SI2/ksTokens17_.tex) (./tables/SI2/ksWords17_.tex)
+(./tables/SI2/ksSents17_.tex) (./tables/SI2/ksAdjs17_.tex)
+(./tables/SI2/ksSubs17_.tex) (./tables/SI2/ksPuns17_.tex)
+(./tables/SI2/ksChars17_.tex) (./tables/SI2/ksVerbs17_.tex) [118]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[119] (./tables/SI2/correlationInline0_.tex
+
+Class revtex4-1 Warning: Float cannot be placed.
+
+) (./tables/SI2/correlationInline1_.tex
+
+Class revtex4-1 Warning: Float cannot be placed.
+
+) (./tables/SI2/correlationInline2_.tex
+
+Class revtex4-1 Warning: Float cannot be placed.
+
+) (./tables/SI2/correlationInline3_.tex
+
+Class revtex4-1 Warning: Float cannot be placed.
+
+) (./tables/SI2/correlationInline4_.tex
+
+Class revtex4-1 Warning: Float cannot be placed.
+
+) (./tables/SI2/correlationInline5_.tex
+
+Class revtex4-1 Warning: Float cannot be placed.
+
+) (./tables/SI2/correlationInline6_.tex
+
+Class revtex4-1 Warning: Float cannot be placed.
+
+) (./tables/SI2/correlationInline7_.tex
+
+Class revtex4-1 Warning: Float cannot be placed.
+
+) (./tables/SI2/correlationInline8_.tex
+
+Class revtex4-1 Warning: Float cannot be placed.
+
+) (./tables/SI2/correlationInline9_.tex
+
+Class revtex4-1 Warning: Float cannot be placed.
+
+) (./tables/SI2/correlationInline10_.tex
+
+Class revtex4-1 Warning: Float cannot be placed.
+
+) (./tables/SI2/correlationInline11_.tex
+
+Class revtex4-1 Warning: Float cannot be placed.
+
+) (./tables/SI2/correlationInline12_.tex
+
+Class revtex4-1 Warning: Float cannot be placed.
+
+) (./tables/SI2/correlationInline13_.tex
+
+Class revtex4-1 Warning: Float cannot be placed.
+
+) (./tables/SI2/correlationInline14_.tex
+
+Class revtex4-1 Warning: Float cannot be placed.
+
+) (./tables/SI2/correlationInline15_.tex
+
+Class revtex4-1 Warning: Float cannot be placed.
+
+) (./tables/SI2/correlationInline16_.tex
+
+Class revtex4-1 Warning: Float cannot be placed.
+
+) (./tables/SI2/correlationInline17_.tex
+
+Class revtex4-1 Warning: Float cannot be placed.
+
+) [120] [121]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 300.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[122]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 300.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[123]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 300.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[124]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 300.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[125]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 300.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[126]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 300.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[127]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 300.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[128]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 300.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[129]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 300.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[130]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 300.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[131]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 300.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[132]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 300.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[133]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 300.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[134]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 300.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[135]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 300.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[136]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 300.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[137]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 300.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+[138] (./tables/SI2/pcaInline0_.tex) [139] (./tables/SI2/pcaInline1_.tex)
+[140] (./tables/SI2/pcaInline2_.tex) [141] (./tables/SI2/pcaInline3_.tex)
+[142] (./tables/SI2/pcaInline4_.tex) [143] (./tables/SI2/pcaInline5_.tex)
+[144] (./tables/SI2/pcaInline6_.tex) [145] (./tables/SI2/pcaInline7_.tex)
+[146] (./tables/SI2/pcaInline8_.tex) [147] (./tables/SI2/pcaInline9_.tex)
+[148] (./tables/SI2/pcaInline10_.tex) [149] (./tables/SI2/pcaInline11_.tex)
+[150] (./tables/SI2/pcaInline12_.tex) [151] (./tables/SI2/pcaInline13_.tex)
+[152] (./tables/SI2/pcaInline14_.tex) [153] (./tables/SI2/pcaInline15_.tex)
+[154] (./tables/SI2/pcaInline16_.tex) [155] (./tables/SI2/pcaInline17_.tex)
+[156] <figs/kw.png, id=1116, 1175.1102pt x 641.0349pt>
+File: figs/kw.png Graphic file (type png)
+ <use figs/kw.png>
+Package pdftex.def Info: figs/kw.png used on input line 327.
+(pdftex.def)             Requested size: 510.0pt x 278.21213pt.
+
+
+Class revtex4-1 Warning: Float cannot be placed.
+
+<figs/kwnsw.png, id=1122, 1175.1102pt x 641.0349pt>
+File: figs/kwnsw.png Graphic file (type png)
+ <use figs/kwnsw.png>
+Package pdftex.def Info: figs/kwnsw.png used on input line 335.
+(pdftex.def)             Requested size: 510.0pt x 278.21213pt.
+
+
+LaTeX Warning: Reference `tab:tokens' on page 157 undefined on input line 336.
+
+
+LaTeX Warning: Reference `tab:tokens' on page 157 undefined on input line 336.
+
+
+Class revtex4-1 Warning: Float cannot be placed.
+
+<figs/kwssnsw.png, id=1127, 1175.1102pt x 641.0349pt>
+File: figs/kwssnsw.png Graphic file (type png)
+ <use figs/kwssnsw.png>
+Package pdftex.def Info: figs/kwssnsw.png used on input line 342.
+(pdftex.def)             Requested size: 510.0pt x 278.21213pt.
+
+
+Class revtex4-1 Warning: Float cannot be placed.
+
+<figs/sw.png, id=1136, 1175.1102pt x 641.0349pt>
+File: figs/sw.png Graphic file (type png)
+ <use figs/sw.png>
+Package pdftex.def Info: figs/sw.png used on input line 350.
+(pdftex.def)             Requested size: 510.0pt x 278.21213pt.
+
+
+Class revtex4-1 Warning: Float cannot be placed.
+
+<figs/nssnsw.png, id=1139, 1175.1102pt x 641.0349pt>
+File: figs/nssnsw.png Graphic file (type png)
+ <use figs/nssnsw.png>
+Package pdftex.def Info: figs/nssnsw.png used on input line 359.
+(pdftex.def)             Requested size: 510.0pt x 278.21213pt.
+
+
+Class revtex4-1 Warning: Float cannot be placed.
+
+No file supportingInformation.bbl.
+[157] [158 <./figs/kw.png>] [159 <./figs/kwnsw.png>] [160 <./figs/kwssnsw.png> 
+<./figs/sw.png>] [161 <./figs/nssnsw.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 370.
+ (./supportingInformation.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 370.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 370.
+Package rerunfilecheck Info: File `supportingInformation.out' has not changed.
+(rerunfilecheck)             Checksum: 557967670846DB610C3B9211637381F4;1206.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 15731 strings out of 494850
+ 262877 string characters out of 6177376
+ 688075 words of memory out of 5000000
+ 17074 multiletter control sequences out of 15000+600000
+ 17960 words of font info for 66 fonts, out of 8000000 for 9000
+ 42 hyphenation exceptions out of 8191
+ 40i,9n,52p,764b,415s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{section*.22} has been referenced but does not exi
+st, replaced by a fixed one
+
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on supportingInformation.pdf (161 pages, 1475563 bytes).
+PDF statistics:
+ 1343 PDF objects out of 1440 (max. 8388607)
+ 1133 compressed objects within 12 object streams
+ 543 named destinations out of 1000 (max. 500000)
+ 138 words of extra memory for PDF output out of 10000 (max. 10000000)
+
