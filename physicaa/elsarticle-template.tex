@@ -62,7 +62,7 @@
   \address[secaddr]{São Carlos Institute of Physics (IFSC/USP) - Avenida Trabalhador São-carlense, 400 - Centro, São Carlos, 13566-590, SP, Brazil}
 
 \begin{abstract}
-  Social networks have been widely considered in recent scientific literature.
+  Social networks has been widely considered in recent scientific literature.
   A central question remains, though: how are the linguistic and topological features of
   social actors related?
   In this work, we demonstrate a fundamental association between sectors of networks
@@ -89,6 +89,48 @@ social networks\sep complex letworks \sep language \sep text mining \sep Erdös 
 \linenumbers
 
 \section{Introduction}
+The first studies dealing explicitly with human interaction networks
+date from the nineteenth century while the foundation of
+social network analysis is generally attributed to the psychiatrist Jacob Moreno in mid twentieth century~\cite{moreno,newmanBook}.
+With the increasing availability of data related to human interactions, research about these networks has grown continuously.
+Contributions can now be found in a variety of fields, from social sciences and humanities~\cite{latour2013} to computer science~\cite{bird} and physics~\cite{barabasiHumanDyn,newmanFriendship}, given the multidisciplinary nature of the topic.
+One of the approaches from an exact science perspective is to represent interaction networks as complex networks, with which 
+several features of human interaction have been revealed~\cite{barabasiHumanDyn,newmanFriendship}.
+For example, the topology of human interaction networks exhibits a scale-free outline,
+which points to the existence of a small number of highly connected hubs and a large number of poorly connected nodes.
+
+\subsection{Related work}
+In~\cite{stab}, the authors reported a remarkable stability of the
+overall topological structure of social networks,
+a stability that holds across network temporal evolution and across different networks.
+In the same work, a sound method for deriving the hub, intermediary and peripheral sectors of a network is thoroughly described.
+As it is fundamental to this present paper, such method is summarized in Section~\ref{ssec}.
+The studies performed considering the interaction networks of participants and their language focus on specific phenomena or features,
+such as rumor propagation~\cite{r1,r2,r3,r4} and language dynamics (e.g. language shift, emergence or learning)~\cite{s1,s2,s3,s4,s5,s6,s7,s8,s9}.
+Linguistic networks have been addressed, such as in~\cite{diego} where authors reported on the
+practicability of using word-adjency networks for (sentiment) polarity detection.
+The studies most closely related to this present article, found by the authors, are:
+1)~\cite{ex1}, where both linguistic and topological features are used to predict socioeconomic attributes,
+but no relation among topological and linguistic features is reported.
+2)~\cite{ex2}, where linguistic and topological features are used to inspect the role spammers hold
+in Twitter and email networks, but, also, no relation among linguistic and topological features is reported.
+In summary, the work here presented is potentially unique in observing
+the relation, in real systems, of basic topological features of the participants
+in their social networks to the basic characteristics of the language they produce therein.
+A thorough presentation of the methods and resulting measurements 
+is lengthy and tiresome, and does not add to the core insights provided.
+Thus, we here sumarize the findings and, if the reader finds necessary,
+the reader will find a more comprehensive consideration of the procedures
+and outcomes in the doctoral thesis which motivated this paper.
+Furthermore, extensive listings of the measurements, encompassing hundreds of tables, are found in the Supplementary document of this artice.
+
+
+% search: language in social network analysis
+
+\subsection{Terminology remarks}
+% language shift vs differentiation
+% sectors vs partitions
+% nodes, participants, actors, agents
 
 \section{Materials and methods}
 \subsection{Mining email lists}
@@ -151,7 +193,7 @@ Source: By the author.\
 \end{figure}
 
 
-\subsection{Sectioning of a network into hub, intermediary and peripheral nodes (Erdös sectioning)}
+\subsection{Sectioning of a network into hub, intermediary and peripheral nodes (Erdös sectioning)}\label{ssec}
 It is often useful to think of vertices as hubs, peripheral and intermediary. We have therefore derived the peripheral, intermediary and hub sectors of an empirical network from the comparison against an Erd\"os-R\'enyi network with the same number of edges and vertices,
 as depicted in Figure~\ref{fig:setores}. We refer to this procedure as \emph{Erd\"os sectioning}, with the resulting sectors being named as \emph{Erd\"os sectors}. The Erd\"os sectioning was recognized as a theoretical possibility by M. O. Jackson in his video lectures~\cite{3setores}, but to our knowledge it has not as yet been applied to empirical data.
 
@@ -370,6 +412,11 @@ This differentiation of the three sectors is an indication that the Erd\"os Sect
 
 \section{Conclusions and further work}
 
+% Obvious: more networks, network provenance, linguistic features, topological features, comparison methods (such as statistical distances), sets of nodes (partitions form the Ratio Cut)
+% use of Coh-Metrix, L2 Syntactical Complexity Analyzer
+% visualization of such differences, as tables are not so prombptly absorbed
+
+% detection of sectors using linguistic features
 
 
 \section*{References}
