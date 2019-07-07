@@ -5,6 +5,9 @@
 \usepackage{amsmath}
 \usepackage{float}
 \usepackage{placeins}
+\usepackage{booktabs}
+\usepackage{array}
+\newcolumntype{?}{!{\vrule width 1.5pt}}
 
 \journal{Physica A}
 
@@ -44,7 +47,8 @@
 
 \begin{frontmatter}
 
-\title{Language differentiation in complex social interaction networks}
+% \title{Language differences in human complex social interaction networks}
+\title{Language differences in human interaction networks}
 % OR
 % \title{Language differentiation in the elementary sectors of complex social interaction networks}
 % OR
@@ -68,22 +72,23 @@
   Social networks has been widely considered in recent scientific literature.
   A central question remains, though: how are the linguistic and topological features of
   social actors related?
-  In this work, we demonstrate a fundamental association between sectors of networks
+  In this work, we describe a fundamental association between connectivity-defined sectors of networks
   and the language used therein.
-  The hubs, intermediary and peripheral sectors of a network, defined though the
+  The hubs, intermediary and peripheral sectors of a network, obtained though the
   connectivity distribution, exhibit statistical distances, between the texts they produce,
   often greater than between texts of different networks or even the same sectors of different networks.
   This result holds for networks related to very distinct subjects, such as programming libraries and
   national elections, and are valid for raw textual features (such as token size),
-  gramatic features (such as fraction of adjectives), and semantic features
+  grammatical features (such as fraction of adjectives), and semantic features
   (such as obtained through the canonical Wornet).
+  Furthermore, the measurements obtained allowed for a first tentative characterization of the language used in the networks and among the sectors.
   The findings herein reported should assist further studies relating language and topology
   in social networks, e.g. by relating communities or special groups of agents, such as of brokers
    and those with a high clustering coefficient, and by the consideration of other social networking systems.
 \end{abstract}
 
 \begin{keyword}
-social networks\sep complex letworks \sep language \sep text mining \sep Erdös sectors
+social networks\sep complex networks \sep language \sep text mining \sep Erdös sectors
 \MSC[2019] 00-01\sep  99-00
 \end{keyword}
 
@@ -99,7 +104,7 @@ With the increasing availability of data related to human interactions, research
 Contributions can now be found in a variety of fields, from social sciences and humanities~\cite{latour2013} to computer science~\cite{bird} and physics~\cite{barabasiHumanDyn,newmanFriendship}, given the multidisciplinary nature of the topic.
 One of the approaches from an exact science perspective is to represent interaction networks as complex networks, with which 
 several features of human interaction have been revealed~\cite{barabasiHumanDyn,newmanFriendship}.
-For example, the topology of human interaction networks exhibits a scale-free outline,
+For example, the connectivity distribution of human interaction networks tends to obey a power-law,
 which points to the existence of a small number of highly connected hubs and a large number of poorly connected nodes.
 Text mining is a multidisciplinary field,
 it is an extension of data mining to (often unstructured) textual data
@@ -112,45 +117,44 @@ start and end respectively~\cite{textSurvey}.
 Text mining tasks include document summarization, sentiment analysis
 and natural language processing techniques such as part-of-speech tagging~\cite{nltk}.
 Among the applications one may include social media monitoring, automated ad placement, and development of tools for 
-semantics ~\cite{textSurvey}.
+semantics~\cite{textSurvey}.
 It is believed that applying text mining to social media
 can yield interesting findings in human behavior~\cite{customText}.
 Although there is no clear cut, text mining is sometimes divided into linguistic and non-linguistic~\cite{customText},
 and in this study we use both perspectives.
 In the first case, techniques borrowed from linguistics are present, such as
-the analysis of discourse and part of speech tagging,
-and it is often mingled with natural language processing or computational linguistics (see Section~\ref{amb} for a coherent distinction of the fields).
+the analysis of discourse and part-of-speech tagging,
+and it is often mingled with natural language processing or computational linguistics.
 In the non-linguistic text mining, text is analyzed by means of statistical features
 derived from e.g. the size of tokens and sentences,
 and might be more easily related to the intuitive concept of data mining of text.
-In this paper, we report on striking differences among the language used by the hub, intermediary and pripheral sectors of
-social networks obtained through email lists.
-Such constrasts were found in networks in diverse scales and using a number of text-related statistics,
+In this paper, we report on striking differences among the language used by the hub, intermediary and peripheral sectors of
+human social interaction networks.
+Such contrasts were found in networks in diverse scales and using a number of text-related statistics,
 from the usage of individual characters, to token sizes, part-of-speech tags and Wordnet synsets.
 These results potentially encompass the first direct report on the association of topological features
 of individuals in human interaction networks to the language they employ.
 
 This document is organized as follows.
 Next subsections briefly discuss related work and hold terminology remarks.
-Section~\ref{smm} describes the data analyzed and the methods applied to
+Section~\ref{smm} describes the data analyzed and the methods employed to
 derive the networks and sectors, and to obtain the measurements.
 Section~\ref{sres} holds the results achieved.
 Section~\ref{scon} is dedicated to conclusions and further work.
-Moreover, the Supplementary document supplies all measurements achieved,
+Moreover, the Supplementary document provides all measurements achieved,
 within hundreds of tables, in order to support current findings and furnish
 the reader with the means to draw additional hypotheses.
 
-
 \subsection{Related work}
-In~\cite{stab}, the authors reported a remarkable stability of the
+In~\cite{stab}, the authors described the remarkable stability of the
 overall topological structure of social networks,
 a stability that holds across network temporal evolution and across different networks.
-In the same work, a sound method for deriving the hub, intermediary and peripheral sectors of a network is thoroughly described.
+In the same work, a sound method for deriving the hubs, intermediary and peripheral sectors of a network is thoroughly described.
 As it is fundamental to this present paper, such method is summarized in Section~\ref{ssec}.
 The studies performed considering the interaction networks of participants and their language focus on specific phenomena or features,
 such as rumor propagation~\cite{r1,r2,r3,r4} and language dynamics (e.g. language shift, emergence or learning)~\cite{s1,s2,s3,s4,s5,s6,s7,s8,s9}.
 Linguistic networks have been addressed, such as in~\cite{diego} where authors reported on the
-practicability of using word-adjency networks for (sentiment) polarity detection.
+practicability of using word-adjacency networks for (sentiment) polarity detection, but no interaction network of human agents are considered in them.
 The studies most closely related to this present article, found by the authors, are:
 1)~\cite{ex1}, where both linguistic and topological features are used to predict socioeconomic attributes,
 but no relation among topological and linguistic features is reported.
@@ -158,30 +162,27 @@ but no relation among topological and linguistic features is reported.
 in Twitter and email networks, but, also, no relation among linguistic and topological features is reported.
 In summary, the work here presented is potentially unique in observing
 the relation, in real systems, of basic topological features of the participants
-in their social networks to the basic characteristics of the language they produce therein.
+in their interaction networks to the basic characteristics of the language they use therein.
 A thorough presentation of the methods and resulting measurements 
 is lengthy and tiresome, and does not add to the core insights provided.
-Thus, we here sumarize the findings and, if the reader finds necessary,
-the reader will find a more comprehensive consideration of the procedures
-and outcomes in the doctoral thesis which motivated this paper.
-Furthermore, extensive listings of the measurements, encompassing hundreds of tables, are found in the Supplementary document of this artice.
-
-
-% search: language in social network analysis
+Thus, we here summarize the findings and, if the reader finds necessary,
+she will find a more comprehensive consideration of the procedures
+and outcomes in the doctoral thesis which motivated this paper~\cite{thesis}.
+Furthermore, extensive listings of the measurements, encompassing hundreds of tables, are found in the Supplementary document of this article.
 
 \subsection{Terminology remarks}
-A major issue in current vocabulary arises when considered the hub, intermediary and peripheral sectors.
+A major issue in current vocabulary arises when considered the hubs, intermediary and peripheral sectors.
 In most cases, the sectors are also partitions
 (i.e. they are non-overlapping sets whose union is the complete superset),
 but it depends on the criteria for obtaining the sectors~\cite{stab},
 thus the use of the more general term \emph{sector}.
-Language shift is the process by which speakers starts to use different linguistic features or a different language altogether.
-Despite the fact that a language shift may be regarded as a type of language differentiation, the term ``language differentiation'' is used in this document
-to refer only to the contrast of the language used by distinct sets of agents,
-more specifically, to the differences in the language found to be employed by the hub, intermediary and peripheral participants.
+Language shift is the process by which speakers start to use different linguistic features or a different language altogether.
+Despite the fact that a language shift may be regarded as a type of language differentiation, this document
+is only concerned with the contrasts found in the language used by distinct sets of agents,
+more specifically, to the differences in the language found to be employed by the hubs, intermediary and peripheral participants.
 Finally, complex and social networks comprehend a multidisciplinary field,
 and e.g. nodes, participants, actors, and agents are used to refer to analogous concepts.
-We strived to avoid vocabulary inconsistency.
+We strived to keep the vocabulary consistent.
 % , but it may be convenient
 % to keep in mind that using analogous terms is beneficial for guiding the reader
 % to peculiar nuances, e.g. node is embedded
@@ -192,14 +193,17 @@ We strived to avoid vocabulary inconsistency.
 \subsection{The data}
 Email list messages were obtained from
 the Gmane email archive, which consists of more than $20,000$
-email lists (discussion groups) and more than $130\times 10^6$ messages~\cite{GMANEwikipedia}. These lists cover a variety of topics, mostly technology-related. The archive can be described as a corpus along with message metadata, including sent time, place, sender name, and sender email address.
-The usage of the Gmane database in scientific research is reported in studies of isolated lists and of lexical innovations~\cite{Gmane2,bird}. 
+email lists (discussion groups) and more than $130\times 10^6$ messages~\cite{GMANEwikipedia}.
+These lists cover a variety of topics, mostly technology-related.
+The archive can be described as a corpus along with message metadata,
+including sent time, place, sender name, and sender email address.
+The usage of the Gmane archive in scientific research is
+reported e.g. in studies of isolated lists and of lexical innovations~\cite{Gmane2,bird}. 
 
-We observed various email lists and data from Twitter, Facebook and Participabr.
-After analyzing dozens of the networks,
-we randomdly selected 18 email lists for the thorough measurements in the
-Supplementary document.
-We also randomnly selected five of the email lists
+After analyzing dozens of the networks
+(derived from Gmane and data from Twitter, Facebook and Participabr),
+we randomly selected 18 email lists for the thorough measurements that are available in the Supplementary document.
+We also selected five of the email lists
 to illustrate the results in this paper.
 These lists are as follows:
 
@@ -208,10 +212,13 @@ These lists are as follows:
 \item Linux Audio Developers list\footnote{gmane.linux.audio.devel is list ID in Gmane.}, with participants from different countries; a more technical and less active version of LAU. English is the prevailing language. Abbreviated as LAD from now on.
 \item Developer's list for the standard C++ library\footnote{gmane.comp.gcc.libstdc++.devel is list ID in Gmane.}, with computer programmers from different countries. English is the prevailing language. Abbreviated as CPP from now on.
 \item List of the MetaReciclagem project\footnote{gmane.politics.organizations.metareciclagem is list ID in Gmane.}, a Brazilian email list for digital culture. Portuguese is the prevailing language, although some messages are written in Spanish and English. Abbreviated as MET from now on.
-\item List for de discussion of the election reform\footnote{gmane.politics.election-methods is list ID in Gmane.}. English is the prevailing language. Abbreviated ELE from now on.
+\item List for discussion of the election reform\footnote{gmane.politics.election-methods is list ID in Gmane.}. English is the prevailing language. Abbreviated ELE from now on.
 \end{itemize} 
 
 Table~\ref{tab:genLists} holds an overview of the messages considered in each of these lists.
+MET was not used for the textual measurements because most messages are not written in English.
+The selection of these lists was performed in preliminary stages of this work,
+in compliance with~\cite{stab,thesis}, as a convenient, small and diverse set of lists to be considered in depth, and has no impact on the results as they are used only for illustration in Table~\ref{tab:genLists} and Section~\ref{subsec:di}.
 
 \begin{table}
 \centering
@@ -223,21 +230,32 @@ $\overline{M}$ is the number of messages missing in the 20,000 collection
 }
 	\def\arraystretch{1.2}
 \label{tab:genLists}
-\begin{tabular}{l|c|c|c|c|c}\hline
+\begin{tabular}{l|c c c c c}
 list & $date_1$ & $date_{M}$ & $N$ & $\Gamma$ & $\overline{M}$ \\\hline
 \input{tables/tab1Overview}
 \end{tabular}
-\begin{flushleft}\footnotesize
-Source: By the author.\
-\end{flushleft}
 \end{table} 
 
-\subsection{Interaction networks}
+\subsection{Interaction networks}\label{intNet}
 Edges in interaction networks can be modeled both as weighted or unweighted, as directed or undirected~\cite{bird,newmanCommunityDirected,newmanCommunity2013}.
-Networks in this paper are directed and weighted, the most informative of the possibilities. We did not investigate directed unweighted, undirected weighted, and undirected unweighted representations of the interaction networks. 
+Networks in this paper are directed and weighted, the most informative of the possibilities. Moreover, all results hold for directed unweighted, undirected weighted, and undirected unweighted representations of the interaction networks,
+with possible exceptions for Sections~\ref{subsec:cor} and~\ref{subsec:pc}.
 
-The interaction networks were obtained as follows: a direct response from participant B to a message from participant A yields an edge from A to B, as information went from A to B. The reasoning is: if B wrote a response to a message from A, he/she read what A wrote and formulated a response, so B assimilated information from A, thus $A \rightarrow B$.
-Edges in both directions are allowed. Each time an interaction occurs, the value of one is added to the edge weight. Selfloops were regarded as non-informative and discarded. Inverting edge direction yields the status network: B read the message and considered what A wrote worth responding, giving status to A, thus $B\rightarrow A$. This thesis considers by convention the information network as described above ($A\rightarrow B$) and depicted in Figure~\ref{formationNetwork}. These interaction networks are reported in the literature as exhibiting scale-free and small-world properties, as expected for a number of social networks~\cite{bird,newmanBook}.
+The interaction networks were obtained as follows:
+a direct response from participant B to a message from participant A yields an edge from A to B,
+as information went from A to B.
+The reasoning is: if B wrote a response to a message from A,
+he/she read what A wrote and formulated a response, so B assimilated information from A, thus $A \rightarrow B$.
+Edges in both directions are allowed.
+Each time an interaction occurs, the value of one is added to the edge weight.
+Selfloops were regarded as non-informative and discarded.
+Inverting edge direction yields the status network:
+B read the message and considered what A wrote worth responding,
+giving status to A, thus $B\rightarrow A$.
+In this paper, we considered by convention the information network as described above ($A\rightarrow B$)
+and depicted in Figure~\ref{formationNetwork}.
+These interaction networks are reported in the literature as exhibiting scale-free
+and small-world properties, as expected for a number of social networks~\cite{bird,newmanBook}.
 
 \begin{figure}[!h]
 \centering
@@ -247,12 +265,31 @@ Edges in both directions are allowed. Each time an interaction occurs, the value
 \end{figure}
 
 
-\subsection{Sectioning of a network into hub, intermediary and peripheral nodes (Erdös sectioning)}\label{ssec}
+\subsection{Topological measures}\label{smes}
+The derivation of the sectors, described in next subsections,
+rely only on the very basic measures of degree and strength.
+In order to avoid unnecessary elaborations, the correlation and principal component analysis
+were only performed using degree, strength as clustering coefficient.
+These measures are defined as follows:
+\begin{itemize}
+\item Degree $k_i$: number of edges linked to vertex $i$.
+\item Strength $s_i$: sum of weights of all edges linked to vertex $i$.
+\item Clustering coefficient $cc_i$:
+  fraction of pairs of neighbors of $i$ that are linked, i.e. the standard clustering coefficient metric for undirected graphs.
+\end{itemize}
+
+\subsection{Sectioning of a network into hub, intermediary and peripheral nodes (Erdös sectioning)}\label{ssec}\label{sectioning}
 It is often useful to think of vertices as hubs, peripheral and intermediary.
-Authors have therefore derived the peripheral, intermediary and hub sectors of an empirical network from the comparison against an Erd\"os-R\'enyi network with the same number of edges and vertices,
-as depicted in Figure~\ref{fig:setores}. We refer to this procedure as \emph{Erd\"os sectioning}, with the resulting sectors being named as \emph{Erd\"os sectors}. The degree distribution $\widetilde{P}(k)$ of a real network with a scale-free profile $\mathcal{N}_f(N,z)$ with $N$ vertices and $z$ edges has less
+Authors have therefore derived the peripheral, intermediary and hub sectors of an empirical network
+from the comparison against an Erd\"os-R\'enyi network with the same number of edges and vertices,
+as depicted in Figure~\ref{fig:setores}. We refer to this procedure as \emph{Erd\"os sectioning},
+with the resulting sectors being named as \emph{Erd\"os sectors}.
+The degree distribution $\widetilde{P}(k)$ of a real network with a scale-free profile
+$\mathcal{N}_f(N,z)$ with $N$ vertices and $z$ edges has less
 average degree nodes than the distribution $P(k)$ of an Erd\"os-R\'enyi
-network with the same number of vertices and edges. Indeed, we define in this work the intermediary sector of a network to be the set of all the nodes whose degree is less abundant in the real network than on the Erd\"os-R\'enyi model:
+network with the same number of vertices and edges.
+Indeed, we define in this work the intermediary sector of a network to be the
+set of all the nodes whose degree is less abundant in the real network than on the Erd\"os-R\'enyi model:
 
 \begin{equation}\label{criterio}
 \widetilde{P}(k)<P(k) \Rightarrow \text{k is intermediary degree}
@@ -260,28 +297,38 @@ network with the same number of vertices and edges. Indeed, we define in this wo
 
 If $\mathcal{N}_f(N,z)$ is directed and has no self-loops, the probability of the existence
 of an edge between two arbitrary vertices is $p_e=\frac{z}{N(N-1)}$.
-A vertex in the ideal Erd\"os-R\'enyi digraph with the same number of vertices and edges, and thus the same probability $p_e$ for the presence of an edge, will have degree $k$ with probability
+A vertex in the ideal Erd\"os-R\'enyi digraph with the same number of vertices and edges,
+and thus the same probability $p_e$ for the presence of an edge, will have degree $k$ with probability
 
 \begin{equation}
 P(k)=\binom{2(N-1)}{k}p_e^k(1-p_e)^{2(N-1)-k}
 \end{equation}
 
-The lower degree fat tail corresponds to the border vertices, i.e. the peripheral sector or periphery where $\widetilde{P}(k)>P(k)$ and $k$ is lower than any value of $k$ in the intermediary sector.
-The higher degree fat tail is the hubs sector, i.e. $\widetilde{P}(k)>P(k)$ and $k$ is higher than any value of $k$ in the intermediary sector. The reasoning for this classification is as follows: vertices so connected that they are virtually nonexistent in the Erd\"os-R\'enyi model, are coherently associated to the hubs sector.
+The lower degree fat tail corresponds to the border vertices,
+i.e. the peripheral sector or periphery where $\widetilde{P}(k)>P(k)$ and $k$
+is lower than any value of $k$ in the intermediary sector.
+The higher degree fat tail is the hubs sector,
+i.e. $\widetilde{P}(k)>P(k)$ and $k$ is higher than any value of $k$ in the intermediary sector.
+The reasoning for this classification is as follows:
+vertices so connected that they are virtually nonexistent in the Erd\"os-R\'enyi model, are coherently associated to the hubs sector.
 Vertices with very few connections, which are way more abundant than expected in the Erd\"os-R\'enyi model,
 are assigned to the periphery.
 Vertices with degree values predicted as the most abundant in the Erd\"os-R\'enyi model,
 near the average, and less frequent in the real network, are classified as intermediary.
-The obtainence of the Erdös sectors is illustrated in Figure~\ref{fig:setores}.
-Further elaboration of the method, such as the usage of in or out-degree, the consideration of node strength instead of degree, and derivation of the sectors by using multiple degree and strength measures, are described in~\cite{stab}.
-Such developments are ommited in this paper because they are not relevant to the results described here.
+The definition of the Erdös sectors is illustrated in Figure~\ref{fig:setores}.
+Further elaboration of the method, such as the usage of in or out-degree,
+the consideration of node strength instead of degree,
+and derivation of the sectors by using multiple degree and strength measures, are described in~\cite{stab}.
+Such developments are omitted in this paper because they are not relevant to the results described here.
+In fact, all sectors in this article were obtained by using degree,
+but results hold for sectors obtained using the strength.
 
 \clearpage
 \begin{figure}[!h]
 \centering
 \includegraphics[width=\textwidth]{figs/fser__}
 \caption{Classification of vertices by comparing degree
-distributions~\cite{3setores}.
+distributions~\cite{stab}.
 The binomial distribution of the Erd\"os-R\'enyi network model exhibits more intermediary vertices, while a scale-free network, associated with the power-law distribution, has more peripheral and hub vertices. The sector borders are defined with respect to the intersections of the distributions. Characteristic degrees are in the compact intervals: $[0,k_L]$, $(k_L,k_R]$, $(k_R,k_{max}]$ for the periphery, intermediary and hub sectors, the ``Erd\"os sectors''.
 The connectivity distribution of empirical interaction networks, e.g. derived from email lists, can be sectioned by comparison against the associated binomial distribution with the same number of vertices and edges. In this figure, a snapshot of 1000 messages from CPP list yields the degree distribution of an interaction network of 98 nodes and 235 edges. A thorough explanation of the method is provided in Section~\ref{sectioning}.}
 \label{fig:setores}
@@ -306,15 +353,15 @@ The measures are:
 such as abstraction and physical entities for nouns or act for verbs.
 \item Mean and standard deviation of the number of Wordnet synset relations, such as holonyms and meronyms, domains, lemmas and verb groups.
 \end{itemize}
-% \noindent To such metrics are dedicated Tables~\ref{tab:cha},~\ref{tab:tokens},~\ref{tab:sizesTokens},~\ref{tab:sizesSents},~\ref{tab:sizesMsgs},~\ref{tab:pos}.
 
 This selection of measures is based on: 1) the lack of such information in the literature, to the best of our knowledge; 
 2) potential relations of these incidences with topological aspects, such as connectivity;
 3) the interdependence of textual artifacts suggests that simple metrics should mirror complex and more subtle aspects.
-A preliminary study, with the complete works from the Brazilian writer Machado de Assis~\cite{machado}, made clear that the measurements vary with respect to style.
+A preliminary study, with the complete works from the Brazilian writer Machado de Assis~\cite{machado},
+made clear that the measurements vary with respect to style.
 
 \subsubsection{About Wordnet}
-We made use of the statistics derived from the incidence of synsets from the caninical Wordnet~\cite{wn} and their characteristics.
+We made use of the statistics derived from the incidence of synsets from the caninical Wordnet~\cite{wordnet} and their characteristics.
 This calls for a brief description of what Wordnet is, what is a synset and what are such characteristics:
 \begin{itemize}
 \item Wordnet groups synonyms into synsets, provides a number of relations among the synsets, definitions and use examples.
@@ -328,7 +375,7 @@ In this respect, we used only the maximum and minimum depth of the synset, which
 \subsubsection{Relating text and topology}\label{sec:ks}
 The topological and textual measures were related by:
 \begin{enumerate}
-\item textual measuress in each of the Erdös sectors, which are delimited by topological criteria as described in Section~\ref{sectioning}.
+\item textual measures in each of the Erdös sectors, which are delimited by topological criteria as described in Section~\ref{sectioning}.
 \item Correlation of metrics of each vertex, facilitating pattern detection involving topology of interaction and language.
 \item Principal components formation derived from the usual Principal Component Analysis.
 \end{enumerate}
@@ -346,9 +393,9 @@ and $c(\alpha)$ is related to the significance level $\alpha$ by:
 
 \begin{table}[H]
 \centering
-\begin{tabular}{l||c|c|c|c|c|c}\hline
+\begin{tabular}{l|c c c c c c}
 $\alpha$ & 0.1 & 0.05 & 0.025 & 0.01 & 0.005 & 0.001 \\
-$c(\alpha)$ & 1.22 & 1.36 & 1.48 & 1.63 & 1.73 & 1.95 \\\hline
+$c(\alpha)$ & 1.22 & 1.36 & 1.48 & 1.63 & 1.73 & 1.95 \\
 \end{tabular}
 \end{table}
 
@@ -366,8 +413,9 @@ We used $c'$ as a measure of how much
 the distributions differ
 and for deriving hypotheses
 about how different are the underlying mechanisms of generation of texts.
-We made systematic measurements of the $c'$ statistic in~\cite{kolmSmir}
-which illustrate that $c'$ and $D_{n,n'}$ are consistent and useful in considering the
+In~\cite{kolm},
+systematic measurements of the $c'$ statistic
+illustrate that $c'$ and $D_{n,n'}$ are consistent and useful in considering the
 similarity or difference in the distributions underlying sets of observations.
 A note of caution should be given here: what is a difference in distributions
 might vary with context.
@@ -375,8 +423,11 @@ A $D_{n,n'}$ of only $0.0001$ will yield a very large $c'$ if $n$ and $n'$ are l
 On the other hand, a large $D_{n,n'}$ with a small $c'$ is not a strong evidence that
 the distributions differ.
 Therefore, we consider both $D_{n,n'}$ and $c'$ simultaneously in our analysis.
+Each text-related measure yields a histogram for the whole network, and one for each
+of the Erdös sectors.
+To obtain the histograms, one value was obtained through each message.
 
-\section{Results and discussion}\label{sres}
+\section{Results and discussion}\label{sres}\label{sec:tresults}
 The consideration of all measures and all distances results in a vast number of measurements, comparisons and tables.
 Also, a thorough discussion of these outcomes becomes lengthy and tiresome.
 We here present a summary of the findings and
@@ -405,7 +456,7 @@ but some of them reach extreme values in the intermediary sector.
 
 The next sections summarize results of immediate interest
 and further insights can be obtained by skimming through
-the tables and figures of~\cite{stab,textTables} and the Conclusions chapter.
+the tables of the Supplementary document of this paper.
 We illustrate with just one table of each kind,
 and from networks obtained with 2000 messages.
 After analysing the networks in many scales,
@@ -766,67 +817,70 @@ but not systematically and might be indicatives of style from the different list
 These results are exemplified in Table~\ref{tab:cor}.
 % verificar e fazer tabelas corretamente:
 % focadas para texto, extensivas para SI
+\bgroup
+\def\arraystretch{0.7}
 \input{tables/correlationInline9_}
+\egroup
 \FloatBarrier
 \subsection{Formation of principal components}\label{subsec:pc}
-Principal components formation of textual and topological metrics
+Using principal component analysis~\cite{pca}, the principal components formation of textual and topological metrics
 seems to be the less stable of all results reported in this study.
 The concentration of dispersion often peaked in the intermediary sector.
 Components are most often composed of both topological or textual features.
 Other than that, we observe that PCA is sensitive to the measurements included
 and should reveal other insights in other settings.
 These results are exemplified in Table~\ref{tab:tpca}.
+\bgroup
+\def\arraystretch{0.7}
 \input{tables/pcaInline11_}
+\egroup
 
-\subsection{Notes in a typology derived from the Erd\"os sectors}
+\subsection{Notes about the typology derived from the Erd\"os sectors}
+In compliance to~\cite{stab}, the Erd\"os sector to which a participant belongs can be regarded as implying a social type for this participant.
+In this case, the type of a participant changes both along time and as different networks are considered,
+despite the stability of the network.
+The association of such typology to the results reported in this present article is remarkable:
+the language used in each of the sectors are different,
+but each participant is related to all the sectors
+as different networks are considered.
+This suggests that language is modulated with respect to the network in which the participant
+is interacting.
+Moreover, hubs and intermediary participants usually have intermittent activity,
+and stable activity was found only in very small communities~\cite{barabasiEvo},
+which further suggests that the sensitivity to context is high for the choice of
+linguistic features by the speaker (more specifically, in our case, the writer).
 
-\section{Conclusions and further work}
+\section{Conclusions and further work}\label{scon}
 This is a first systematic exploration of the relation between topological and textual
-metrics in human interaction networks, as far the author knows.
-Different textual features were scrutinized and were found to present
-salient patterns, especially in relation to topological measures and the Erd\"os sectors.
-Furthermore, results show that peripheral participants use more nouns while hubs use more verbs,
-which suggests that less connected participants bring content and concepts,
-while hubs propose action on them.
-Such findings have potential applications in the collection and diffusion of information,
-resources recommendation in linked data contexts,
-and open processes of document elaboration and refinement~\cite{ensaio,ops,opa,stab,pnud4,pnud3}.
-
-Most importantly, it is reasonable to conclude, from all the distinct textual characteristics
-between the Erd\"os sectors, that, as a rule of thumb, the texts from each of the sectors differ.
-Surely there should be exceptions and it is a fact that we left out of the analysis
-more subtle textual aspects e.g. those related to low percentages (<5\%) or to small
+measures in human interaction networks, as far the author knows.
+Different textual features were scrutinized and
+the main result found is that the language employed in each of the Erdös sectors are very distinct.
+Furthermore, prominent patterns were found,
+e.g. the peripheral participants use more nouns while hubs use more verbs, adverbs and adjectives per noun,
+which suggests that less connected participants contribute with content and concepts,
+while hubs propose actions and qualifications on them.
+There should be exceptions to the findings and it is a fact that we left out of the analysis
+more subtle linguistic features e.g. those related to low percentages (<5\%) or to small
 differences.
-These might be the subject of future studies.
-
-Further work should expand the analysis to include
-more types of networks and more metrics.
-
-% Obvious: more networks, network provenance, linguistic features, topological features, comparison methods (such as statistical distances), sets of nodes (partitions form the Ratio Cut)
-% use of Coh-Metrix, L2 Syntactical Complexity Analyzer
-% visualization of such differences, as tables are not so prombptly absorbed
-% development of tools to analyze and visualize networks and linguistic features used
-
-% detection of sectors using linguistic features
-
+Further work should
+address these issues and
+expand the analysis to include
+more types of networks, more topological and linguistic measures,
+sets of vertices (e.g. using Ratio Cut),
+and comparison methods.
+We also envision the development of interactive visualization tools to analyze
+the networks and their embedded texts.
 Other potential next steps are:
 \begin{itemize}
 \item The observation of most incident words and word types,
-such as words related to cursing, food or body parts.
+  such as words related to polarity (e.g. good and bad), food or body parts.
 \item Interpretation of the constant difference found from incident and existent tokens histograms, found at the end of the Supplementary document of this paper.
 \item Extend word class observations, e.g. to include plurals, gender, common prefixes and suffixes.
 \item The observation of date and time in relation to the language employed in interaction networks and
 to activity characteristics (e.g. dispersion of sent time along the day or weekdays).
 \item A careful analysis of each linguistic feature distribution which is likely to reveal multimodal outlines and other non-trivial characteristics.
-\item Extend the analysis of language-related measurements to the windowed approach along the timelines, where hub, peripheral and intermediary sectors were topologically characterized~\cite{stab}.
-\item For ELE list, the more connected the sector, the longer the messages are.
-This is the inverse of what was found in the other lists,
-and was considered a peculiarity of the culture bonded with the political subject of ELE list.
-This hypothesis should be further verified.
+\item Extend the analysis of language-related measurements to the windowed approach along the timelines employed in~\cite{stab}.
 \item Tackle the same analysis on networks with languages other than English.
-This is especially important for applications~\cite{ensaio}
-and should rely on dedicated implementation of 
-tokenization, lemmatization and attribution of POS tags.
 \item The significant differences found from the texts of the sectors raises the question as to why we are not conscious of these differences.
 One possibility is that they are part of our instinctive and unconscious social coordination and this hypothesis might be the goal of future efforts.
 \item The inclusion of more sophisticated analyses of text, such as those used in the Coh-Metrix framework for text complexity~\cite{coh}.
