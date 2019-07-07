@@ -2,6 +2,9 @@
 
 \usepackage{lineno,hyperref}
 \modulolinenumbers[5]
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{placeins}
 
 \journal{Physica A}
 
@@ -98,6 +101,45 @@ One of the approaches from an exact science perspective is to represent interact
 several features of human interaction have been revealed~\cite{barabasiHumanDyn,newmanFriendship}.
 For example, the topology of human interaction networks exhibits a scale-free outline,
 which points to the existence of a small number of highly connected hubs and a large number of poorly connected nodes.
+Text mining is a multidisciplinary field,
+it is an extension of data mining to (often unstructured) textual data
+with the goal of discovering structure and meaning~\cite{customText}.
+A general outline of a text mining endeavor involves structuring input text,
+deriving patterns and the evaluation of the output.
+There are actually numerous models of such outline,
+as e.g. considering document collection and obtaining a final report in the
+start and end respectively~\cite{textSurvey}.
+Text mining tasks include document summarization, sentiment analysis
+and natural language processing techniques such as part-of-speech tagging~\cite{nltk}.
+Among the applications one may include social media monitoring, automated ad placement, and development of tools for 
+semantics ~\cite{textSurvey}.
+It is believed that applying text mining to social media
+can yield interesting findings in human behavior~\cite{customText}.
+Although there is no clear cut, text mining is sometimes divided into linguistic and non-linguistic~\cite{customText},
+and in this study we use both perspectives.
+In the first case, techniques borrowed from linguistics are present, such as
+the analysis of discourse and part of speech tagging,
+and it is often mingled with natural language processing or computational linguistics (see Section~\ref{amb} for a coherent distinction of the fields).
+In the non-linguistic text mining, text is analyzed by means of statistical features
+derived from e.g. the size of tokens and sentences,
+and might be more easily related to the intuitive concept of data mining of text.
+In this paper, we report on striking differences among the language used by the hub, intermediary and pripheral sectors of
+social networks obtained through email lists.
+Such constrasts were found in networks in diverse scales and using a number of text-related statistics,
+from the usage of individual characters, to token sizes, part-of-speech tags and Wordnet synsets.
+These results potentially encompass the first direct report on the association of topological features
+of individuals in human interaction networks to the language they employ.
+
+This document is organized as follows.
+Next subsections briefly discuss related work and hold terminology remarks.
+Section~\ref{smm} describes the data analyzed and the methods applied to
+derive the networks and sectors, and to obtain the measurements.
+Section~\ref{sres} holds the results achieved.
+Section~\ref{scon} is dedicated to conclusions and further work.
+Moreover, the Supplementary document supplies all measurements achieved,
+within hundreds of tables, in order to support current findings and furnish
+the reader with the means to draw additional hypotheses.
+
 
 \subsection{Related work}
 In~\cite{stab}, the authors reported a remarkable stability of the
@@ -128,33 +170,48 @@ Furthermore, extensive listings of the measurements, encompassing hundreds of ta
 % search: language in social network analysis
 
 \subsection{Terminology remarks}
-% language shift vs differentiation
+A major issue in current vocabulary arises when considered the hub, intermediary and peripheral sectors.
+In most cases, the sectors are also partitions
+(i.e. they are non-overlapping sets whose union is the complete superset),
+but it depends on the criteria for obtaining the sectors~\cite{stab},
+thus the use of the more general term \emph{sector}.
+Language shift is the process by which speakers starts to use different linguistic features or a different language altogether.
+Despite the fact that a language shift may be regarded as a type of language differentiation, the term ``language differentiation'' is used in this document
+to refer only to the contrast of the language used by distinct sets of agents,
+more specifically, to the differences in the language found to be employed by the hub, intermediary and peripheral participants.
+Finally, complex and social networks comprehend a multidisciplinary field,
+and e.g. nodes, participants, actors, and agents are used to refer to analogous concepts.
+We strived to avoid vocabulary inconsistency.
+% , but it may be convenient
+% to keep in mind that using analogous terms is beneficial for guiding the reader
+% to peculiar nuances, e.g. node is embedded
 % sectors vs partitions
 % nodes, participants, actors, agents
 
-\section{Materials and methods}
-\subsection{Mining email lists}
+\section{Materials and methods}\label{smm}
+\subsection{The data}
 Email list messages were obtained from
 the Gmane email archive, which consists of more than $20,000$
 email lists (discussion groups) and more than $130\times 10^6$ messages~\cite{GMANEwikipedia}. These lists cover a variety of topics, mostly technology-related. The archive can be described as a corpus along with message metadata, including sent time, place, sender name, and sender email address.
 The usage of the Gmane database in scientific research is reported in studies of isolated lists and of lexical innovations~\cite{Gmane2,bird}. 
 
 We observed various email lists and data from Twitter, Facebook and Participabr.
-For a thorough analysis, we selected five of the email lists
-from which general properties can be inferred.
+After analyzing dozens of the networks,
+we randomdly selected 18 email lists for the thorough measurements in the
+Supplementary document.
+We also randomnly selected five of the email lists
+to illustrate the results in this paper.
 These lists are as follows:
 
 \begin{itemize}
 \item Linux Audio Users list\footnote{gmane.linux.audio.users is list ID in Gmane.}, with participants from different countries with artistic and technological interests. English is the prevailing language. Abbreviated as LAU from now on.
-
 \item Linux Audio Developers list\footnote{gmane.linux.audio.devel is list ID in Gmane.}, with participants from different countries; a more technical and less active version of LAU. English is the prevailing language. Abbreviated as LAD from now on.
-
 \item Developer's list for the standard C++ library\footnote{gmane.comp.gcc.libstdc++.devel is list ID in Gmane.}, with computer programmers from different countries. English is the prevailing language. Abbreviated as CPP from now on.
 \item List of the MetaReciclagem project\footnote{gmane.politics.organizations.metareciclagem is list ID in Gmane.}, a Brazilian email list for digital culture. Portuguese is the prevailing language, although some messages are written in Spanish and English. Abbreviated as MET from now on.
 \item List for de discussion of the election reform\footnote{gmane.politics.election-methods is list ID in Gmane.}. English is the prevailing language. Abbreviated ELE from now on.
 \end{itemize} 
-We systematicaly used 18 lists for taking text-related metrics.
 
+Table~\ref{tab:genLists} holds an overview of the messages considered in each of these lists.
 
 \begin{table}
 \centering
@@ -177,7 +234,7 @@ Source: By the author.\
 
 \subsection{Interaction networks}
 Edges in interaction networks can be modeled both as weighted or unweighted, as directed or undirected~\cite{bird,newmanCommunityDirected,newmanCommunity2013}.
-Networks in this thesis are directed and weighted, the most informative of the possibilities. We did not investigate directed unweighted, undirected weighted, and undirected unweighted representations of the interaction networks. 
+Networks in this paper are directed and weighted, the most informative of the possibilities. We did not investigate directed unweighted, undirected weighted, and undirected unweighted representations of the interaction networks. 
 
 The interaction networks were obtained as follows: a direct response from participant B to a message from participant A yields an edge from A to B, as information went from A to B. The reasoning is: if B wrote a response to a message from A, he/she read what A wrote and formulated a response, so B assimilated information from A, thus $A \rightarrow B$.
 Edges in both directions are allowed. Each time an interaction occurs, the value of one is added to the edge weight. Selfloops were regarded as non-informative and discarded. Inverting edge direction yields the status network: B read the message and considered what A wrote worth responding, giving status to A, thus $B\rightarrow A$. This thesis considers by convention the information network as described above ($A\rightarrow B$) and depicted in Figure~\ref{formationNetwork}. These interaction networks are reported in the literature as exhibiting scale-free and small-world properties, as expected for a number of social networks~\cite{bird,newmanBook}.
@@ -185,19 +242,15 @@ Edges in both directions are allowed. Each time an interaction occurs, the value
 \begin{figure}[!h]
 \centering
 \includegraphics[width=0.5\textwidth]{figs/criaRede3_}
-\caption{The formation of interaction networks from exchanged messages. Each vertex represents a participant. A reply message from author B to a message from author A is regarded as evidence that B received information from A and yields a directed edge. Multiple messages add ``weight'' to a directed edge. Further details are given in Section~\ref{intNet}.}
+\caption{The formation of interaction networks from exchanged messages. Each node represents a participant. A reply from author B to a message from author A is regarded as evidence that B received information from A and yields a directed edge. Multiple messages add ``weight'' to a directed edge. Further details are given in Section~\ref{intNet}.}
 \label{formationNetwork}
-\begin{flushleft}\footnotesize
-Source: By the author.\
-\end{flushleft}
 \end{figure}
 
 
 \subsection{Sectioning of a network into hub, intermediary and peripheral nodes (Erdös sectioning)}\label{ssec}
-It is often useful to think of vertices as hubs, peripheral and intermediary. We have therefore derived the peripheral, intermediary and hub sectors of an empirical network from the comparison against an Erd\"os-R\'enyi network with the same number of edges and vertices,
-as depicted in Figure~\ref{fig:setores}. We refer to this procedure as \emph{Erd\"os sectioning}, with the resulting sectors being named as \emph{Erd\"os sectors}. The Erd\"os sectioning was recognized as a theoretical possibility by M. O. Jackson in his video lectures~\cite{3setores}, but to our knowledge it has not as yet been applied to empirical data.
-
-The degree distribution $\widetilde{P}(k)$ of a real network with a scale-free profile $\mathcal{N}_f(N,z)$ with $N$ vertices and $z$ edges has less
+It is often useful to think of vertices as hubs, peripheral and intermediary.
+Authors have therefore derived the peripheral, intermediary and hub sectors of an empirical network from the comparison against an Erd\"os-R\'enyi network with the same number of edges and vertices,
+as depicted in Figure~\ref{fig:setores}. We refer to this procedure as \emph{Erd\"os sectioning}, with the resulting sectors being named as \emph{Erd\"os sectors}. The degree distribution $\widetilde{P}(k)$ of a real network with a scale-free profile $\mathcal{N}_f(N,z)$ with $N$ vertices and $z$ edges has less
 average degree nodes than the distribution $P(k)$ of an Erd\"os-R\'enyi
 network with the same number of vertices and edges. Indeed, we define in this work the intermediary sector of a network to be the set of all the nodes whose degree is less abundant in the real network than on the Erd\"os-R\'enyi model:
 
@@ -219,6 +272,9 @@ Vertices with very few connections, which are way more abundant than expected in
 are assigned to the periphery.
 Vertices with degree values predicted as the most abundant in the Erd\"os-R\'enyi model,
 near the average, and less frequent in the real network, are classified as intermediary.
+The obtainence of the Erdös sectors is illustrated in Figure~\ref{fig:setores}.
+Further elaboration of the method, such as the usage of in or out-degree, the consideration of node strength instead of degree, and derivation of the sectors by using multiple degree and strength measures, are described in~\cite{stab}.
+Such developments are ommited in this paper because they are not relevant to the results described here.
 
 \clearpage
 \begin{figure}[!h]
@@ -235,8 +291,8 @@ Source: By the author.\
 \end{figure}
 
 \subsection{Text-related measures}
-This work focuses on very simple metrics derived from texts as they have been sufficient for current interests.
-Such metrics are:
+This work focuses on simple measurements derived from texts as they have been sufficient for current interests.
+The measures are:
 \begin{itemize}
 \item Frequency of characters: letters, vowels, punctuations and uppercase letters.
 \item Number of tokens, frequency of punctuations among tokens, frequency of known words, frequency of words that have Wordnet synsets, frequency of tokens that are stopwords.
@@ -252,34 +308,33 @@ such as abstraction and physical entities for nouns or act for verbs.
 \end{itemize}
 % \noindent To such metrics are dedicated Tables~\ref{tab:cha},~\ref{tab:tokens},~\ref{tab:sizesTokens},~\ref{tab:sizesSents},~\ref{tab:sizesMsgs},~\ref{tab:pos}.
 
-This choice is based on: 1) the lack of such information in the literature, to the best of our knowledge; 
+This selection of measures is based on: 1) the lack of such information in the literature, to the best of our knowledge; 
 2) potential relations of these incidences with topological aspects, such as connectivity;
-3) the interdependence of textual artifacts suggests that simple metrics should reflect complex and more subtle aspects.
-A preliminary study, with the complete works from the Brazilian writer Machado de Assis~\cite{machado},
-made clear that these metrics vary with respect to style.
+3) the interdependence of textual artifacts suggests that simple metrics should mirror complex and more subtle aspects.
+A preliminary study, with the complete works from the Brazilian writer Machado de Assis~\cite{machado}, made clear that the measurements vary with respect to style.
 
 \subsubsection{About Wordnet}
-In this thesis, we made use of the statistics derived from the incidence of Wordnet synsets and their characteristics.
+We made use of the statistics derived from the incidence of synsets from the caninical Wordnet~\cite{wn} and their characteristics.
 This calls for a brief description of what Wordnet is, what is a synset and what are such characteristics:
 \begin{itemize}
-\item Wordnet: a lexical database for the English language released in a BSD style license. It groups synonyms into synsets, provides a number of relations among the synsets, definitions and use examples.
-\item Synset: defined by Wordnet documentation as a set of one or more synonyms that are (somewhat) interchangeable without changing the true value of the proposition in which they occur.
+\item Wordnet groups synonyms into synsets, provides a number of relations among the synsets, definitions and use examples.
+\item A ``synset'' is defined by Wordnet documentation as a set of one or more synonyms that are (somewhat) interchangeable without changing the truth value of the proposition in which they occur.
 \item Synset characteristics: a synset is associated to other synsets by a number of semantic relations which differ with the POS tag attributed to them.
-Examples of such relations include hyponyms and hypernyms (respectively less and more general terms), meronyms and holonyms (respectively is part of and has part), lemmas (canonical forms of a word), similar words by semantic criteria, entailments.
+Examples of such relations include hyponyms and hypernyms (respectively less and more general terms), meronyms and holonyms (respectively ``is part of'' and ``has part''), lemmas (canonical forms of a word), similar words by semantic criteria, entailments.
 Some characteristics are derived from the synset in relation to the whole Wordnet network.
 In this respect, we used only the maximum and minimum depth of the synset, which are respectively the maximum and minimum number of hypernyms from the synset to the root synset (e.g. 'thing' for nouns).
 \end{itemize}
 
 \subsubsection{Relating text and topology}\label{sec:ks}
-The topological and textual metrics were related by:
+The topological and textual measures were related by:
 \begin{enumerate}
-\item textual metrics in hub, intermediary and peripheral network sectors, which are delimited by topological criteria as described in Section~\ref{sectioning}.
+\item textual measuress in each of the Erdös sectors, which are delimited by topological criteria as described in Section~\ref{sectioning}.
 \item Correlation of metrics of each vertex, facilitating pattern detection involving topology of interaction and language.
 \item Principal components formation derived from the usual Principal Component Analysis.
 \end{enumerate}
 
 \subsection{Statistical distances}
-An adaptation of the Kolmogorov-Smirnov test was used to observe differences in textual content, as follows.
+An adaptation of the Kolmogorov-Smirnov test~\cite{kolm} was used to observe differences in textual content, as follows.
 Let $F_{1,n}$ and $F_{2,n'}$ be two empirical distribution functions, where $n$ and $n'$ are the number of observations on each sample.
 The two-sample Kolmogorov-Smirnov test rejects the null hypothesis (that the samples are drawn from the same underlying distribution) if:
 \begin{equation}\label{eq:ks}
@@ -295,13 +350,10 @@ and $c(\alpha)$ is related to the significance level $\alpha$ by:
 $\alpha$ & 0.1 & 0.05 & 0.025 & 0.01 & 0.005 & 0.001 \\
 $c(\alpha)$ & 1.22 & 1.36 & 1.48 & 1.63 & 1.73 & 1.95 \\\hline
 \end{tabular}
-\begin{flushleft}\footnotesize
-	Source: KOLMOGOROV-SMIRNOV test~\cite{kolm}.\
-\end{flushleft}
 \end{table}
 
-We need to compare empirical distribution functions,
-therefore $D_{n,n'}$ is given, as are $n$ and $n'$.
+In comparing two empirical distribution functions,
+$D_{n,n'}$ is given, as are $n$ and $n'$.
 All terms in equation~\ref{eq:ks} are positive and $c(\alpha)$ can be isolated:
 
 \begin{equation}\label{eq:ks2}
@@ -315,7 +367,7 @@ the distributions differ
 and for deriving hypotheses
 about how different are the underlying mechanisms of generation of texts.
 We made systematic measurements of the $c'$ statistic in~\cite{kolmSmir}
-which illustrate that $c'$ and $D_{n,n'}$ are useful in considering the
+which illustrate that $c'$ and $D_{n,n'}$ are consistent and useful in considering the
 similarity or difference in the distributions underlying sets of observations.
 A note of caution should be given here: what is a difference in distributions
 might vary with context.
@@ -324,23 +376,27 @@ On the other hand, a large $D_{n,n'}$ with a small $c'$ is not a strong evidence
 the distributions differ.
 Therefore, we consider both $D_{n,n'}$ and $c'$ simultaneously in our analysis.
 
-\section{Results and discussion}
+\section{Results and discussion}\label{sres}
 The consideration of all measures and all distances results in a vast number of measurements, comparisons and tables.
 Also, a thorough discussion of these outcomes becomes lengthy and tiresome.
-We here present a summary of the findinds and
+We here present a summary of the findings and
 a more comprehensive presentation is available at~\cite{thesis} if
 the reader finds necessary.
+Furthermore, we recall that the Supplementary document of this paper provides all measurements in all 18 randomly selected email lists.
+Also in the Supplementary document, we relate the email lists to each numerical
+TAG in the tables of the following sections.
 
-The most important result of is the strong statistical evidence of differentiation of each Erd\"os sector with respect to the language used.
+The most important result is the strong statistical evidence of differentiation of each Erd\"os sector with respect to the language used.
 This conclusion can be reached by observing the differences in the measurements of textual features in
 each sector, and is supported on firm theoretical grounds by using the adapted Kolmogorov-Smirnov test presented in Section~\ref{sec:ks}.
 % derived from the kolmogorov-smirnov test adaptation
 Other relevant results are:
 \begin{itemize}
-\item the identification of patterns in the frequency of use of nouns, adverbs, sizes of words, depth of Wordnet synsets and other linguistic traces, by different types of participants in the Erd\"os sectors. We did not find in the literature any indication for such values; thus we believe it is useful to report e.g. that about 15\% of the characters are spaces and that nouns often account for more than 25\% of the words.
-These values are available in~\cite{textTables} and not in the body of the text,
-                since the focus here is the evidence that texts from distinct sectors differ.
-\item Evidence of what is different in the texts produced by each Erd\"os sector. For example: hubs were found to use more contractions,
+\item the identification of patterns in the frequency of use of nouns, adverbs, sizes of words, depth of Wordnet synsets and other linguistic features, in the network as a whole.
+  We did not find in the literature any indication for such values, thus we understand useful to report e.g. that about 15\% of the characters are spaces and that nouns often account for more than 25\% of the words.
+These values are available in the Supplementary document and not in the body of this paper,
+since the focus here is the evidence that texts from distinct sectors differ.
+\item Evidence of what is different in the language used by each Erd\"os sector. For example: hubs were found to use more contractions,
 more common words, and less punctuation if compared to the rest of the network,
 especially the peripheral sector.
 In general, the rise or fall of a text-related metric is not relevant or is monotonic along connectivity,
@@ -352,25 +408,21 @@ and further insights can be obtained by skimming through
 the tables and figures of~\cite{stab,textTables} and the Conclusions chapter.
 We illustrate with just one table of each kind,
 and from networks obtained with 2000 messages.
-In~\cite{textTables} we display tables for various networks.
-In the same document, we relate the email lists to each numerical
-TAG in the tables of the following sections.
-The scale of 1000 and 2000 messages was chosen for deriving results,
-as the networks in this scale are found to have stable topological structure,
-as described in~\cite{stab}.
-The findings with 1000 messages are the same as with 2000 messages,
-and there are many tables.
+After analysing the networks in many scales,
+we considered the networks obtained by constructed using 1000 and 2000 messages as representative for the phenomena being characterized.
+The findings with 1000 messages are the same as with 2000 messages.
 This motivated the exclusion of the tables with measurements in
 networks of 1000 messages.
 
 \subsection{General characteristics of activity distribution among sectors}\label{sec:gen}
-Before we dig into the findings derived from text-related measurements,
-let us look once more at the general structure of these networks,
-now giving emphasis on the activity of the sectors.
+In order to support a relevant consideration of findings derived from text-related measurements,
+this section provides a glance at the general structure of these networks,
+with emphasis on the activity of the Erdös sectors.
 In almost all our observations,
 the peripheral sector was responsible for starting most of the discussion threads,
 i.e. for sending messages to the list which are not replies.
-This is surprising since the peripheral sector is responsible for fewer messages. It suggests complementarity between peripheral diversity and hub specialization, which, on its turn, deepens the understanding of the interaction network as a meaningful system. 
+This is surprising since the peripheral sector is responsible for fewer messages.
+It suggests a complementarity between peripheral diversity and hub specialization, which, on its turn, emphasizes the understanding of the interaction network as a meaningful system. 
 These assertions are condensed in Table~\ref{geralListas}.
 Less often, the intermediary sector is responsible for the largest number of messages and of threads.
 Also meaningful is that the hubs sector is responsible for most of the messages, which is not obvious: hub participants are far more active but way less numerous. Interestingly, in such a setting where every characteristic differs with respect to
@@ -378,25 +430,24 @@ distinct sectors, there was no evidence of difference on the size of the threads
 \input{tables/geralInline_}
 
 \subsection{Evidence that the texts from Erd\"os sectors differ}\label{subsec:di}
-Results from our adaptation of the Kolmogorov-Smirnov test (see Section~\ref{sec:ks})
-present strong evidence
-that the text produced by each sector are different.
+This is the most important outcome from this paper: there strong enough evidence
+to support the assertion that the language used by distinct Erd\"os sectors are different.
 Tables~\ref{tab:kolTok}-\ref{tab:kolPctInter}
 illustrate three results:
 \begin{itemize}
- \item There is statistical evidence that the textual production of the Erd\"os sectors is different.
+ \item The statistical evidence that the textual production of the Erd\"os sectors is different.
 	 This can be noticed from the high values of $c'$ on these tables, clearly above reference values used for the acceptance of the null hypothesis (the null hypothesis being that the probability distributions generating the samples are the same). Also, we regarded as non-negligible the values often above 0.1 for the Kolmogorov-Smirnov statistics (the maximum difference between the cumulative distributions), which we recognized as relevant for assuming differences in the underlying distributions in our study (see Section~\ref{sec:ks}).
   \item Intermediary sectors sometimes exhibit greater differences 
-from periphery and hubs than these extreme sectors between themselves 
+against the periphery and hubs than these extreme sectors between themselves 
 (Tables~\ref{tab:kolTok} and~\ref{tab:kolSub}).
-This differentiation of the three sectors is an indication that the Erd\"os Sectioning described in Section~\ref{sectioning} reveals meaningful sectors of the networks.
+This differentiation of the three sectors is a further indicative that the Erd\"os Sectioning described in Section~\ref{sectioning} reveals meaningful sectors of the networks.
  \item The evidence of difference (as measured by $c'$) between sectors on the same network (Tables~\ref{tab:kolTok}-\ref{tab:kolPct}) is often larger than found between the same sector from distinct networks (Tables~\ref{tab:kolSubInter}-\ref{tab:kolPctInter}).
  \end{itemize}
 
- In Tables~\ref{tab:kolTok}-\ref{tab:kolPct}, there are two measurements for each pair of sectors.
+Two measurements for each pair of sectors are in Tables~\ref{tab:kolTok}-\ref{tab:kolPct}.
  The top value is $c'$ while the bottom value is the Kolmogorov-Smirnov statistic.
  In Tables~\ref{tab:kolSubInter}-\ref{tab:kolPctInter} only $c'$ values are shown to illustrate
- that the measurements found between networks are comparable to measurements found between sectors of a same network.
+ that the measurements found between networks are comparable to (and often lower than) measurements found between sectors of a same network.
  \input{tables/ksTokens___}
  \input{tables/ksWords___}
  \input{tables/ksSents___}
@@ -406,18 +457,406 @@ This differentiation of the three sectors is an indication that the Erd\"os Sect
  \input{tables/ksPuns___}
  \input{tables/ksInter}
 
-\subsection{Token-related distances}
-\subsection{Grammar-related distances}
-\subsection{Wordnet-related distances}
+\subsection{What differs and how the texts from the sectors differ}
+ In the next sections we will look through language-related measurements
+ and summarize the findings about what might be different in
+ the textual features of the sectors.
+ One should keep in mind that our core result is the evidence that
+ the texts from distinct sectors differ.
+ The following discussion of what differs and how it differs
+ is interesting but is both derived from less strong statistical evidence and less crucial for our current stage of researching these structures.
+ Nonetheless, for the sake of clarity, we state the main findings in this respect:
+ \begin{itemize}
+\item Peripherals were found to use more nouns while hubs use more verbs and adverbs. The fraction of adjectives did not change as irrefutably with respect to connectivity, but given that nouns are more numerous in the periphery sector, there are more adjectives per noun in the hubs sector texts.
+\item Sentences and messages were found smaller in the more connected sectors although punctuation was more incident in the less connected sectors.
+\item The differences found in analyzing Wordnet synset hypernyms were found less well behaved. Often, the sectors exhibit noticeable differences but greater and smaller incidences are found in all sectors (but in different networks). Some of these incidences are more systematic and this analysis assisted by Wordnet is the only semantic analysis we made, which is why we included these results.
+\end{itemize}
+
+Appendix~\ref{ap:textd} presents tables with counts for larger incidence in each sector throughout the networks. In the following discussion we provide example tables for each set of measurements.
+In the measurements derived from synset hypernyms the example tables were less meaningful because of the greater variability and therefore we present the counts of greater incidence directly.
+In any case, the measurements for each of the networks are in the Supplementary document of this paper.
+The analysis of the measurements
+is not trivial because of the number of different measures
+and because differences in measurements are not obviously relevant.
+Furthermore, there is too much variation among networks
+which renders worthless the usual global measurements such as mean and variance when obtained from all the systems at once.
+In order to obtain consistent results, we considered \emph{weak evidence of difference} in sectors in a network
+if maximum measure is at least 10\% greater than minimum measure,
+i.e. $\frac{maximum\;measure}{minumum\;measure}>1.1$.
+We considered \emph{evidence of difference} in sectors in a network if
+$\frac{maximum\;measure}{minumum\;measure}>1.2$.
+When 
+$\frac{maximum\;measure}{minumum\;measure}>1.5$, we considered \emph{strong evidence of difference}.
+We then looked through each measure in all networks to reach compelling observations about the
+differences of sectors through all networks.
+Instead of the counts of maximum incidences, we also performed a weighted count:
+when the evidence was weak, the sector received an add of $0.5$ in the weighted count;
+then the evidence was strong, the sector received an add of $2$ in the weighted count.
+The results were qualitatively the same, so we omit the tables with weighted counts.
+Also useful here is the definition of lower sectors (peripheral and intermediary),
+upper sectors (intermediary and hubs) and extreme sectors (peripheral and hubs).
+We should also state when measurements peak often at the intermediary sector,
+be it a maximum or minimum peak.
+
+The tables that follow have terms for measurements that might be immediately inferred,
+but this depends on the background of the reader.
+Therefore the terms are explicitly defined in Appendix~\ref{ap:msTerms}.
+
+\subsection{Characters}\label{sec:cha}
+Most often, peripheral and intermediary sectors use more digits, uppercase letters and punctuation.
+Hubs sectors were found to use more spaces in most cases. 
+These results are illustrated in Table~\ref{tab:cha}.
+\input{tables/charsInline_}
+\FloatBarrier
+
+\subsection{Tokens and words}\label{subsec:tw}
+Hubs were found to use more contractions and stopwords, while the peripheral sectors exhibit a greater incidence of punctuations among tokens.
+Although the token diversity ($\frac{|tokens \neq|}{|tokens|}$) found in the peripheral sector is greater,
+this result has the masking artifact that the peripheral sector corpus is smaller, yielding a larger token diversity.
+This can be noticed by the token diversity of the whole network, which is lower than in any of the sectors.
+These results are exemplified in Table~\ref{tab:tokensInline}
+where mean and variance were taken with respect to the length in characters of tokens, known words and stopwords.
+\input{tables/tokensMergedInline}
+\FloatBarrier
+
+\subsection{Sizes of sentences}\label{subsec:ss}
+Hubs present the lowest average sentence size
+in terms of characters, tokens, known words or punctuations.
+This result is illustrated in Table~\ref{tab:sizesSents}
+and might be considered counterintuitive given that punctuation
+is more abundant in the texts of less connected participants.
+\input{tables/sentencesInline_}
+\FloatBarrier
+
+\subsection{Messages}\label{subsec:mm}
+Connectivity was found correlated to smaller messages in terms of characters, tokens, known words and punctuations.
+Connectivity was also found correlated to smaller messages in terms of the number of sentences, but
+it was less consistent.
+Interestingly, the number of stopwords per message was found greater in all sectors (but in different networks).
+This result is exemplified in Table~\ref{tab:sizesMsgs}.
+\input{tables/messagesInline_}
+\FloatBarrier
+
+\subsection{POS tags}\label{subsec:pos}
+We found that lower connectivity yields more nouns and less verbs and adverbs.
+Also, the fraction of adjectives does not change consistently,
+but given that peripherals use more nouns,
+we can conclude that hubs use more adjectives per noun.
+This suggests that the networks gather issues
+through the peripheral sector. 
+These issues are qualified and proposed to be acted upon
+by the more connected participants.
+This is a further indicative that peripheral sectors
+are related to diversity while hubs relate to specialization.
+These results are exemplified in Table~\ref{tab:pos}.
+Weaker evidence was found that hubs use more \emph{adpositions},
+determinants and 'particles and other functional words' while
+peripherals use more numerals.
+\input{tables/posInline_}
+\FloatBarrier
+
+
+\subsection{Wordnet-related results}
+For correctly analyzing text production in terms of the Wordnet lexical database,
+we only considered words that had synsets\footnote{
+  Examples of categories of tokens without synsets are stopwords, punctuations, numerals, acronyms and typos.}
+and that had at least one synset with the POS tag obtained with the POS tagger.
+There are often more than one synset with the same POS tag for each word,
+thus we chose the most frequent synset as ranked by Wordnet.
+This resulted in portions of tokens considered of $\approx 30\%$,
+but of more than $90\%$ of all tokens with Wordnet synsets.
+This yields less strong results, but which we found still relevant as no similar outcome was found in the scientific literature by the authors.
+Moreover, observations seem consistent and meaningful,
+Measures regarding Wordnet synsets often reach an extreme value (maximum or minimum)
+in the intermediary sector, which we understood as evidence that:
+\begin{itemize}
+\item the Erd\"os sectors are in fact relevant for human social structures, at least to the ones analyzed in this thesis.
+\item Human social networks present relations between connectivity and semantics.
+\item The intermediary sector might hold a deeper identity than that of a sector bounded by hubs and periphery sectors.
+\item The analysis of the language employed in social networksm, using Wordnet, reveals aspects of the structures which are not clear though the non-semantic analysis we performed.
+\end{itemize}
+
+\subsubsection{Wordnet POS tags}\label{subsec:wnpos}
+The observations here are somewhat consistent with those in Section~\ref{subsec:pos}:
+peripherals use more nouns and less verbs and adverbs.
+The variation is related to adjectives, which was found more frequent in the hubs.
+These results are illustrated in Table~\ref{tab:wnpos}.
+\input{tables/wnPOSInline_}
+\FloatBarrier
+
+\subsubsection{Wordnet synsets characteristics}\label{subsec:wn1}
+Wordnet synsets with different POS tags have different relations (to other synsets).
+Therefore, we made separate observations about each POS tag.
+In each synset we performed a count of the number of the relations (e.g. max depth, hyponyms),
+thus yielding a mean and variance of each of the number of relations.
+\begin{itemize}
+\item Nouns, exemplified in Table~\ref{tab:wnn}.
+\begin{itemize}
+\item Minimum and maximum depth: 
+differences were found in the mean of minimum and maximum depth of a synset between email lists,
+but not once among sectors of a network.
+Differences between the variance of minimum and maximum depth of synsets of sectors were found mostly nonexistent or weak.
+\item Holonyms:
+differences in the number of holonyms per word were present in $\approx 85\%$ of the networks and were
+more incident in the lower sectors in $\approx 90\%$ of the observations in which we found such differences.
+Differences in the variance in the number of holonyms were also found with the same regularity,
+but were greater in the upper sectors in $\approx 80\%$ of the networks.
+Both mean and variance of the number of holonyms peaked in the intermediary sector in $\approx50\%$ of the observations.
+\item Meronyms:
+differences in the number of meronyms of nouns were present in $\approx 90\%$ of the networks and were
+more incident in the lower sectors in $\approx 80\%$ of the observations in which we found such differences.
+Differences in the variance in the number of meronyms were found in $100\%$ of the networks and was often strong.
+The variance was greater in the periphery in $66.66\%$ and in the lower sectors in $\approx 90\%$ of the observations.
+\item Domain:
+differences in the mean and variance of the number of domains of words were found respectively in $90\%$ and $50\%$ of the networks and maximum values were found evenly distributed across sectors.
+Peaks were found in the intermediary sector in $\approx 50\%$ of the networks.
+\item Lemmas:
+differences in the mean and variance of the number of lemmas of words were found respectively in $40\%$ and $55\%$ of the networks.
+In $\approx 90\%$ of the cases where there was difference in the mean, the maximum number of lemmas was found in the periphery.
+Peaks in the intermediary sector were less often, occurring only in $\approx 35\%$ of the observations.
+\item Hyponyms:
+differences in the mean and variance of the number of hyponyms of words were found respectively in $77.77\%$ and $88.88\%$ of the networks.
+In $\approx 93\%$ of the cases where there was difference in the mean, 
+the maximum number of hyponyms was found indistinctly in the upper sectors.
+In $75\%$ of the cases where there was difference in the variance, 
+the maximum variance was found indistinctly in the upper sectors.
+Peaks occurred for both mean and variance in the intermediary sector in $\approx 75\%$ of the observations.
+\item Hypernyms:
+between the sectors of all networks analyzed, we found no differences in the mean of the number of hypernyms.
+There were differences in the variance of the number of hypernyms of the words used by the sectors in $\approx 72\%$ of the networks.
+Greatest values occurred indistinctly in all sectors and peaked in the intermediary sector in $\approx 50\%$ of the observations.
+\input{tables/wnPOSInline2-n-13tag_}
+\FloatBarrier
+\end{itemize}
+\item Adjectives, exemplified in Table~\ref{tab:wnas}.
+\begin{itemize}
+\item Domain:
+differences in the mean and variance of the number of domains of words were found respectively in $88.88\%$ and $61.11\%$ of the networks.
+In $87.5\%$ of the cases where there was difference in the mean, 
+the maximum number of domains was found indistinctly in the upper sectors.
+In $\approx 82\%$ of the cases where there was difference in the variance, 
+the maximum variance was found indistinctly in the upper sectors.
+Peaks occurred in the intermediary sector in $68.75\%$ of the observations for the mean
+and in $\approx 54.55\%$ of the observations for the variance.
+\item Similar:
+differences in the mean and variance of the number of similar synsets relations of adjectives were found respectively only in $44.45\%$ and $61.11\%$ of the networks.
+In $\approx 90\%$ of the cases where there was difference in the mean, 
+the maximum number of domains was found in the hubs sector.
+In $\approx 90\%$ of the cases where there was difference in the variance, 
+the maximum number of domains was found indistinctly in the extreme sectors.
+Peaks occurred in the intermediary sector in $50\%$ of the observations for the mean
+and in $\approx 36.37\%$ of the observations for the variance.
+\item Lemmas:
+differences in the mean and variance of the number of lemmas of adjectives were found respectively only in $27.78\%$ and $72.22\%$ of the networks.
+Maximum values occurred indistinctly in all sectors and peaks were found in the intermediary sector in $\approx 50\%$ of the observed cases.
+\input{tables/wnPOSInline2-as-9tag_}
+\FloatBarrier
+\end{itemize}
+\item Verbs, illustrated in Table~\ref{tab:wnv}.
+\begin{itemize}
+\item No significant differences were found in the mean and variance verb synset relations of minimum and maximum depth, verb groups, lemmas and hypernyms.
+\item Domains and entailments:
+differences were often strong (i.e. $>1.5$) in both mean and variance.
+Due to the reduced number of verbs and the small values of mean and variance,
+we considered these measures as not significant.
+\item Hyponyms:
+differences in the mean and variance of the number of hyponyms of verbs were found respectively in $50\%$ and $72.23\%$ of the networks.
+In $\approx 90\%$ of the cases where there was difference in the mean, 
+the maximum number of hyponyms was found in the upper sectors ($66.67\%$ in the hubs sector).
+In $\approx 85\%$ of the cases where there was difference in the variance, 
+the maximum number of domains was found indistinctly in the upper sectors ($61.54\%$ in the hubs sector).
+Peaks occurred in the intermediary sector in $\approx 35\%$ with respect to both mean and variance.
+\input{tables/wnPOSInline2-v-3tag_}
+\FloatBarrier
+\end{itemize}
+\item Adverbs, exemplified in Table~\ref{tab:wnr}.
+\begin{itemize}
+\item Domains:
+differences in the mean and variance of the number of domains of adverbs were found respectively in $\approx 95.45\%$ and $\approx 66.67\%$ of the networks.
+In $\approx 82.35\%$ of the cases where there was difference in the mean, 
+the maximum number of domains was found in the upper sectors ($58.82\%$ in the hubs sector).
+In $\approx 92\%$ of the cases where there was difference in the variance, 
+the maximum number of domains was found indistinctly in the upper sectors ($50\%$ in the intermediary sector).
+Peaks occurred in the intermediary sector in $\approx 64.71\%$ and $75\%$ in the mean and variance respectively.
+\item Lemmas:
+no systematic difference was found in the mean and variance of the number of lemmas of adverbs.
+\input{tables/wnPOSInline2-r-17tag_}
+\FloatBarrier
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Wordnet synset hypernyms}\label{subsec:wn1}
+In measuring the incidence of hypernyms, significant differences were often found, but greater values
+occurred in all sectors.
+This motivated the inclusion of the tables below in which incidences are observed in all the networks at once.
+The drawback is that the individual values, found in the Supplementary document, may have to be investigated.
+The advantage is the more immediate observation of the findings with respect to all the networks analyzed.
+Each line holds the count of the greater incidence of each hypernym in each sector,
+the count of peaks in the intermediary sector, the total number of networks in which the
+synset was found with incidence greater than $10\%$ in at least one sector,
+and the depth of the hypernym.
+All the words with synsets were taken into account but when measures were below $10\%$ in all
+sectors, the differences were considered negligible in the corresponding network.
+For each POS tag, we consider synsets for which there is such significant incidence in a minimum number of networks,
+i.e. \emph{total} should be above a certain threshold.
+This threshold was chosen to yield few synsets and some structure:
+total $\geq$ 16 for nouns;
+total $\geq$ 11 for adjectives;
+total $\geq$ 14 for verbs;
+total $\geq$ 13 for adverbs.
+This is surely an \emph{ad hoc} procedure,
+but suited our purposes of making sense of many measurements
+and for a first semantic consideration of the language used by the Erd\"os sectors. 
+
+The analysis comprises hundreds of thousands of synsets in each POS tag.
+Few synsets are listed below as most of them are discarded because of low incidence. 
+
+\begin{itemize}
+\item Noun synsets: differences in the use of nouns with physical entity hypernyms were found indistinctly in all sectors.
+In deeper layers, more systematic differences arise.
+With depth 2, hubs use more nouns related to attribute and psychological features.
+Lower sectors use more nouns related to measure,
+with $62.5\%$ of the lists where this difference was found having greater values in the peripheral sector.
+Communication related nouns were found mostly in extreme sectors.
+With depth 3, hubs presented more nouns related to written communication, event and cognition.
+Peripherals showed greater use of nouns related to definite quantity.
+Message-related nouns often peaked at the intermediary sector.
+These results are shown in Table~\ref{tab:wnnh}.
+\input{tables/finalSynsetsN_}
+\FloatBarrier
+\item Adjective synsets: the use of adjectives was found less systematic.
+The synsets varied greatly among lists and differences were not strong.
+We observed weak evidence that hubs use more adjectives related to certainty,
+and that the use of such adjectives peaked at the intermediary sector.
+Even weaker evidence was found that hubs use more adjectives related to newness.
+These results are shown in Table~\ref{tab:wnash}.
+\input{tables/finalSynsetsAS_}
+\FloatBarrier
+\item Verbs synset hypernyms of move and travel were more numerous in the peripheral sector.
+Verbs related to change were more common in the hubs sector.
+Verbs related to making had differences in the frequency of use among sectors,
+but had greatest incidence in all sectors (but in distinct networks).
+With depth 2, hubs exhibited greater use of verbs related to state and evaluate while
+peripherals exhibited greater use of verbs related to keeping and putting.
+With depth 3, in the upper sectors was found a greater use of verbs related to thinking.
+Hubs used more increase-related verbs.
+Periphery presented more verbs related to running and communication.
+With depth 4, lower sectors used more verbs related to informing, peripherals might be regarded as using more verbs related to recording (set in a permanent form), and hubs as using more verbs related to adding.
+These results are shown in Table~\ref{tab:wnvh}.
+\input{tables/finalSynsetsV_}
+\FloatBarrier
+\item Adverb synsets were found with particularly interesting patterns as greater use of adverbs related to possibility and stillness was found in the intermediary sector.
+Adverbs related to ``however'' and ``even'' were more frequent in the peripheral sector while adverbs related to ``well'' (good way to perform) was more used by hubs.
+These results are shown in Table~\ref{tab:wnrh}.
+\input{tables/finalSynsetsR_}
+\FloatBarrier
+\end{itemize}
+
+\subsection{Correlation of topological and textual metrics}\label{subsec:cor}
+Overall, the correlation between textual and topological measurements was small. 
+An exception is strength which was very often negatively correlated to the mean and variance of the number
+of punctuations (and sometimes with the number of known words or stopwords) with values below -0.4, but a few positive and high values (above 0.5) were also found.
+Interestingly, the number of punctuations per sentence was most often correlated to the number of stopwords
+while most often \emph{not} correlated to the number of known words.
+Noteworthy is that degree is negatively correlated to clustering coefficient in intermediary and hubs sectors,
+which is consistent with the literature, but it is positively correlated for
+peripheral sectors.
+Other strong correlation associations of textual and topological measures were found
+but not systematically and might be indicatives of style from the different lists analyzed.
+These results are exemplified in Table~\ref{tab:cor}.
+% verificar e fazer tabelas corretamente:
+% focadas para texto, extensivas para SI
+\input{tables/correlationInline9_}
+\FloatBarrier
+\subsection{Formation of principal components}\label{subsec:pc}
+Principal components formation of textual and topological metrics
+seems to be the less stable of all results reported in this study.
+The concentration of dispersion often peaked in the intermediary sector.
+Components are most often composed of both topological or textual features.
+Other than that, we observe that PCA is sensitive to the measurements included
+and should reveal other insights in other settings.
+These results are exemplified in Table~\ref{tab:tpca}.
+\input{tables/pcaInline11_}
+
+\subsection{Notes in a typology derived from the Erd\"os sectors}
 
 \section{Conclusions and further work}
+This is a first systematic exploration of the relation between topological and textual
+metrics in human interaction networks, as far the author knows.
+Different textual features were scrutinized and were found to present
+salient patterns, especially in relation to topological measures and the Erd\"os sectors.
+Furthermore, results show that peripheral participants use more nouns while hubs use more verbs,
+which suggests that less connected participants bring content and concepts,
+while hubs propose action on them.
+Such findings have potential applications in the collection and diffusion of information,
+resources recommendation in linked data contexts,
+and open processes of document elaboration and refinement~\cite{ensaio,ops,opa,stab,pnud4,pnud3}.
+
+Most importantly, it is reasonable to conclude, from all the distinct textual characteristics
+between the Erd\"os sectors, that, as a rule of thumb, the texts from each of the sectors differ.
+Surely there should be exceptions and it is a fact that we left out of the analysis
+more subtle textual aspects e.g. those related to low percentages (<5\%) or to small
+differences.
+These might be the subject of future studies.
+
+Further work should expand the analysis to include
+more types of networks and more metrics.
 
 % Obvious: more networks, network provenance, linguistic features, topological features, comparison methods (such as statistical distances), sets of nodes (partitions form the Ratio Cut)
 % use of Coh-Metrix, L2 Syntactical Complexity Analyzer
 % visualization of such differences, as tables are not so prombptly absorbed
+% development of tools to analyze and visualize networks and linguistic features used
 
 % detection of sectors using linguistic features
 
+Other potential next steps are:
+\begin{itemize}
+\item The observation of most incident words and word types,
+such as words related to cursing, food or body parts.
+\item Interpretation of the constant difference found from incident and existent tokens histograms, found at the end of the Supplementary document of this paper.
+\item Extend word class observations, e.g. to include plurals, gender, common prefixes and suffixes.
+\item The observation of date and time in relation to the language employed in interaction networks and
+to activity characteristics (e.g. dispersion of sent time along the day or weekdays).
+\item A careful analysis of each linguistic feature distribution which is likely to reveal multimodal outlines and other non-trivial characteristics.
+\item Extend the analysis of language-related measurements to the windowed approach along the timelines, where hub, peripheral and intermediary sectors were topologically characterized~\cite{stab}.
+\item For ELE list, the more connected the sector, the longer the messages are.
+This is the inverse of what was found in the other lists,
+and was considered a peculiarity of the culture bonded with the political subject of ELE list.
+This hypothesis should be further verified.
+\item Tackle the same analysis on networks with languages other than English.
+This is especially important for applications~\cite{ensaio}
+and should rely on dedicated implementation of 
+tokenization, lemmatization and attribution of POS tags.
+\item The significant differences found from the texts of the sectors raises the question as to why we are not conscious of these differences.
+One possibility is that they are part of our instinctive and unconscious social coordination and this hypothesis might be the goal of future efforts.
+\item The inclusion of more sophisticated analyses of text, such as those used in the Coh-Metrix framework for text complexity~\cite{coh}.
+\item Using machine learning to quantify the separability of the Erdös sectors with respect to their respective texts.
+\end{itemize}
+
+\subsection*{Acknowledgements}
+The authors acknowledge the financial support of the São Paulo State Research Foundation (FAPESP grant 2017/05838-3) and the National Council for Scientific and Technological Development (CNPq, grant 140860/2013-4).
+
+\appendix
+\section{Additional tables of the textual differences found in all networks}\label{ap:textd}
+In the following tables the counting of differences of textual features among the analyzed networks
+are shown.
+	These results are auxiliary for the discussion in Section~\ref{sec:tresults}.
+\FloatBarrier
+\input{tables/charsInlineTotal_}
+\input{tables/tokensMergedInlineTotal_}
+\input{tables/sentencesInlineTotal_}
+\input{tables/messagesInlineTotal_}
+\input{tables/posInlineTotal_}
+\input{tables/wnPOSInlineTotal_}
+\input{tables/wnPOSInline2-n-Total_}
+\input{tables/wnPOSInline2-as-Total_}
+\input{tables/wnPOSInline2-v-Total_}
+\input{tables/wnPOSInline2-r-Total_}
+
+\section{Definition of the terms of text-related measurements}\label{ap:msTerms}
+      The following terms are used in Sections~\ref{sec:cha}-\ref{subsec:pc} and Appendix~\ref{ap:textd}.
+	The terms related to part-of-speech (POS) were defined directly at Tables~\ref{tab:pos} and~\ref{tab:wnpos}.
+\input{tables/textMeasures}
 
 \section*{References}
 
