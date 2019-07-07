@@ -1,6 +1,19 @@
 \documentclass[review]{elsarticle}
 
 \usepackage{lineno,hyperref}
+\usepackage{xcolor}
+\hypersetup{
+	%pagebackref=true,
+	pdfcreator={LaTeX with abnTeX2},
+	pdfkeywords={abnt}{latex}{abntex}{USPSC}{trabalho acadêmico}, 
+	colorlinks=true,       		% false: boxed links; true: colored links
+	linkcolor=blue,          	% color of internal links
+	citecolor=blue,        		% color of links to bibliography
+	filecolor=magenta,      		% color of file links
+	urlcolor=blue,
+	allbordercolors=black,
+	bookmarksdepth=4
+}
 \modulolinenumbers[5]
 \usepackage{amsmath}
 \usepackage{float}
@@ -215,14 +228,14 @@ These lists are as follows:
 \item List for discussion of the election reform\footnote{gmane.politics.election-methods is list ID in Gmane.}. English is the prevailing language. Abbreviated ELE from now on.
 \end{itemize} 
 
-Table~\ref{tab:genLists} holds an overview of the messages considered in each of these lists.
+Table~\ref{tab:genLists} holds an overview of the messages in each of these lists.
 MET was not used for the textual measurements because most messages are not written in English.
 The selection of these lists was performed in preliminary stages of this work,
 in compliance with~\cite{stab,thesis}, as a convenient, small and diverse set of lists to be considered in depth, and has no impact on the results as they are used only for illustration in Table~\ref{tab:genLists} and Section~\ref{subsec:di}.
 
 \begin{table}
 \centering
-\caption{Columns $date_1$ and $date_M$ have dates of first and last messages from the 20,000 messages considered in each email list.
+\caption{Columns $date_1$ and $date_M$ have dates of first and last messages from the 20,000 messages in each email list.
 $N$ is the number of participants (number of different email addresses),
 $\Gamma$ is the number of discussion threads (count of messages without antecedent),
 $\overline{M}$ is the number of messages missing in the 20,000 collection
@@ -260,7 +273,7 @@ and small-world properties, as expected for a number of social networks~\cite{bi
 \begin{figure}[!h]
 \centering
 \includegraphics[width=0.5\textwidth]{figs/criaRede3_}
-\caption{The formation of interaction networks from exchanged messages. Each node represents a participant. A reply from author B to a message from author A is regarded as evidence that B received information from A and yields a directed edge. Multiple messages add ``weight'' to a directed edge. Further details are given in Section~\ref{intNet}.}
+\caption{The formation of interaction networks from exchanged messages. Each node represents a participant. A reply from author B to a message from author A is regarded as evidence that B received information from A and yields a directed edge. Multiple messages add ``weight'' to a directed edge. Further information is provided in Section~\ref{intNet}.}
 \label{formationNetwork}
 \end{figure}
 
@@ -329,12 +342,9 @@ but results hold for sectors obtained using the strength.
 \includegraphics[width=\textwidth]{figs/fser__}
 \caption{Classification of vertices by comparing degree
 distributions~\cite{stab}.
-The binomial distribution of the Erd\"os-R\'enyi network model exhibits more intermediary vertices, while a scale-free network, associated with the power-law distribution, has more peripheral and hub vertices. The sector borders are defined with respect to the intersections of the distributions. Characteristic degrees are in the compact intervals: $[0,k_L]$, $(k_L,k_R]$, $(k_R,k_{max}]$ for the periphery, intermediary and hub sectors, the ``Erd\"os sectors''.
-The connectivity distribution of empirical interaction networks, e.g. derived from email lists, can be sectioned by comparison against the associated binomial distribution with the same number of vertices and edges. In this figure, a snapshot of 1000 messages from CPP list yields the degree distribution of an interaction network of 98 nodes and 235 edges. A thorough explanation of the method is provided in Section~\ref{sectioning}.}
+The binomial distribution of the Erd\"os-R\'enyi network model exhibits more intermediary vertices, while a scale-free network, associated with the power-law distribution, has more peripheral and hub vertices. The sector borders are defined with respect to the intersections of the distributions. Characteristic degrees are in the compact intervals: $[0,k_L]$, $(k_L,k_R]$, $(k_R,k_{max}]$ for the peripheral, intermediary and hubs sectors: the ``Erd\"os sectors''.
+Accordingly, the connectivity distribution of empirical interaction networks, e.g. derived from email lists, can be sectioned by comparison against the associated binomial distribution with the same number of vertices and edges. In this figure, a snapshot of 1000 messages from the CPP list yields the degree distribution of an interaction network of 98 nodes and 235 edges. A thorough explanation of the method is provided in Section~\ref{sectioning}.}
 \label{fig:setores}
-\begin{flushleft}\footnotesize
-Source: By the author.\
-\end{flushleft}
 \end{figure}
 
 \subsection{Text-related measures}
@@ -380,7 +390,7 @@ The topological and textual measures were related by:
 \item Principal components formation derived from the usual Principal Component Analysis.
 \end{enumerate}
 
-\subsection{Statistical distances}
+\subsection{Statistical distances}\label{sstat}
 An adaptation of the Kolmogorov-Smirnov test~\cite{kolm} was used to observe differences in textual content, as follows.
 Let $F$ and $F'$ be two empirical distribution functions, where $n$ and $n'$ are the number of observations on each sample.
 The two-sample Kolmogorov-Smirnov test rejects the null hypothesis, that the samples are drawn from the same underlying distribution, if:
@@ -495,8 +505,8 @@ distinct sectors, there was no evidence of difference on the size of the threads
 \subsection{Evidence that the texts from Erd\"os sectors differ}\label{subsec:di}
 This is the most important outcome from this paper: there strong enough evidence
 to support the assertion that the language used by distinct Erd\"os sectors are different.
-Tables~\ref{tab:kolTok}-\ref{tab:kolPctInter}
-illustrate three results:
+Figure~\ref{fdif} illustrates, and Tables~\ref{tab:kolTok}-\ref{tab:kolPctInter}
+exemplify three results:
 \begin{itemize}
  \item The statistical evidence that the textual production of the Erd\"os sectors is different.
 	 This can be noticed from the high values of $c'$ on these tables, clearly above reference values used for the acceptance of the null hypothesis (the null hypothesis being that the probability distributions generating the samples are the same). Also, we regarded as non-negligible the values often above 0.1 for the Kolmogorov-Smirnov statistics (the maximum difference between the cumulative distributions), which we recognized as relevant for assuming differences in the underlying distributions in our study (see Section~\ref{sec:ks}).
@@ -506,6 +516,19 @@ against the periphery and hubs than these extreme sectors between themselves
 This differentiation of the three sectors is a further indicative that the Erd\"os Sectioning described in Section~\ref{sectioning} reveals meaningful sectors of the networks.
  \item The evidence of difference (as measured by $c'$) between sectors on the same network (Tables~\ref{tab:kolTok}-\ref{tab:kolPct}) is often larger than found between the same sector from distinct networks (Tables~\ref{tab:kolSubInter}-\ref{tab:kolPctInter}).
  \end{itemize}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.9\textwidth]{figs/hists}
+  \caption{Histograms of the $c'$ statistic between the Erd\"os sectos for all the language-related measurements performed. The histogram bins are limited by the values $l=1.22$, and $L=1.95$, which are related to the significance levels of 0.1 and 0.001, respectively, as described in Section~\ref{sstat}. 
+  In qualitative terms, one may associate the bars to:
+  measurements that are not evidence of difference (blue),
+  measurements that are evidence of difference (green),
+  and measurements that are strong evidence of difference (red).
+  Notice that, although the $c'$ values obtained by comparing the peripheral and intermediary sectors present less values in the red bar, the values reach the magnitudes comparable to the highest values obtained by comparing the peripheral and hubs sectors.
+  Further information is provided in Section~\ref{subsec:di}.}
+\label{fdif}
+\end{figure}
 
 Two measurements for each pair of sectors are in Tables~\ref{tab:kolTok}-\ref{tab:kolPct}.
  The top value is $c'$ while the bottom value is the Kolmogorov-Smirnov statistic.
