@@ -23,6 +23,5 @@ for f in ff:
         s = f_.readlines()
         for n in no:
             s = [l for l in s if n not in l]
-        f_.close()
     with open(tdir + f, 'w') as f__:
         f__.writelines(s)

@@ -382,13 +382,25 @@ The topological and textual measures were related by:
 
 \subsection{Statistical distances}
 An adaptation of the Kolmogorov-Smirnov test~\cite{kolm} was used to observe differences in textual content, as follows.
-Let $F_{1,n}$ and $F_{2,n'}$ be two empirical distribution functions, where $n$ and $n'$ are the number of observations on each sample.
-The two-sample Kolmogorov-Smirnov test rejects the null hypothesis (that the samples are drawn from the same underlying distribution) if:
+Let $F$ and $F'$ be two empirical distribution functions, where $n$ and $n'$ are the number of observations on each sample.
+The two-sample Kolmogorov-Smirnov test rejects the null hypothesis, that the samples are drawn from the same underlying distribution, if:
 \begin{equation}\label{eq:ks}
-D_{n,n'} > c(\alpha)\sqrt{\frac{n+n'}{nn'}}
+D_{F,F'} > c(\alpha)\sqrt{\frac{n+n'}{nn'}}
 \end{equation}
 
-\noindent where $D_{n,n'}=sup_x[F_{1,n}-F_{2,n'}]$ is the Kolmogorov-Smirnov statistic
+\begin{figure}[!htbp] %h or !htbp
+\vspace{-2pt}
+\begin{center}
+	\includegraphics[width=0.64\textwidth]{./figs/Dnn}
+	\caption{The Kolmogorov-Smirnov statistic $D_{F,F'}$: the maximum difference between
+		two cumulative distribution functions.}
+	\label{fig:dnn}
+\end{center}
+\end{figure}
+
+
+\noindent where $D_{F,F'}=sup_x[F - F']$ is the Kolmogorov-Smirnov statistic
+(illustrated in Figure~\ref{fig:dnn})
 and $c(\alpha)$ is related to the significance level $\alpha$ by:
 
 \begin{table}[H]
@@ -400,29 +412,29 @@ $c(\alpha)$ & 1.22 & 1.36 & 1.48 & 1.63 & 1.73 & 1.95 \\
 \end{table}
 
 In comparing two empirical distribution functions,
-$D_{n,n'}$ is given, as are $n$ and $n'$.
+$D_{F,F'}$ is given, as are $n$ and $n'$.
 All terms in equation~\ref{eq:ks} are positive and $c(\alpha)$ can be isolated:
 
 \begin{equation}\label{eq:ks2}
-c(\alpha) < \frac{D_{n,n'}}{\sqrt{\frac{n+n'}{nn'}}} = c'
+c(\alpha) < \frac{D_{F,F'}}{\sqrt{\frac{n+n'}{nn'}}} = c'
 \end{equation}
 
 When $c'$ is high, corresponding low values of $\alpha$ favor rejecting the null hypothesis.
-For example, when $c'$ is greater than $\approx 1.7$, one might assume that $F_{1,n}$ and $F_{2,n'}$ differ.
+For example, when $c'$ is greater than $\approx 1.7$, one might assume that $F$ and $F'$ differ.
 We used $c'$ as a measure of how much
 the distributions differ
 and for deriving hypotheses
 about how different are the underlying mechanisms of generation of texts.
 In~\cite{kolm},
 systematic measurements of the $c'$ statistic
-illustrate that $c'$ and $D_{n,n'}$ are consistent and useful in considering the
+illustrate that $c'$ and $D_{F,F'}$ are consistent and useful in considering the
 similarity or difference in the distributions underlying sets of observations.
 A note of caution should be given here: what is a difference in distributions
 might vary with context.
-A $D_{n,n'}$ of only $0.0001$ will yield a very large $c'$ if $n$ and $n'$ are large enough.
-On the other hand, a large $D_{n,n'}$ with a small $c'$ is not a strong evidence that
+A $D_{F,F'}$ of only $0.0001$ will yield a very large $c'$ if $n$ and $n'$ are large enough.
+On the other hand, a large $D_{F,F'}$ with a small $c'$ is not a strong evidence that
 the distributions differ.
-Therefore, we consider both $D_{n,n'}$ and $c'$ simultaneously in our analysis.
+Therefore, we consider both $D_{F,F'}$ and $c'$ simultaneously in our analysis.
 Each text-related measure yields a histogram for the whole network, and one for each
 of the Erdös sectors.
 To obtain the histograms, one value was obtained through each message.
@@ -893,7 +905,7 @@ The authors acknowledge the financial support of the São Paulo State Research F
 \appendix
 \section{Additional tables of the textual differences found in all networks}\label{ap:textd}
 In the following tables the counting of differences of textual features among the analyzed networks
-are shown.
+are provided.
 	These results are auxiliary for the discussion in Section~\ref{sec:tresults}.
 \FloatBarrier
 \input{tables/charsInlineTotal_}
