@@ -87,9 +87,10 @@
   social actors related?
   In this work, we describe a fundamental association between connectivity-defined sectors of networks
   and the language used therein.
-  The hubs, intermediary and peripheral sectors of a network, obtained though the
-  connectivity distribution, exhibit statistical distances, between the texts they produce,
-  often greater than between texts of different networks or even the same sectors of different networks.
+  The hubs, intermediary and peripheral sectors of a network, defined though the
+  connectivity distribution, present remarkable statistical distances between the texts they produce.
+  Such distances are greater then e.g. distances between segments of a literary novel,
+  and are often greater than between texts of different networks.
   This result holds for networks related to very distinct subjects, such as programming libraries and
   national elections, and are valid for raw textual features (such as token size),
   grammatical features (such as fraction of adjectives), and semantic features
@@ -97,7 +98,7 @@
   Furthermore, the measurements obtained allowed for a first tentative characterization of the language used in the networks and among the sectors.
   The findings herein reported should assist further studies relating language and topology
   in social networks, e.g. by relating communities or special groups of agents, such as of brokers
-   and those with a high clustering coefficient, and by the consideration of other social networking systems.
+   and those with a high clustering coefficient, by performing analyses using other measures or comparison techniques, and by the consideration of other social networking systems.
 \end{abstract}
 
 \begin{keyword}
@@ -144,12 +145,12 @@ and might be more easily related to the intuitive concept of data mining of text
 In this paper, we report on striking differences among the language used by the hub, intermediary and peripheral sectors of
 human social interaction networks.
 Such contrasts were found in networks in diverse scales and using a number of text-related statistics,
-from the usage of individual characters, to token sizes, part-of-speech tags and Wordnet synsets.
+from the usage of individual characters to token sizes, part-of-speech tags and Wordnet synsets.
 These results potentially encompass the first direct report on the association of topological features
 of individuals in human interaction networks to the language they employ.
 
 This document is organized as follows.
-Next subsections briefly discuss related work and hold terminology remarks.
+Next subsections briefly discuss related work and terminology remarks.
 Section~\ref{smm} describes the data analyzed and the methods employed to
 derive the networks and sectors, and to obtain the measurements.
 Section~\ref{sres} holds the results achieved.
@@ -703,181 +704,7 @@ in the intermediary sector, which we understood as evidence that:
 \item The analysis of the language employed in social networksm, using Wordnet, reveals aspects of the structures which are not clear though the non-semantic analysis we performed.
 \end{itemize}
 
-\subsubsection{Wordnet POS tags}\label{subsec:wnpos}
-The observations here are somewhat consistent with those in Section~\ref{subsec:pos}:
-peripherals use more nouns and less verbs and adverbs.
-The variation is related to adjectives, which was found more frequent in the hubs.
-These results are illustrated in Table~\ref{tab:wnpos}.
-\input{tables/wnPOSInline_}
-\FloatBarrier
-
-\subsubsection{Wordnet synsets characteristics}\label{subsec:wn1}
-Wordnet synsets with different POS tags have different relations (to other synsets).
-Therefore, we made separate observations about each POS tag.
-In each synset we performed a count of the number of the relations (e.g. max depth, hyponyms),
-thus yielding a mean and variance of each of the number of relations.
-\begin{itemize}
-\item Nouns, exemplified in Table~\ref{tab:wnn}.
-\begin{itemize}
-\item Minimum and maximum depth: 
-differences were found in the mean of minimum and maximum depth of a synset between email lists,
-but not once among sectors of a network.
-Differences between the variance of minimum and maximum depth of synsets of sectors were found mostly nonexistent or weak.
-\item Holonyms:
-differences in the number of holonyms per word were present in $\approx 85\%$ of the networks and were
-more incident in the lower sectors in $\approx 90\%$ of the observations in which we found such differences.
-Differences in the variance in the number of holonyms were also found with the same regularity,
-but were greater in the upper sectors in $\approx 80\%$ of the networks.
-Both mean and variance of the number of holonyms peaked in the intermediary sector in $\approx50\%$ of the observations.
-\item Meronyms:
-differences in the number of meronyms of nouns were present in $\approx 90\%$ of the networks and were
-more incident in the lower sectors in $\approx 80\%$ of the observations in which we found such differences.
-Differences in the variance in the number of meronyms were found in $100\%$ of the networks and was often strong.
-The variance was greater in the periphery in $66.66\%$ and in the lower sectors in $\approx 90\%$ of the observations.
-\item Domain:
-differences in the mean and variance of the number of domains of words were found respectively in $90\%$ and $50\%$ of the networks and maximum values were found evenly distributed across sectors.
-Peaks were found in the intermediary sector in $\approx 50\%$ of the networks.
-\item Lemmas:
-differences in the mean and variance of the number of lemmas of words were found respectively in $40\%$ and $55\%$ of the networks.
-In $\approx 90\%$ of the cases where there was difference in the mean, the maximum number of lemmas was found in the periphery.
-Peaks in the intermediary sector were less often, occurring only in $\approx 35\%$ of the observations.
-\item Hyponyms:
-differences in the mean and variance of the number of hyponyms of words were found respectively in $77.77\%$ and $88.88\%$ of the networks.
-In $\approx 93\%$ of the cases where there was difference in the mean, 
-the maximum number of hyponyms was found indistinctly in the upper sectors.
-In $75\%$ of the cases where there was difference in the variance, 
-the maximum variance was found indistinctly in the upper sectors.
-Peaks occurred for both mean and variance in the intermediary sector in $\approx 75\%$ of the observations.
-\item Hypernyms:
-between the sectors of all networks analyzed, we found no differences in the mean of the number of hypernyms.
-There were differences in the variance of the number of hypernyms of the words used by the sectors in $\approx 72\%$ of the networks.
-Greatest values occurred indistinctly in all sectors and peaked in the intermediary sector in $\approx 50\%$ of the observations.
-\input{tables/wnPOSInline2-n-13tag_}
-\FloatBarrier
-\end{itemize}
-\item Adjectives, exemplified in Table~\ref{tab:wnas}.
-\begin{itemize}
-\item Domain:
-differences in the mean and variance of the number of domains of words were found respectively in $88.88\%$ and $61.11\%$ of the networks.
-In $87.5\%$ of the cases where there was difference in the mean, 
-the maximum number of domains was found indistinctly in the upper sectors.
-In $\approx 82\%$ of the cases where there was difference in the variance, 
-the maximum variance was found indistinctly in the upper sectors.
-Peaks occurred in the intermediary sector in $68.75\%$ of the observations for the mean
-and in $\approx 54.55\%$ of the observations for the variance.
-\item Similar:
-differences in the mean and variance of the number of similar synsets relations of adjectives were found respectively only in $44.45\%$ and $61.11\%$ of the networks.
-In $\approx 90\%$ of the cases where there was difference in the mean, 
-the maximum number of domains was found in the hubs sector.
-In $\approx 90\%$ of the cases where there was difference in the variance, 
-the maximum number of domains was found indistinctly in the extreme sectors.
-Peaks occurred in the intermediary sector in $50\%$ of the observations for the mean
-and in $\approx 36.37\%$ of the observations for the variance.
-\item Lemmas:
-differences in the mean and variance of the number of lemmas of adjectives were found respectively only in $27.78\%$ and $72.22\%$ of the networks.
-Maximum values occurred indistinctly in all sectors and peaks were found in the intermediary sector in $\approx 50\%$ of the observed cases.
-\input{tables/wnPOSInline2-as-9tag_}
-\FloatBarrier
-\end{itemize}
-\item Verbs, illustrated in Table~\ref{tab:wnv}.
-\begin{itemize}
-\item No significant differences were found in the mean and variance verb synset relations of minimum and maximum depth, verb groups, lemmas and hypernyms.
-\item Domains and entailments:
-differences were often strong (i.e. $>1.5$) in both mean and variance.
-Due to the reduced number of verbs and the small values of mean and variance,
-we considered these measures as not significant.
-\item Hyponyms:
-differences in the mean and variance of the number of hyponyms of verbs were found respectively in $50\%$ and $72.23\%$ of the networks.
-In $\approx 90\%$ of the cases where there was difference in the mean, 
-the maximum number of hyponyms was found in the upper sectors ($66.67\%$ in the hubs sector).
-In $\approx 85\%$ of the cases where there was difference in the variance, 
-the maximum number of domains was found indistinctly in the upper sectors ($61.54\%$ in the hubs sector).
-Peaks occurred in the intermediary sector in $\approx 35\%$ with respect to both mean and variance.
-\input{tables/wnPOSInline2-v-3tag_}
-\FloatBarrier
-\end{itemize}
-\item Adverbs, exemplified in Table~\ref{tab:wnr}.
-\begin{itemize}
-\item Domains:
-differences in the mean and variance of the number of domains of adverbs were found respectively in $\approx 95.45\%$ and $\approx 66.67\%$ of the networks.
-In $\approx 82.35\%$ of the cases where there was difference in the mean, 
-the maximum number of domains was found in the upper sectors ($58.82\%$ in the hubs sector).
-In $\approx 92\%$ of the cases where there was difference in the variance, 
-the maximum number of domains was found indistinctly in the upper sectors ($50\%$ in the intermediary sector).
-Peaks occurred in the intermediary sector in $\approx 64.71\%$ and $75\%$ in the mean and variance respectively.
-\item Lemmas:
-no systematic difference was found in the mean and variance of the number of lemmas of adverbs.
-\input{tables/wnPOSInline2-r-17tag_}
-\FloatBarrier
-\end{itemize}
-\end{itemize}
-
-\subsubsection{Wordnet synset hypernyms}\label{subsec:wn1}
-In measuring the incidence of hypernyms, significant differences were often found, but greater values
-occurred in all sectors.
-This motivated the inclusion of the tables below in which incidences are observed in all the networks at once.
-The drawback is that the individual values, found in the Supplementary document, may have to be investigated.
-The advantage is the more immediate observation of the findings with respect to all the networks analyzed.
-Each line holds the count of the greater incidence of each hypernym in each sector,
-the count of peaks in the intermediary sector, the total number of networks in which the
-synset was found with incidence greater than $10\%$ in at least one sector,
-and the depth of the hypernym.
-All the words with synsets were taken into account but when measures were below $10\%$ in all
-sectors, the differences were considered negligible in the corresponding network.
-For each POS tag, we consider synsets for which there is such significant incidence in a minimum number of networks,
-i.e. \emph{total} should be above a certain threshold.
-This threshold was chosen to yield few synsets and some structure:
-total $\geq$ 16 for nouns;
-total $\geq$ 11 for adjectives;
-total $\geq$ 14 for verbs;
-total $\geq$ 13 for adverbs.
-This is surely an \emph{ad hoc} procedure,
-but suited our purposes of making sense of many measurements
-and for a first semantic consideration of the language used by the Erd\"os sectors. 
-
-The analysis comprises hundreds of thousands of synsets in each POS tag.
-Few synsets are listed below as most of them are discarded because of low incidence. 
-
-\begin{itemize}
-\item Noun synsets: differences in the use of nouns with physical entity hypernyms were found indistinctly in all sectors.
-In deeper layers, more systematic differences arise.
-With depth 2, hubs use more nouns related to attribute and psychological features.
-Lower sectors use more nouns related to measure,
-with $62.5\%$ of the lists where this difference was found having greater values in the peripheral sector.
-Communication related nouns were found mostly in extreme sectors.
-With depth 3, hubs presented more nouns related to written communication, event and cognition.
-Peripherals showed greater use of nouns related to definite quantity.
-Message-related nouns often peaked at the intermediary sector.
-These results are shown in Table~\ref{tab:wnnh}.
-\input{tables/finalSynsetsN_}
-\FloatBarrier
-\item Adjective synsets: the use of adjectives was found less systematic.
-The synsets varied greatly among lists and differences were not strong.
-We observed weak evidence that hubs use more adjectives related to certainty,
-and that the use of such adjectives peaked at the intermediary sector.
-Even weaker evidence was found that hubs use more adjectives related to newness.
-These results are shown in Table~\ref{tab:wnash}.
-\input{tables/finalSynsetsAS_}
-\FloatBarrier
-\item Verbs synset hypernyms of move and travel were more numerous in the peripheral sector.
-Verbs related to change were more common in the hubs sector.
-Verbs related to making had differences in the frequency of use among sectors,
-but had greatest incidence in all sectors (but in distinct networks).
-With depth 2, hubs exhibited greater use of verbs related to state and evaluate while
-peripherals exhibited greater use of verbs related to keeping and putting.
-With depth 3, in the upper sectors was found a greater use of verbs related to thinking.
-Hubs used more increase-related verbs.
-Periphery presented more verbs related to running and communication.
-With depth 4, lower sectors used more verbs related to informing, peripherals might be regarded as using more verbs related to recording (set in a permanent form), and hubs as using more verbs related to adding.
-These results are shown in Table~\ref{tab:wnvh}.
-\input{tables/finalSynsetsV_}
-\FloatBarrier
-\item Adverb synsets were found with particularly interesting patterns as greater use of adverbs related to possibility and stillness was found in the intermediary sector.
-Adverbs related to ``however'' and ``even'' were more frequent in the peripheral sector while adverbs related to ``well'' (good way to perform) was more used by hubs.
-These results are shown in Table~\ref{tab:wnrh}.
-\input{tables/finalSynsetsR_}
-\FloatBarrier
-\end{itemize}
+Appendix~\ref{awn} presents Wordnet-related results derived from POS tags and from synset relations (such as hypernyms and meronyms). 
 
 \subsection{Correlation of topological and textual metrics}\label{subsec:cor}
 Overall, the correlation between textual and topological measurements was small. 
@@ -987,6 +814,183 @@ are provided.
       The following terms are used in Sections~\ref{sec:cha}-\ref{subsec:pc} and Appendix~\ref{ap:textd}.
 	The terms related to part-of-speech (POS) were defined directly at Tables~\ref{tab:pos} and~\ref{tab:wnpos}.
 \input{tables/textMeasures}
+
+\section{Preliminary description of Wordnet-related results}\label{awn}
+\subsection{Wordnet POS tags}\label{subsec:wnpos}
+The observations here are somewhat consistent with those in Section~\ref{subsec:pos}:
+peripherals use more nouns and less verbs and adverbs.
+The variation is related to adjectives, which was found more frequent in the hubs.
+These results are illustrated in Table~\ref{tab:wnpos}.
+\input{tables/wnPOSInline_}
+\FloatBarrier
+
+\subsection{Wordnet synsets characteristics}\label{subsec:wn1}
+Wordnet synsets with different POS tags have different relations (to other synsets).
+Therefore, we made separate observations about each POS tag.
+In each synset we performed a count of the number of the relations (e.g. max depth, hyponyms),
+thus yielding a mean and variance of each of the number of relations.
+\begin{itemize}
+\item Nouns, exemplified in Table~\ref{tab:wnn}.
+\begin{itemize}
+\item Minimum and maximum depth: 
+differences were found in the mean of minimum and maximum depth of a synset between email lists,
+but not once among sectors of a network.
+Differences between the variance of minimum and maximum depth of synsets of sectors were found mostly nonexistent or weak.
+\item Holonyms:
+differences in the number of holonyms per word were present in $\approx 85\%$ of the networks and were
+more incident in the lower sectors in $\approx 90\%$ of the observations in which we found such differences.
+Differences in the variance in the number of holonyms were also found with the same regularity,
+but were greater in the upper sectors in $\approx 80\%$ of the networks.
+Both mean and variance of the number of holonyms peaked in the intermediary sector in $\approx50\%$ of the observations.
+\item Meronyms:
+differences in the number of meronyms of nouns were present in $\approx 90\%$ of the networks and were
+more incident in the lower sectors in $\approx 80\%$ of the observations in which we found such differences.
+Differences in the variance in the number of meronyms were found in $100\%$ of the networks and was often strong.
+The variance was greater in the periphery in $66.66\%$ and in the lower sectors in $\approx 90\%$ of the observations.
+\item Domain:
+differences in the mean and variance of the number of domains of words were found respectively in $90\%$ and $50\%$ of the networks and maximum values were found evenly distributed across sectors.
+Peaks were found in the intermediary sector in $\approx 50\%$ of the networks.
+\item Lemmas:
+differences in the mean and variance of the number of lemmas of words were found respectively in $40\%$ and $55\%$ of the networks.
+In $\approx 90\%$ of the cases where there was difference in the mean, the maximum number of lemmas was found in the periphery.
+Peaks in the intermediary sector were less often, occurring only in $\approx 35\%$ of the observations.
+\item Hyponyms:
+differences in the mean and variance of the number of hyponyms of words were found respectively in $77.77\%$ and $88.88\%$ of the networks.
+In $\approx 93\%$ of the cases where there was difference in the mean, 
+the maximum number of hyponyms was found indistinctly in the upper sectors.
+In $75\%$ of the cases where there was difference in the variance, 
+the maximum variance was found indistinctly in the upper sectors.
+Peaks occurred for both mean and variance in the intermediary sector in $\approx 75\%$ of the observations.
+\item Hypernyms:
+between the sectors of all networks analyzed, we found no differences in the mean of the number of hypernyms.
+There were differences in the variance of the number of hypernyms of the words used by the sectors in $\approx 72\%$ of the networks.
+Greatest values occurred indistinctly in all sectors and peaked in the intermediary sector in $\approx 50\%$ of the observations.
+\input{tables/wnPOSInline2-n-13tag_}
+\FloatBarrier
+\end{itemize}
+\item Adjectives, exemplified in Table~\ref{tab:wnas}.
+\begin{itemize}
+\item Domain:
+differences in the mean and variance of the number of domains of words were found respectively in $88.88\%$ and $61.11\%$ of the networks.
+In $87.5\%$ of the cases where there was difference in the mean, 
+the maximum number of domains was found indistinctly in the upper sectors.
+In $\approx 82\%$ of the cases where there was difference in the variance, 
+the maximum variance was found indistinctly in the upper sectors.
+Peaks occurred in the intermediary sector in $68.75\%$ of the observations for the mean
+and in $\approx 54.55\%$ of the observations for the variance.
+\item Similar:
+differences in the mean and variance of the number of similar synsets relations of adjectives were found respectively only in $44.45\%$ and $61.11\%$ of the networks.
+In $\approx 90\%$ of the cases where there was difference in the mean, 
+the maximum number of domains was found in the hubs sector.
+In $\approx 90\%$ of the cases where there was difference in the variance, 
+the maximum number of domains was found indistinctly in the extreme sectors.
+Peaks occurred in the intermediary sector in $50\%$ of the observations for the mean
+and in $\approx 36.37\%$ of the observations for the variance.
+\item Lemmas:
+differences in the mean and variance of the number of lemmas of adjectives were found respectively only in $27.78\%$ and $72.22\%$ of the networks.
+Maximum values occurred indistinctly in all sectors and peaks were found in the intermediary sector in $\approx 50\%$ of the observed cases.
+\input{tables/wnPOSInline2-as-9tag_}
+\FloatBarrier
+\end{itemize}
+\item Verbs, illustrated in Table~\ref{tab:wnv}.
+\begin{itemize}
+\item No significant differences were found in the mean and variance verb synset relations of minimum and maximum depth, verb groups, lemmas and hypernyms.
+\item Domains and entailments:
+differences were often strong (i.e. $>1.5$) in both mean and variance.
+Due to the reduced number of verbs and the small values of mean and variance,
+we considered these measures as not significant.
+\item Hyponyms:
+differences in the mean and variance of the number of hyponyms of verbs were found respectively in $50\%$ and $72.23\%$ of the networks.
+In $\approx 90\%$ of the cases where there was difference in the mean, 
+the maximum number of hyponyms was found in the upper sectors ($66.67\%$ in the hubs sector).
+In $\approx 85\%$ of the cases where there was difference in the variance, 
+the maximum number of domains was found indistinctly in the upper sectors ($61.54\%$ in the hubs sector).
+Peaks occurred in the intermediary sector in $\approx 35\%$ with respect to both mean and variance.
+\input{tables/wnPOSInline2-v-3tag_}
+\FloatBarrier
+\end{itemize}
+\item Adverbs, exemplified in Table~\ref{tab:wnr}.
+\begin{itemize}
+\item Domains:
+differences in the mean and variance of the number of domains of adverbs were found respectively in $\approx 95.45\%$ and $\approx 66.67\%$ of the networks.
+In $\approx 82.35\%$ of the cases where there was difference in the mean, 
+the maximum number of domains was found in the upper sectors ($58.82\%$ in the hubs sector).
+In $\approx 92\%$ of the cases where there was difference in the variance, 
+the maximum number of domains was found indistinctly in the upper sectors ($50\%$ in the intermediary sector).
+Peaks occurred in the intermediary sector in $\approx 64.71\%$ and $75\%$ in the mean and variance respectively.
+\item Lemmas:
+no systematic difference was found in the mean and variance of the number of lemmas of adverbs.
+\input{tables/wnPOSInline2-r-17tag_}
+\FloatBarrier
+\end{itemize}
+\end{itemize}
+
+\subsection{Wordnet synset hypernyms}\label{subsec:wn1}
+In measuring the incidence of hypernyms, significant differences were often found, but greater values
+occurred in all sectors.
+This motivated the inclusion of the tables below in which incidences are observed in all the networks at once.
+The drawback is that the individual values, found in the Supplementary document, may have to be investigated.
+The advantage is the more immediate observation of the findings with respect to all the networks analyzed.
+Each line holds the count of the greater incidence of each hypernym in each sector,
+the count of peaks in the intermediary sector, the total number of networks in which the
+synset was found with incidence greater than $10\%$ in at least one sector,
+and the depth of the hypernym.
+All the words with synsets were taken into account but when measures were below $10\%$ in all
+sectors, the differences were considered negligible in the corresponding network.
+For each POS tag, we consider synsets for which there is such significant incidence in a minimum number of networks,
+i.e. \emph{total} should be above a certain threshold.
+This threshold was chosen to yield few synsets and some structure:
+total $\geq$ 16 for nouns;
+total $\geq$ 11 for adjectives;
+total $\geq$ 14 for verbs;
+total $\geq$ 13 for adverbs.
+This is surely an \emph{ad hoc} procedure,
+but suited our purposes of making sense of many measurements
+and for a first semantic consideration of the language used by the Erd\"os sectors. 
+
+The analysis comprises hundreds of thousands of synsets in each POS tag.
+Few synsets are listed below as most of them are discarded because of low incidence. 
+
+\begin{itemize}
+\item Noun synsets: differences in the use of nouns with physical entity hypernyms were found indistinctly in all sectors.
+In deeper layers, more systematic differences arise.
+With depth 2, hubs use more nouns related to attribute and psychological features.
+Lower sectors use more nouns related to measure,
+with $62.5\%$ of the lists where this difference was found having greater values in the peripheral sector.
+Communication related nouns were found mostly in extreme sectors.
+With depth 3, hubs presented more nouns related to written communication, event and cognition.
+Peripherals showed greater use of nouns related to definite quantity.
+Message-related nouns often peaked at the intermediary sector.
+These results are shown in Table~\ref{tab:wnnh}.
+\input{tables/finalSynsetsN_}
+\FloatBarrier
+\item Adjective synsets: the use of adjectives was found less systematic.
+The synsets varied greatly among lists and differences were not strong.
+We observed weak evidence that hubs use more adjectives related to certainty,
+and that the use of such adjectives peaked at the intermediary sector.
+Even weaker evidence was found that hubs use more adjectives related to newness.
+These results are shown in Table~\ref{tab:wnash}.
+\input{tables/finalSynsetsAS_}
+\FloatBarrier
+\item Verbs synset hypernyms of move and travel were more numerous in the peripheral sector.
+Verbs related to change were more common in the hubs sector.
+Verbs related to making had differences in the frequency of use among sectors,
+but had greatest incidence in all sectors (but in distinct networks).
+With depth 2, hubs exhibited greater use of verbs related to state and evaluate while
+peripherals exhibited greater use of verbs related to keeping and putting.
+With depth 3, in the upper sectors was found a greater use of verbs related to thinking.
+Hubs used more increase-related verbs.
+Periphery presented more verbs related to running and communication.
+With depth 4, lower sectors used more verbs related to informing, peripherals might be regarded as using more verbs related to recording (set in a permanent form), and hubs as using more verbs related to adding.
+These results are shown in Table~\ref{tab:wnvh}.
+\input{tables/finalSynsetsV_}
+\FloatBarrier
+\item Adverb synsets were found with particularly interesting patterns as greater use of adverbs related to possibility and stillness was found in the intermediary sector.
+Adverbs related to ``however'' and ``even'' were more frequent in the peripheral sector while adverbs related to ``well'' (good way to perform) was more used by hubs.
+These results are shown in Table~\ref{tab:wnrh}.
+\input{tables/finalSynsetsR_}
+\FloatBarrier
+\end{itemize}
 
 \section*{References}
 
